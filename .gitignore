@@ -1,0 +1,6 @@
+env/
+old-questions/
+questions/
+topics_and_questions.pkl
+questions.txt
+__pycache__/
