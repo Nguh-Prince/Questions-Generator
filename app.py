@@ -1,6 +1,8 @@
 import os
+import random
 import sqlite3
 import tkinter
+from tkinter.font import Font
 import tkinter.messagebox
 
 import customtkinter
@@ -35,6 +37,8 @@ class QuestionAndAnswers(customtkinter.CTkFrame):
             self, question, choices, *args, 
             code=None, on_question_save=None, on_question_delete=None, **kwargs):
         super().__init__(*args, **kwargs)
+
+        self.grid_columnconfigure(0, weight=1)
         
         self.question = question
         self.choices = choices
@@ -42,9 +46,18 @@ class QuestionAndAnswers(customtkinter.CTkFrame):
         self.difficulty = 1
         new_line = '\n\n'
 
-        self.question_textbox = customtkinter.CTkTextbox(self, width=250, height=100)
-        self.question_textbox.grid(row=0, column=0)
-        self.question_textbox.insert("0.0", f"{self.question[1]} {new_line + code if code else ''}" )
+        question_text = f"{self.question[1]} {new_line + code if code else ''}"
+        
+        self.font = Font(family="Arial", size=16)
+        line_height = self.font.metrics("linespace")
+
+        number_of_lines = len(question_text.splitlines())
+
+        text_box_height = (line_height * number_of_lines) + 20
+
+        self.question_textbox = customtkinter.CTkTextbox(self, width=400, height=text_box_height)
+        self.question_textbox.grid(row=0, column=0, pady=(5, 5))
+        self.question_textbox.insert("0.0", question_text )
 
         self.choice_radio_var = tkinter.IntVar(value=0)
         self.choices_frame = customtkinter.CTkFrame(self)
@@ -70,7 +83,7 @@ class QuestionAndAnswers(customtkinter.CTkFrame):
 
         self.difficulty_slider = customtkinter.CTkSlider(self.difficulty_frame, from_=1, to=5, number_of_steps=25, command=self.on_slide)
         self.difficulty_slider.grid(row=1, column=0)
-        self.difficulty_slider.set( question[3] if question[3] else self.difficulty )
+        self.difficulty_slider.set( question[2] if question[2] else self.difficulty )
 
         buttons_frame = customtkinter.CTkFrame(self, bg_color="transparent", fg_color="transparent")
         buttons_frame.grid(row=3, column=0, pady=(20, 0))
@@ -256,9 +269,14 @@ class App(customtkinter.CTk):
         )
         label.grid(row=0, column=0, pady=(0, 40))
 
-        for index, item in enumerate(self.data.items()):
+        data_items = list(self.data.items())
+        indices = random.choices(range(len(data_items)), k=number_of_rows)
+
+        for index, item_index in enumerate(indices):
             if index >= number_of_rows:
                 break
+            
+            item = data_items[item_index]
 
             print(f"Adding the {index+1} question to the frame")
             qa = QuestionAndAnswers(
