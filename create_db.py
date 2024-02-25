@@ -9,6 +9,7 @@ CREATE TABLE topics (
         id INTEGER PRIMARY KEY AUTOINCREMENT, 
         name TEXT, 
         subject INTEGER NOT NULL,
+        deleted INTEGER DEFAULT 0,
         FOREIGN KEY(subject) REFERENCES Subjects(id) ON DELETE CASCADE ON UPDATE CASCADE,
         UNIQUE(subject, name)
     )
@@ -18,6 +19,7 @@ create_difficulties_table = """
 CREATE TABLE difficulties (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT UNIQUE,
+    deleted INTEGER DEFAULT 0,
     min_difficulty_level REAL,
     max_difficulty_level REAL
 )
@@ -29,6 +31,7 @@ CREATE TABLE questions (
     question TEXT NOT NULL,
     difficulty REAL,
     topic INTEGER NOT NULL,
+    deleted INTEGER DEFAULT 0,
     FOREIGN KEY(topic) REFERENCES Topics(id) ON UPDATE CASCADE
 )
 """
@@ -40,6 +43,7 @@ CREATE TABLE Choices (
     choice TEXT,
     is_correct_answer INTEGER DEFAULT 0,
     explanation TEXT,
+    deleted INTEGER DEFAULT 0,
     FOREIGN KEY(question) REFERENCES Questions(id) ON UPDATE CASCADE,
     UNIQUE(choice, question)
 )
@@ -50,6 +54,7 @@ CREATE TABLE code (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     question INTEGER,
     code TEXT,
+    deleted INTEGER DEFAULT 0,
     FOREIGN KEY(question) REFERENCES Questions(id) ON UPDATE CASCADE
 )
 """
@@ -84,5 +89,5 @@ with sqlite3.connect("questions-db.sqlite3") as connection:
         cursor.execute("""
                        INSERT INTO Difficulties 
                        (name, min_difficulty_level, max_difficulty_level) 
-                       VALUES(?,?,?)""", item[1], item[0][0], item[0][1])
+                       VALUES(?,?,?)""", (item[1], item[0][0], item[0][1]))
         

@@ -13,8 +13,27 @@ path_to_db = os.path.join(
     "questions-db.sqlite3"
 )
 
+difficulty_ranges_and_names = {}
+
+with sqlite3.connect(path_to_db) as connection:
+    connection.row_factory = sqlite3.Row
+    cursor = connection.cursor()
+
+    results = cursor.execute(
+        """
+            SELECT name, min_difficulty_level min_d, max_difficulty_level max_d FROM 
+            difficulties WHERE deleted=0
+        """).fetchall()
+    
+    for row in results:
+        difficulty_range = ( row['min_d'], row['max_d'] )
+
+        difficulty_ranges_and_names[difficulty_range] = row['name']
+
 class QuestionAndAnswers(customtkinter.CTkFrame):
-    def __init__(self, question, choices, *args, code=None, on_question_save=None, **kwargs):
+    def __init__(
+            self, question, choices, *args, 
+            code=None, on_question_save=None, on_question_delete=None, **kwargs):
         super().__init__(*args, **kwargs)
         
         self.question = question
@@ -47,22 +66,62 @@ class QuestionAndAnswers(customtkinter.CTkFrame):
         self.difficulty_frame.grid(row=2, column=0, pady=(20, 0))
         self.difficulty_label = customtkinter.CTkLabel(self.difficulty_frame, text=f"Difficulty: {self.question[3] if self.question[3] else self.difficulty}")
         self.difficulty_label.grid(column=0, row=0)
+        self.set_difficulty_label_text()
 
         self.difficulty_slider = customtkinter.CTkSlider(self.difficulty_frame, from_=1, to=5, number_of_steps=25, command=self.on_slide)
         self.difficulty_slider.grid(row=1, column=0)
         self.difficulty_slider.set( question[3] if question[3] else self.difficulty )
 
-        self.save_button = customtkinter.CTkButton(self, text="Save", command=self.save_to_db)
-        self.save_button.grid(row=3, column=0, pady=(20, 0))
+        buttons_frame = customtkinter.CTkFrame(self, bg_color="transparent", fg_color="transparent")
+        buttons_frame.grid(row=3, column=0, pady=(20, 0))
+
+        self.save_button = customtkinter.CTkButton(buttons_frame, text="Save", command=self.save_to_db)
+        self.save_button.grid(row=0, column=0, padx=(0, 20))
+
+        self.delete_button = customtkinter.CTkButton(
+            buttons_frame, 
+            text="Delete", 
+            command=self.delete_from_db, 
+            # bg_color="red",
+            fg_color="red",
+            hover_color="red"
+        )
+        self.delete_button.grid(row=0, column=1, padx=(0, 20))
         self.set_save_button_state()
 
         self.on_question_save = on_question_save
+        self.on_question_delete = on_question_delete
     
     def on_slide(self, difficulty):
+        global difficulty_ranges_and_names
+
         self.difficulty = round(difficulty, 1)
-        self.difficulty_label.configure(text=f"Difficulty: {self.difficulty}")
+
+        self.set_difficulty_label_text()
 
         self.enable_save_button() if self.difficulty != self.question[3] else self.disable_save_button()
+
+    def set_difficulty_label_text(self):
+        difficulty_name = __class__.get_difficulty_name(self.difficulty)
+        
+        self.difficulty_label.configure(text=f"Difficulty: {self.difficulty}, {difficulty_name}")
+
+    def get_difficulty_name(difficulty):
+        global difficulty_ranges_and_names
+
+        def difficulty_is_in_range(range: tuple):
+            nonlocal difficulty
+
+            return difficulty >= range[0] and difficulty <= range[1]
+
+
+        difficulty_range = list(filter( 
+            difficulty_is_in_range, 
+            list(difficulty_ranges_and_names.keys()) 
+        ))[0]
+        difficulty_name = difficulty_ranges_and_names[difficulty_range]
+        
+        return difficulty_name
 
     def save_to_db(self):
         print("Saving to DB")
@@ -84,6 +143,18 @@ class QuestionAndAnswers(customtkinter.CTkFrame):
         else:
             print(f"In QuestionAndAnswers: {self.on_question_save} is not callable")
 
+    def delete_from_db(self):
+        print("Deleting question from database")
+
+        with sqlite3.connect(path_to_db) as connection:
+            cursor = connection.cursor()
+
+            cursor.execute("UPDATE questions SET deleted=1 WHERE id=?", (self.question[0], ))
+
+        print("Query executed successfully")
+        if callable(self.on_question_delete):
+            self.on_question_delete()
+
     def disable_save_button(self):
         self.save_button.configure(state="disabled")
 
@@ -91,7 +162,8 @@ class QuestionAndAnswers(customtkinter.CTkFrame):
         self.save_button.configure(state="enabled")
 
     def set_save_button_state(self):
-        self.disable_save_button() if self.difficulty == self.question[3] else self.enable_save_button()
+        self.disable_save_button() if self.difficulty == self.question[2] else self.enable_save_button()
+
 class App(customtkinter.CTk):
     def __init__(self, fg_color=None, **kwargs):
         super().__init__(fg_color, **kwargs)
@@ -144,7 +216,7 @@ class App(customtkinter.CTk):
                 SELECT q.*, c.id, c.question, c.choice, c.is_correct_answer, c.explanation, co.code FROM 
                 questions q JOIN Choices c ON q.id = c.question 
                 LEFT JOIN code co ON co.question=q.id
-                WHERE q.difficulty IS NULL
+                WHERE q.difficulty IS NULL AND q.deleted=0
             """
 
             results = cursor.execute(query).fetchall()
@@ -153,8 +225,8 @@ class App(customtkinter.CTk):
 
             self.data = {}
             for row in results:
-                question = row[:4]
-                choice = row[4:-1]
+                question = row[:5]
+                choice = row[5:-1]
 
                 self.data.setdefault(question, {
                     "choices": set([]),
@@ -192,7 +264,7 @@ class App(customtkinter.CTk):
             qa = QuestionAndAnswers(
                 item[0], item[1]["choices"], self.scrollable_frame, 
                 on_question_save=lambda question=item[0]: self.remove_question(question),
-                code=item[1]["code"]
+                code=item[1]["code"], on_question_delete=lambda question=item[0]: self.delete_question(question)
             )
             qa.grid(row=index+1, column=0, pady=(0, 40))
 
@@ -201,8 +273,13 @@ class App(customtkinter.CTk):
     def remove_question(self, question: tuple):
         print("Calling remove question")
         del self.data[question]
-
         self.display_data()
+
+    def delete_question(self, question: tuple):
+        print("Deleting a question")
+        self.total_number_of_questions -= 1
+
+        self.remove_question(question)
 
 app = App()
 
