@@ -124,6 +124,7 @@ class App(customtkinter.CTk):
         self.scrollable_frame = None
         
         self.data = None
+        self.total_number_of_questions = 0
         self.get_data()
 
     def change_appearance_mode_event(self, new_appearance_mode: str):
@@ -147,6 +148,8 @@ class App(customtkinter.CTk):
             """
 
             results = cursor.execute(query).fetchall()
+
+            self.total_number_of_questions = cursor.execute("SELECT COUNT(id) FROM questions").fetchone()[0]
 
             self.data = {}
             for row in results:
@@ -172,6 +175,15 @@ class App(customtkinter.CTk):
         self.scrollable_frame.grid(row=0, column=1, rowspan=4, padx=(20, 20), pady=(20, 20), sticky="nsew")
         self.scrollable_frame.grid_columnconfigure(0, weight=1)
         
+        number_of_labeled_questions = self.total_number_of_questions - len(self.data.keys())
+
+        label = customtkinter.CTkLabel(
+            self.scrollable_frame, 
+            text=f"{number_of_labeled_questions}/{self.total_number_of_questions}", 
+            anchor="center"
+        )
+        label.grid(row=0, column=0, pady=(0, 40))
+
         for index, item in enumerate(self.data.items()):
             if index >= number_of_rows:
                 break
@@ -182,7 +194,7 @@ class App(customtkinter.CTk):
                 on_question_save=lambda question=item[0]: self.remove_question(question),
                 code=item[1]["code"]
             )
-            qa.grid(row=index, column=0, pady=(0, 40))
+            qa.grid(row=index+1, column=0, pady=(0, 40))
 
         print("Done displaying the data")
 
