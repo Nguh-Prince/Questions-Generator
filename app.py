@@ -62,7 +62,13 @@ class QuestionAndAnswers(customtkinter.CTkFrame):
         self.choice_radio_var = tkinter.IntVar(value=0)
         self.choices_frame = customtkinter.CTkFrame(self)
         self.choices_frame.grid(row=1, column=0, padx=(20, 20), pady=(20, 0))
-        
+
+        self.explanation_text_box = customtkinter.CTkTextbox(
+            self.choices_frame,
+            width=200
+        )
+        self.explanation_text_box.grid(row=0, column=1, rowspan=len(choices), padx=(20, 0))
+
         self.choices_label = customtkinter.CTkLabel(master=self.choices_frame, text="choices")
 
         longest_string_length = max(len(choice[2]) for choice in choices)
@@ -74,6 +80,9 @@ class QuestionAndAnswers(customtkinter.CTkFrame):
             choice_text += "(A)" if choice[3] == 1 else ""
             radio_button = customtkinter.CTkRadioButton(master=self.choices_frame, variable=self.choice_radio_var, value=choice[0], text=choice_text)
             radio_button.grid(row=index, column=0)
+
+            if choice[3] == 1:
+                self.explanation_text_box.insert("0.0", choice[4])
 
         self.difficulty_frame = customtkinter.CTkFrame(self)
         self.difficulty_frame.grid(row=2, column=0, pady=(20, 0))
@@ -203,7 +212,7 @@ class App(customtkinter.CTk):
         self.appearance_mode_optionemenu.grid(row=6, column=0, padx=20, pady=(10, 10))
         self.scaling_label = customtkinter.CTkLabel(self.sidebar_frame, text="Language 🌐", anchor="w")
         self.scaling_label.grid(row=7, column=0, padx=20, pady=(10, 0))
-        self.scaling_optionemenu = customtkinter.CTkOptionMenu(self.sidebar_frame, values=["English", "Francais"],                               command=self.change_scaling_event)
+        self.scaling_optionemenu = customtkinter.CTkOptionMenu(self.sidebar_frame, values=["English", "Francais"])
         self.scaling_optionemenu.grid(row=8, column=0, padx=20, pady=(10, 20))
 
         self.scrollable_frame = None

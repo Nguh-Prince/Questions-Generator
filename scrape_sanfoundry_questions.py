@@ -1,19 +1,23 @@
 import re
 import os
 
-question_regex = re.compile("^(\d+\.)((\s*\w*\s*)*) (?<![\r])")
-question_with_answers = re.compile("^(\d+\.)((\s*\w*\s*)*)")
-
 from playwright.sync_api import Playwright, sync_playwright, expect
 from bs4 import BeautifulSoup
+
+question_regex = re.compile("^(\d+\.)((\s*\w*\s*)*) (?<![\r])")
 
 questions_directory_path = os.path.join(
     os.path.dirname(__file__), "questions"
 )
 
+if not os.path.exists(questions_directory_path):
+    os.makedirs(questions_directory_path)
+
 already_downloaded_questions = set([
     f.strip(".txt") for f in os.listdir(questions_directory_path)
 ])
+
+url = "https://www.sanfoundry.com/1000-python-questions-answers/"
 
 def get_questions_from_page(page, url, topic="Basics"):
     page.goto(url, timeout=0)
@@ -22,12 +26,11 @@ def get_questions_from_page(page, url, topic="Basics"):
 
         file_path = os.path.join(questions_directory_path, f"{topic}.txt")
 
+        # get the questions and save to a text file at file_path
         get_questions_from_soup(soup, topic, file_path=file_path)
 
-        # get the questions and save to a text file (questions.txt)
     except Exception as e:
         print("Error in get_questions_from_page")
-        breakpoint()
 
 def get_questions_from_soup(soup, topic="Basics", file_path="questions.txt"):
     paragraphs = soup.select(".entry-content>p")
@@ -54,16 +57,14 @@ def get_questions_from_soup(soup, topic="Basics", file_path="questions.txt"):
 
         if len(paragraph.split('\n')) >= 2:
             print(f"The question has the options in it, setting text to the question")
-            # write the question directly to the file
             text = f"{paragraph.strip('View Answer')}\n\n{answer}"
         else:
             print(f"This question has a code block, code_blocks_index: {code_block_index}")
             # The paragraph is a code block
             answer_paragraph = paragraphs[paragraph_index].text.strip('View Answer').replace('\r', '') # this is now the paragraph with the answers
             try:
-                code_block = code_blocks[code_block_index].text#.replace('\r', '')
+                code_block = code_blocks[code_block_index].text
             except IndexError as e:
-                breakpoint()
                 raise e
 
             print("This question has a code block, the block is: ")
@@ -81,7 +82,6 @@ def get_questions_from_soup(soup, topic="Basics", file_path="questions.txt"):
             '\n\n\n\n'.join(texts)
         )
 
-url = "https://www.sanfoundry.com/1000-python-questions-answers/"
 
 def run(playwright: Playwright) -> None:
     try:
