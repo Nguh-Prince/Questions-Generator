@@ -1,0 +1,269 @@
+1.	Which of the statements about dictionary values if false?
+a)	More than one key can have the same value
+b)	The values of the dictionary can be accessed as dict[key] 
+c)	Values of a dictionary must be unique
+d)	Values of a dictionary can be a mixture of letters and numbers
+
+
+Answer: c
+Explanation: More than one key can have the same value.
+
+
+
+(Python Dictionary – 3) 2.	What will be the output of the following Python code snippet?
+
+>>> a={1:"A",2:"B",3:"C"}
+>>> del a
+
+a)	method del doesn’t exist for the dictionary
+b)	del deletes the values in the dictionary
+c)	del deletes the entire dictionary
+d)	del deletes the keys in the dictionary
+
+
+Answer: c
+Explanation: del deletes the entire dictionary and any further attempt to access it will throw an error.
+
+
+
+3.	If a is a dictionary with some key-value pairs, what does a.popitem() do?
+a)	Removes an arbitrary element
+b)	Removes all the key-value pairs
+c)	Removes the key-value pair for the key given as an argument
+d)	Invalid method for dictionary
+
+
+Answer: a
+Explanation: The method popitem() removes a random key-value pair.
+
+
+
+(Python Dictionary – 3) 4.	What will be the output of the following Python code snippet?
+
+total={}
+def insert(items):
+    if items in total:
+        total[items] += 1
+    else:
+        total[items] = 1
+insert('Apple')
+insert('Ball')
+insert('Apple')
+print (len(total))
+
+a) 3
+b) 1
+c) 2
+d) 0
+
+
+Answer: c
+Explanation: The insert() function counts the number of occurrences of the item being inserted into the dictionary. There are only 2 keys present since the key ‘Apple’ is repeated. Thus, the length of the dictionary is 2.
+
+
+
+(Python Dictionary – 3) 5.	What will be the output of the following Python code snippet?
+
+a = {}
+a[1] = 1
+a['1'] = 2
+a[1]=a[1]+1
+count = 0
+for i in a:
+    count += a[i]
+print(count)
+
+a)	1
+b)	2
+c)	4
+d)	Error, the keys can’t be a mixture of letters and numbers
+
+
+Answer: c
+Explanation: The above piece of code basically finds the sum of the values of keys. 
+
+
+
+(Python Dictionary – 3) 6.	What will be the output of the following Python code snippet?
+
+numbers = {}
+letters = {}
+comb = {}
+numbers[1] = 56
+numbers[3] = 7
+letters[4] = 'B'
+comb['Numbers'] = numbers
+comb['Letters'] = letters
+print(comb)
+
+a)	Error, dictionary in a dictionary can’t exist
+b)	‘Numbers’: {1: 56, 3: 7}
+c)	{‘Numbers’: {1: 56}, ‘Letters’: {4: ‘B’}}
+d)	{‘Numbers’: {1: 56, 3: 7}, ‘Letters’: {4: ‘B’}}
+
+
+Answer: d
+Explanation: Dictionary in a dictionary can exist.
+
+
+
+(Python Dictionary – 3) 7.	What will be the output of the following Python code snippet?
+
+test = {1:'A', 2:'B', 3:'C'}
+test = {}
+print(len(test))
+
+a)	0
+b)	None
+c)	3
+d)	An exception is thrown
+
+
+Answer: a
+Explanation: In the second line of code, the dictionary becomes an empty dictionary. Thus, length=0.
+
+
+
+(Python Dictionary – 3) 8.	What will be the output of the following Python code snippet?
+
+test = {1:'A', 2:'B', 3:'C'}
+del test[1]
+test[1] = 'D'
+del test[2]
+print(len(test))
+
+a)	0
+b)	2
+c)	Error as the key-value pair of 1:’A’ is already deleted
+d)	1
+
+
+Answer: b
+Explanation: After the key-value pair of 1:’A’ is deleted, the key-value pair of 1:’D’ is added. 
+
+
+
+(Python Dictionary – 3) 9.	What will be the output of the following Python code snippet?
+
+a = {}
+a[1] = 1
+a['1'] = 2
+a[1.0]=4
+count = 0
+for i in a:
+    count += a[i]
+print(count)
+
+a)	An exception is thrown
+b)	3
+c)	6
+d)	2
+
+
+Answer: c
+Explanation: The value of key 1 is 4 since 1 and 1.0 are the same. Then, the function count() gives the sum of all the values of the keys (2+4). 
+
+
+
+(Python Dictionary – 3) 10.	What will be the output of the following Python code snippet?
+
+a={}
+a['a']=1
+a['b']=[2,3,4]
+print(a)
+
+a)	Exception is thrown
+b)	{‘b’: [2], ‘a’: 1}
+c)	{‘b’: [2], ‘a’: [3]}
+d)	{‘b’: [2, 3, 4], ‘a’: 1}
+
+
+Answer: d
+Explanation: Mutable members can be used as the values of the dictionary but they cannot be used as the keys of the dictionary. 
+
+
+
+(Python Dictionary – 3) 11.	What will be the output of the following Python code snippet?
+
+>>>import collections
+>>> a=collections.Counter([1,1,2,3,3,4,4,4])
+>>> a
+
+a)	{1,2,3,4}
+b)	Counter({4, 1, 3, 2})
+c)	Counter({4: 3, 1: 2, 3: 2, 2: 1})
+d)	{4: 3, 1: 2, 3: 2, 2: 1}
+
+
+Answer: c
+Explanation: The statement a=collections.OrderedDict() generates a dictionary with the number as the key and the count of times the number appears as the value.
+
+
+
+(Python Dictionary – 3) 12.	What will be the output of the following Python code snippet?
+
+>>>import collections
+>>> b=collections.Counter([2,2,3,4,4,4])
+>>> b.most_common(1)
+
+a)	Counter({4: 3, 2: 2, 3: 1})
+b)	{3:1}
+c)	{4:3}
+d)	[(4, 3)] 
+
+
+Answer: d
+Explanation: The most_common() method returns the n number key-value pairs where the value is the most recurring.
+
+
+
+(Python Dictionary – 3) 13.	What will be the output of the following Python code snippet?
+
+>>>import collections
+>>> b=collections.Counter([2,2,3,4,4,4])
+>>> b.most_common(1)
+
+a)	Counter({4: 3, 2: 2, 3: 1})
+b)	{3:1}
+c)	{4:3}
+d)	[(4, 3)] 
+
+
+Answer: d
+Explanation: The most_common() method returns the n number key-value pairs where the value is the most recurring.
+
+
+
+(Python Dictionary – 3) 14.	What will be the output of the following Python code snippet?
+
+>>> import collections
+>>> a=collections.Counter([2,2,3,3,3,4])
+>>> b=collections.Counter([2,2,3,4,4])
+>>> a|b
+
+a)	Counter({3: 3, 2: 2, 4: 2})
+b)	Counter({2: 2, 3: 1, 4: 1})
+c)	Counter({3: 2})
+d)	Counter({4: 1})
+
+
+Answer: a
+Explanation: a|b returns the pair of keys and the highest recurring value.
+
+
+
+(Python Dictionary – 3) 15.	What will be the output of the following Python code snippet?
+
+>>> import collections
+>>> a=collections.Counter([3,3,4,5])
+>>> b=collections.Counter([3,4,4,5,5,5])
+>>> a&b
+
+a)	Counter({3: 12, 4: 1, 5: 1})
+b)	Counter({3: 1, 4: 1, 5: 1})
+c)	Counter({4: 2})
+d)	Counter({5: 1})
+
+
+Answer: b
+Explanation: a&b returns the pair of keys and the lowest recurring value.

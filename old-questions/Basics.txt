@@ -1,0 +1,863 @@
+1. Who developed Python Programming Language?
+a) Wick van Rossum
+b) Rasmus Lerdorf
+c) Guido van Rossum
+d) Niene Stom
+
+
+Answer: c
+Explanation: Python language is designed by a Dutch programmer Guido van Rossum in the Netherlands. 
+
+
+
+2. Which type of Programming does Python support?
+a) object-oriented programming
+b) structured programming
+c) functional programming
+d) all of the mentioned
+
+
+Answer: d
+Explanation: Python is an interpreted programming language, which supports object-oriented, structured, and functional programming.
+
+
+
+3. Is Python case sensitive when dealing with identifiers?
+a) no
+b) yes
+c) machine dependent
+d) none of the mentioned
+
+
+Answer: b
+Explanation: Case is always significant while dealing with identifiers in python.
+
+
+
+4. Which of the following is the correct extension of the Python file?
+a) .python
+b) .pl
+c) .py
+d) .p
+
+
+Answer: c
+Explanation: ‘.py’ is the correct extension of the Python file. Python programs can be written in any text editor. To save these programs we need to save in files with file extension ‘.py’.
+
+
+
+5. Is Python code compiled or interpreted?
+a) Python code is both compiled and interpreted
+b) Python code is neither compiled nor interpreted
+c) Python code is only compiled
+d) Python code is only interpreted
+
+
+Answer: a
+Explanation: Many languages have been implemented using both compilers and interpreters, including C, Pascal, and Python.
+
+
+
+6. All keywords in Python are in _________
+a) Capitalized
+b) lower case
+c) UPPER CASE
+d) None of the mentioned
+
+
+Answer: d
+Explanation: True, False and None are capitalized while the others are in lower case.
+
+
+
+(Basics) 7. What will be the value of the following Python expression?
+
+4 + 3 % 5
+
+a) 7
+b) 2
+c) 4
+d) 1
+
+
+Answer: a
+Explanation: The order of precedence is: %, +. Hence the expression above, on simplification results in   4 + 3 = 7. Hence the result is 7.
+
+
+
+8. Which of the following is used to define a block of code in Python language?
+a) Indentation
+b) Key
+c) Brackets
+d) All of the mentioned
+
+
+Answer: a
+Explanation: In Python, to define a block of code we use indentation. Indentation refers to whitespaces at the beginning of the line.
+
+
+
+9. Which keyword is used for function in Python language?
+a) Function
+b) def
+c) Fun
+d) Define
+
+
+Answer: b
+Explanation: The def keyword is used to create, (or define) a function in python.
+
+
+
+
+10. Which of the following character is used to give single-line comments in Python?
+a) //
+b) #
+c) !
+d) /*
+
+
+Answer: b
+Explanation: To write single-line comments in Python use the Hash character (#) at the beginning of the line. It is also called number sign or pound sign. To write multi-line comments, close the text between triple quotes.
+Example: “”” comment
+text “””
+
+
+
+
+(Basics) 11. What will be the output of the following Python code?
+
+i = 1
+while True:
+    if i%3 == 0:
+        break
+    print(i)
+ 
+    i + = 1
+
+a) 1 2 3
+b) error
+c) 1 2
+d) none of the mentioned
+
+
+Answer: b
+Explanation: SyntaxError, there shouldn’t be a space between + and = in +=.
+
+
+
+12. Which of the following functions can help us to find the version of python that we are currently working on?
+a) sys.version(1)
+b) sys.version(0)
+c) sys.version()
+d) sys.version
+
+
+Answer: d
+Explanation: The function sys.version can help us to find the version of python that we are currently working on. It also contains information on the build number and compiler used. For example, 3.5.2, 2.7.3 etc. this function also returns the current date, time, bits etc along with the version.
+
+
+
+13. Python supports the creation of anonymous functions at runtime, using a construct called __________
+a) pi
+b) anonymous
+c) lambda
+d) none of the mentioned
+
+
+Answer: c
+Explanation: Python supports the creation of anonymous functions (i.e. functions that are not bound to a name) at runtime, using a construct called lambda. Lambda functions are restricted to a single expression. They can be used wherever normal functions can be used. 
+
+
+
+14. What is the order of precedence in python?
+a) Exponential, Parentheses, Multiplication, Division, Addition, Subtraction
+b) Exponential, Parentheses, Division, Multiplication, Addition, Subtraction
+c) Parentheses, Exponential, Multiplication, Division, Subtraction, Addition
+d) Parentheses, Exponential, Multiplication, Division, Addition, Subtraction
+
+
+Answer: d
+Explanation: For order of precedence, just remember this PEMDAS (similar to BODMAS).
+
+
+
+
+(Basics) 15. What will be the output of the following Python code snippet if x=1?
+
+x<<2
+
+a) 4
+b) 2
+c) 1
+d) 8
+
+
+Answer: a
+Explanation: The binary form of 1 is 0001. The expression x<<2 implies we are performing bitwise left shift on x. This shift yields the value: 0100, which is the binary form of the number 4.
+
+
+
+16. What does pip stand for python?
+a) Pip Installs Python
+b) Pip Installs Packages
+c) Preferred Installer Program
+d) All of the mentioned
+
+
+Answer: c
+Explanation: pip is a package manager for python. Which is also called Preferred Installer Program.
+
+
+
+
+17. Which of the following is true for variable names in Python?
+a) underscore and ampersand are the only two special characters allowed
+b) unlimited length
+c) all private members must have leading and trailing underscores
+d) none of the mentioned
+
+
+Answer: b
+Explanation: Variable names can be of any length.
+
+
+
+(Basics) 18. What are the values of the following Python expressions?
+
+ 2**(3**2)
+ (2**3)**2
+ 2**3**2
+
+a) 512, 64, 512
+b) 512, 512, 512
+c) 64, 512, 64
+d) 64, 64, 64
+
+
+Answer: a
+Explanation: Expression 1 is evaluated as: 2**9, which is equal to 512. Expression 2 is evaluated as 8**2, which is equal to 64. The last expression is evaluated as 2**(3**2). This is because the associativity of ** operator is from right to left. Hence the result of the third expression is 512.
+
+
+
+19. Which of the following is the truncation division operator in Python?
+a) |
+b) //
+c) /
+d) %
+
+
+Answer: b
+Explanation: // is the operator for truncation division. It is called so because it returns only the integer part of the quotient, truncating the decimal part. For example: 20//3 = 6.
+
+
+
+(Basics) 20. What will be the output of the following Python code?
+
+l=[1, 0, 2, 0, 'hello', '', []]
+list(filter(bool, l))
+
+a) [1, 0, 2, ‘hello’, ”, []] 
+b) Error
+c) [1, 2, ‘hello’] 
+d) [1, 0, 2, 0, ‘hello’, ”, []] 
+
+
+Answer: c
+Explanation: The code shown above returns a new list containing only those elements of the list l which do not amount to zero. Hence the output is: [1, 2, ‘hello’].
+
+
+
+21. Which of the following functions is a built-in function in python?
+a) factorial()
+b) print()
+c) seed()
+d) sqrt()
+
+
+Answer: b
+Explanation: The function seed is a function which is present in the random module. The functions sqrt and factorial are a part of the math module. The print function is a built-in function which prints a value directly to the system output.
+
+
+
+22. Which of the following is the use of id() function in python?
+a) Every object doesn’t have a unique id
+b) Id  returns the identity of the object
+c) All of the mentioned
+d) None of the mentioned
+
+
+Answer: b
+Explanation: Each object in Python has a unique id. The id() function returns the object’s id. 
+
+
+
+(Basics) 23. The following python program can work with ____ parameters.
+
+def f(x):
+    def f1(*args, **kwargs):
+           print("Sanfoundry")
+           return x(*args, **kwargs)
+    return f1
+
+a) any number of
+b) 0
+c) 1
+d) 2
+
+
+Answer: a
+Explanation: The code shown above shows a general decorator which can work with any number of arguments.
+
+
+
+(Basics) 24. What will be the output of the following Python function?
+
+min(max(False,-3,-4), 2,7)
+
+a) -4
+b) -3
+c) 2
+d) False
+
+
+Answer: d
+Explanation: The function max() is being used to find the maximum value from among -3, -4 and false. Since false amounts to the value zero, hence we are left with min(0, 2, 7) Hence the output is 0 (false).
+
+
+
+25. Which of the following is not a core data type in Python programming?
+a) Tuples
+b) Lists
+c) Class
+d) Dictionary
+
+
+Answer: c
+Explanation: Class is a user-defined data type. 
+
+
+
+(Basics) 26. What will be the output of the following Python expression if x=56.236?
+
+print("%.2f"%x)
+
+a) 56.236
+b) 56.23
+c) 56.0000
+d) 56.24
+
+
+Answer: d
+Explanation: The expression shown above rounds off the given number to the number of decimal places specified. Since the expression given specifies rounding off to two decimal places, the output of this expression will be 56.24. Had the value been x=56.234 (last digit being any number less than 5), the output would have been 56.23.
+
+
+
+27. Which of these is the definition for packages in Python?
+a) A set of main modules
+b) A folder of python modules
+c) A number of files containing Python definitions and statements
+d) A set of programs making use of Python modules
+
+
+Answer: b
+Explanation: A folder of python programs is called as a package of modules.
+
+
+
+(Basics) 28. What will be the output of the following Python function?
+
+len(["hello",2, 4, 6])
+
+a) Error
+b) 6
+c) 4
+d) 3
+
+
+Answer: c
+Explanation: The function len() returns the length of the number of elements in the iterable. Therefore the output of the function shown above is 4.
+
+
+
+(Basics) 29. What will be the output of the following Python code?
+
+x = 'abcd'
+for i in x:
+    print(i.upper())
+
+a)
+
+Answer: d
+Explanation: The instance of the string returned by upper() is being printed.
+
+
+
+30.  What is the order of namespaces in which Python looks for an identifier?
+a) Python first searches the built-in namespace, then the global namespace and finally the local namespace
+b) Python first searches the built-in namespace, then the local namespace and finally the global namespace
+c) Python first searches the local namespace, then the global namespace and finally the built-in namespace
+d) Python first searches the global namespace, then the local namespace and finally the built-in namespace
+
+
+Answer: c
+Explanation: Python first searches for the local, then the global and finally the built-in namespace.
+
+
+
+(Basics) 31. What will be the output of the following Python code snippet?
+
+for i in [1, 2, 3, 4][::-1]:
+    print(i, end=' ')
+
+a) 4 3 2 1
+b) error
+c) 1 2 3 4
+d) none of the mentioned
+
+
+Answer: a
+Explanation: [::-1] reverses the list.
+
+
+
+(Basics) 32. What will be the output of the following Python statement?
+
+>>>"a"+"bc"
+
+a) bc
+b) abc
+c) a
+d) bca
+
+
+Answer: b
+Explanation: + operator is concatenation operator. 
+
+
+
+(Basics) 33. Which function is called when the following Python program is executed?
+
+f = foo()
+format(f)
+
+a) str()
+b) format()
+c) __str__()
+d) __format__()
+
+
+Answer: c
+Explanation: Both str(f) and format(f) call f.__str__().
+
+
+
+34. Which one of the following is not a keyword in Python language?
+a) pass
+b) eval
+c) assert
+d) nonlocal
+
+
+Answer: b
+Explanation: eval can be used as a variable.
+
+
+
+(Basics) 35. What will be the output of the following Python code?
+
+class tester:
+
+a) 12
+b) 224
+c) None
+d) Error
+
+
+Answer: a
+Explanation: Id in this case will be the attribute of the instance. 
+
+
+
+(Basics) 36. What will be the output of the following Python program?
+
+    def __init__(self, id):
+
+a) Error
+b) None
+c) False
+d) True
+
+
+Answer: d
+Explanation: The same object is modified in the function.
+
+
+
+37. Which module in the python standard library parses options received from the command line?
+a) getarg
+b) getopt
+c) main
+d) os
+
+
+Answer: b
+Explanation: getopt parses options received from the command line.
+
+
+
+(Basics) 38. What will be the output of the following Python program?
+
+        self.id = str(id)
+
+a) {‘a’, ‘c’, ‘c’, ‘p’, ‘q’, ‘s’, ‘a’, ‘n’}
+b) {‘abc’, ‘p’, ‘q’, ‘san’}
+c) {‘a’, ‘b’, ‘c’, ‘p’, ‘q’, ‘san’}
+d) {‘a’, ‘b’, ‘c’, [‘p’, ‘q’], ‘san}
+
+
+Answer: c
+Explanation: The code shown first adds the element ‘san’ to the set z. The set z is then updated and two more elements, namely, ‘p’ and ‘q’ are added to it. Hence the output is: {‘a’, ‘b’, ‘c’, ‘p’, ‘q’, ‘san’}
+
+
+
+39. What arithmetic operators cannot be used with strings in Python?
+a) *
+b) –
+c) +
+d) All of the mentioned
+
+
+Answer: b
+Explanation: + is used to concatenate and * is used to multiply strings.
+
+
+
+(Basics) 40. What will be the output of the following Python code?
+
+        id="224"
+
+a) Abc. def
+b) abc. def
+c) Abc. Def
+d) ABC. DEF
+
+
+Answer: a
+Explanation: The first letter of the string is converted to uppercase and the others are converted to lowercase.
+
+
+
+41. Which of the following statements is used to create an empty set in Python?
+a) ( )
+b) [ ] 
+c) { }
+d) set()
+
+
+Answer: d
+Explanation: { } creates a dictionary not a set. Only set() creates an empty set. 
+
+
+
+(Basics) 42. What will be the value of ‘result’ in following Python program?
+
+ 
+
+a) [1, 3, 5, 7, 8] 
+b) [1, 7, 8] 
+c) [1, 2, 4, 7, 8] 
+d) error
+
+
+Answer: a
+Explanation: Here, ‘result’ is a list which is extending three times. When first time ‘extend’ function is called for ‘result’, the inner code generates a generator object, which is further used in ‘extend’ function. This generator object contains the values which are in ‘list1’ only (not in ‘list2’ and ‘list3’).
+Same is happening in second and third call of ‘extend’ function in these generator object contains values only in ‘list2’ and ‘list3’ respectively.
+So, ‘result’ variable will contain elements which are only in one list (not more than 1 list).
+
+
+
+43. To add a new element to a list we use which Python command?
+a) list1.addEnd(5)
+b) list1.addLast(5)
+c) list1.append(5)
+d) list1.add(5)
+
+
+Answer: c
+Explanation: We use the function append to add an element to the list. 
+
+
+
+(Basics) 44. What will be the output of the following Python code?
+
+>>>temp = tester(12)
+
+a) *  abcde *
+b) *abcde *
+c) * abcde*
+d) * abcde  *
+
+
+Answer: b
+Explanation: Padding is done towards the right-hand-side first when the final string is of even length.
+
+
+
+(Basics) 45. What will be the output of the following Python code?
+
+>>>print(temp.id)
+
+a) [1, 4] 
+b) [1, 3, 4] 
+c) [4, 3] 
+d) [1, 3] 
+
+
+Answer: c
+Explanation: Lists should be copied by executing [:] operation.
+
+
+
+46. Which one of the following is the use of function in python?
+a) Functions don’t provide better modularity for your application
+b) you can’t also create your own functions
+c) Functions are reusable pieces of programs
+d) All of the mentioned
+
+
+Answer: c
+Explanation: Functions are reusable pieces of programs. They allow you to give a name to a block of statements, allowing you to run that block using the specified name anywhere in your program and any number of times. 
+
+
+
+(Basics) 47. Which of the following Python statements will result in the output: 6?
+
+def foo(x):
+    x[0] = ['def']
+    x[1] = ['abc']
+    return id(x)
+q = ['abc', 'def']
+print(id(q) == foo(q))
+
+a) A[2][1] 
+b) A[1][2] 
+c) A[3][2] 
+d) A[2][3] 
+
+
+Answer: b
+Explanation: The output that is required is 6, that is, row 2, item 3. This position is represented by the statement: A[1][2].
+
+
+
+48. What is the maximum possible length of an identifier in Python?
+a) 79 characters
+b) 31 characters
+c) 63 characters
+d) none of the mentioned
+
+
+Answer: d
+Explanation: Identifiers can be of any length.
+
+
+
+(Basics) 49. What will be the output of the following Python program?
+
+z=set('abc')
+z.add('san')
+z.update(set(['p', 'q']))
+z
+
+a) error
+b) 0 1 2 0
+c) 0 1 2
+d) none of the mentioned
+
+
+Answer: c
+Explanation: The else part is not executed if control breaks out of the loop.
+
+
+
+(Basics) 50. What will be the output of the following Python code?
+
+print("abc. DEF".capitalize())
+
+a) error
+b) 1 2 3 4
+c) a b c d
+d) 0 1 2 3
+
+
+Answer: d
+Explanation: i takes values 0, 1, 2 and 3.
+
+
+
+51. What are the two main types of functions in Python?
+a) System function
+b) Custom function
+c) Built-in function & User defined function
+d) User function
+
+
+ Answer: c
+Explanation: Built-in functions and user defined ones. The built-in functions are part of the Python language. Examples are: dir(), len() or abs(). The user defined functions are functions created with the def keyword. 
+
+
+
+(Basics) 52. What will be the output of the following Python program?
+
+list1 = [1,2,3,4]
+list2 = [2,4,5,6]
+list3 = [2,6,7,8]
+result = list()
+result.extend(i for i in list1 if i not in (list2+list3) and i not in result)
+result.extend(i for i in list2 if i not in (list1+list3) and i not in result)
+result.extend(i for i in list3 if i not in (list1+list2) and i not in result)
+
+a) 5
+b) 8
+c) 2
+d) 1
+
+
+ Answer: a
+Explanation: + will append the element to the list.
+
+
+
+53. Which of the following is a Python tuple?
+a) {1, 2, 3}
+b) {}
+c) [1, 2, 3] 
+d) (1, 2, 3)
+
+
+ Answer: d
+Explanation: Tuples are represented with round brackets.
+
+
+
+(Basics) 54. What will be the output of the following Python code snippet?
+
+print('*', "abcde".center(6), '*', sep='')
+
+a) Error
+b) True
+c) False
+d) No output
+
+
+Answer: b
+Explanation: The code shown above is used to check whether a particular item is a part of a given set or not. Since ‘a’ is a part of the set z, the output is true. Note that this code would result in an error in the absence of the quotes.
+
+
+
+(Basics) 55. What will be the output of the following Python expression?
+
+>>>list1 = [1, 3]
+
+a) 4
+b) 4.6
+c) 5
+d) 4.5
+
+
+Answer: c
+Explanation: This is a built-in function which rounds a number to give precision in decimal digits. In the above case, since the number of decimal places has not been specified, the decimal number is rounded off to a whole number. Hence the output will be 5.
+
+
+
+56. Which of the following is a feature of Python DocString?
+a) In Python all functions should have a docstring
+b) Docstrings can be accessed by the __doc__ attribute on objects
+c) It provides a convenient way of associating documentation with Python modules, functions, classes, and methods
+d) All of the mentioned
+
+
+ Answer: d
+Explanation: Python has a nifty feature called documentation strings, usually referred to by its shorter name docstrings. DocStrings are an important tool that you should make use of since it helps to document the program better and makes it easier to understand. 
+
+
+
+(Basics) 57. What will be the output of the following Python code?
+
+>>>list2 = list1
+
+a) Hello (‘foo’, ‘bin’) and (‘foo’, ‘bin’)
+b) Error
+c) Hello foo and bin
+d) None of the mentioned
+
+
+Answer: c
+Explanation: The elements of the tuple are accessed by their indices.
+
+
+
+58. What is output of print(math.pow(3, 2))?
+a) 9.0
+b) None
+c) 9
+d) None of the mentioned
+
+
+Answer: a
+Explanation: math.pow() returns a floating point number.
+
+
+
+59. Which of the following is the use of id() function in python?
+a) Every object in Python doesn’t have a unique id
+b) In Python Id function returns the identity of the object
+c) None of the mentioned
+d) All of the mentioned
+
+
+ Answer: b
+Explanation: Each object in Python has a unique id. The id() function returns the object’s id. 
+
+
+
+(Basics) 60. What will be the output of the following Python code?
+
+>>>list1[0] = 4
+
+a) 01
+b) [0] [1] 
+c) (’01’)
+d) (‘[0] [1]’,)
+
+
+Answer: d
+Explanation: (element,) is not the same as element. It is a tuple with one item.
+
+
+
+61. The process of pickling in Python includes ____________
+a) conversion of a Python object hierarchy into byte stream
+b) conversion of a datatable into a list
+c) conversion of a byte stream into Python object hierarchy
+d) conversion of a list into a datatable
+
+
+Answer: a
+Explanation: Pickling is the process of serializing a Python object, that is, conversion of a Python object hierarchy into a byte stream. The reverse of this process is known as unpickling.
+
+
+
+(Basics) 62. What will be the output of the following Python code?
+
+>>>print(list2)
+
+a) error, there is more than one return statement in a single try-finally block
+b) 3
+c) 2
+d) 1
+
+
+Answer: c
+Explanation: The finally block is executed even there is a return statement in the try block.

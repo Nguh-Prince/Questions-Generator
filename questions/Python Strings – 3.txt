@@ -1,0 +1,129 @@
+(Python Strings – 3) 1. What will be the output of the following Python statement?
+
+>>>chr(ord('A'))
+
+a) A
+b) B
+c) a
+d) Error
+
+
+ Answer: a
+Explanation: Execute in shell to verify. 
+
+
+
+(Python Strings – 3) 2. What will be the output of the following Python statement?
+
+>>>print(chr(ord('b')+1))
+
+a) a
+b) b
+c) c
+d) A
+
+
+ Answer: c
+Explanation: Execute in the shell to verify. 
+
+
+
+3. Which of the following statement prints hello\example\test.txt?
+a) print(“hello\example\test.txt”)
+b) print(“hello\\example\\test.txt”)
+c) print(“hello\”example\”test.txt”)
+d) print(“hello”\example”\test.txt”)
+
+
+ Answer: b
+Explanation: \is used to indicate that the next \ is not an escape sequence. 
+
+
+
+4. Suppose s is “\t\tWorld\n”, what is s.strip()?
+a) \t\tWorld\n
+b) \t\tWorld\n
+c) \t\tWORLD\n
+d) World
+
+
+ Answer: d
+Explanation: Execute help(string.strip) to find details.
+
+
+
+5. The format function, when applied on a string returns ___________
+a) Error
+b) int
+c) bool
+d) str
+
+
+ Answer: d
+Explanation: Format function returns a string.
+
+
+
+6. What will be the output of the “hello” +1+2+3?
+a) hello123
+b) hello
+c) Error
+d) hello6
+
+
+ Answer: c
+Explanation: Cannot concatenate str and int objects. 
+
+
+
+(Python Strings – 3) 7. What will be the output of the following Python code?
+
+>>>print("D", end = ' ')
+
+a) DCBA
+b) A, B, C, D
+c) D C B A
+d) D, C, B, A will be displayed on four lines
+
+
+ Answer: c
+Explanation: Execute in the shell.
+
+
+
+(Python Strings – 3) 8. What will be the output of the following Python statement?(python 3.xx)
+
+>>>print("C", end = ' ')
+
+a)    Welcome# 111#924.66
+b) Welcome#111#924.66
+c) Welcome#111#.66
+d) Welcome   # 111#924.66
+
+
+ Answer: d
+Explanation: Execute in the shell to verify.
+
+
+
+9. What will be displayed by print(ord(‘b’) – ord(‘a’))?
+a) 0
+b) 1
+c) -1
+d) 2
+
+
+ Answer: b
+Explanation: ASCII value of b is one more than a. Hence the output of this code is 98-97, which is equal to 1.
+
+
+
+10. Say s=”hello” what will be the return value of type(s)?
+a) int
+b) bool
+c) str
+d) String
+
+
+ Answer: c
+Explanation: str is used to represent strings in python.

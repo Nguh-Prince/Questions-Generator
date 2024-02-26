@@ -1,0 +1,123 @@
+1. What is “Hello”.replace(“l”, “e”)?
+a) Heeeo
+b) Heelo
+c) Heleo
+d) None
+
+
+ Answer: a
+Explanation: Execute in shell to verify. 
+
+
+
+2. To retrieve the character at index 3 from string s=”Hello” what command do we execute (multiple answers allowed)?
+a) s[] 
+b) s.getitem(3)
+c) s.__getitem__(3)
+d) s.getItem(3)
+
+
+ Answer:  c
+Explanation: __getitem(..) can be used to get character at index specified as parameter. 
+
+
+
+3. To return the length of string s what command do we execute?
+a) s.__len__()
+b) len(s)
+c) size(s)
+d) s.size()
+
+
+ Answer: a
+Explanation: Execute in shell to verify. 
+
+
+
+4. If a class defines the __str__(self) method, for an object obj for the class, you can use which command to invoke the __str__ method.
+a) obj.__str__()
+b) str(obj)
+c) print obj
+d) all of the mentioned
+
+
+ Answer: d
+Explanation: Execute in shell to verify.
+
+
+
+5. To check whether string s1 contains another string s2, use ________
+a) s1.__contains__(s2)
+b) s2 in s1
+c) s1.contains(s2)
+d) si.in(s2)
+
+
+ Answer: a
+Explanation: s2 in s1 works in the same way as calling the special function __contains__ .
+
+
+
+6. Suppose i is 5 and j is 4, i + j is same as ________
+a) i.__add(j)
+b) i.__add__(j)
+c) i.__Add(j)
+d) i.__ADD(j)
+
+
+ Answer: b
+Explanation: Execute in shell to verify. 
+
+
+
+(Python Strings – 4) 7. What will be the output of the following Python code?
+
+class Count:
+
+a) True False
+b) True True
+c) False True
+d) False False
+
+
+ Answer: c
+Explanation: Execute in the shell objects cannot have same id, however in the case of strings its different.
+
+
+
+(Python Strings – 4) 8. What will be the output of the following Python code?
+
+    def __init__(self, count = 0):
+
+a) Peter Pan
+b) John Pan
+c) Peter Smith
+d) John Smith
+
+
+ Answer: b
+Explanation: Execute in the shell to verify.
+
+
+
+9. What function do you use to read a string?
+a) input(“Enter a string”)
+b) eval(input(“Enter a string”))
+c) enter(“Enter a string”)
+d) eval(enter(“Enter a string”))
+
+
+ Answer: a
+Explanation: Execute in shell to verify.
+
+
+
+10. Suppose x is 345.3546, what is format(x, “10.3f”) (_ indicates space).
+a) __345.355
+b) ___345.355
+c) ____345.355
+d) _____345.354
+
+
+ Answer: b
+Explanation: Execute in the shell to verify.

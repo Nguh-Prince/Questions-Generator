@@ -1,0 +1,143 @@
+1. Which of the following functions is a built-in function in python?
+a) seed()
+b) sqrt()
+c) factorial()
+d) print()
+
+
+Answer: d
+Explanation: The function seed is a function which is present in the random module. The functions sqrt and factorial are a part of the math module. The print function is a built-in function which prints a value directly to the system output.
+
+
+
+(Python Built-in Functions – 1) 2. What will be the output of the following Python expression?
+
+round(4.576)
+
+a) 4.5
+b) 5
+c) 4
+d) 4.6
+
+
+Answer: b
+Explanation: This is a built-in function which rounds a number to give precision in decimal digits. In the above case, since the number of decimal places has not been specified, the decimal number is rounded off to a whole number. Hence the output will be 5.
+
+
+
+3. The function pow(x,y,z) is evaluated as:
+a) (x**y)**z
+b) (x**y) / z
+c) (x**y) % z
+d) (x**y)*z
+
+
+Answer: c
+Explanation: The built-in function pow() can accept two or three arguments. When it takes in two arguments, they are evaluated as x**y. When it takes in three arguments, they are evaluated as (x**y)%z.
+
+
+
+(Python Built-in Functions – 1) 4. What will be the output of the following Python function?
+
+all([2,4,0,6])
+
+a) Error
+b) True
+c) False
+d) 0
+
+
+Answer: c
+Explanation: The function all returns false if any one of the elements of the iterable is zero and true if all the elements of the iterable are non zero. Hence the output of this function will be false.
+
+
+
+(Python Built-in Functions – 1) 5.  What will be the output of the following Python expression?
+
+round(4.5676,2)?
+
+a) 4.5
+b) 4.6
+c) 4.57
+d) 4.56
+
+
+Answer: c
+Explanation: The function round is used to round off the given decimal number to the specified decimal places. In this case, the number should be rounded off to two decimal places. Hence the output will be 4.57.
+
+
+
+(Python Built-in Functions – 1) 6. What will be the output of the following Python function?
+
+any([2>8, 4>2, 1>2])
+
+a) Error
+b) True
+c) False
+d) 4>2
+
+
+Answer: b
+Explanation: The built-in function any() returns true if any or more of the elements of the iterable is true (non zero), If all the elements are zero, it returns false.
+
+
+
+(Python Built-in Functions – 1) 7. What will be the output of the following Python function?
+
+import math
+abs(math.sqrt(25))
+
+a) Error
+b) -5
+c) 5
+d) 5.0
+
+
+Answer: d
+Explanation: The abs() function prints the absolute value of the argument passed. For example: abs(-5)=5. Hence, in this case we get abs(5.0)=5.0.
+
+
+
+(Python Built-in Functions – 1) 8.  What will be the output of the following Python function?
+
+sum(2,4,6)
+sum([1,2,3])
+
+a) Error, 6
+b) 12, Error
+c) 12, 6
+d) Error, Error
+
+
+Answer: a
+Explanation: The first function will result in an error because the function sum() is used to find the sum of iterable numbers. Hence the outcomes will be Error and 6 respectively.
+
+
+
+(Python Built-in Functions – 1) 9. What will be the output of the following Python function?
+
+all(3,0,4.2)
+
+a) True
+b) False
+c) Error
+d) 0
+
+
+Answer: c
+Explanation: The function all() returns ‘True’ if any one or more of the elements of the iterable are non zero. In the above case, the values are not iterable, hence an error is thrown.
+
+
+
+(Python Built-in Functions – 1) 10. What will be the output of the following Python function?
+
+min(max(False,-3,-4), 2,7)
+
+a) 2
+b) False
+c) -3
+d) -4
+
+
+Answer: b
+Explanation: The function max() is being used to find the maximum value from among -3, -4 and false. Since false amounts to the value zero, hence we are left with min(0, 2, 7) Hence the output is 0 (false).

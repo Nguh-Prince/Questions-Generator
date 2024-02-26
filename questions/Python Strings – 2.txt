@@ -1,0 +1,141 @@
+(Python Strings – 2) 1. What will be the output of the following Python code?
+
+class father:
+
+a) None None
+b) None 22
+c) 22 None
+d) Error is generated
+
+
+ Answer: d
+Explanation: self.o1 was never created. 
+
+
+
+(Python Strings – 2) 2. What will be the output of the following Python code?
+
+    def __init__(self, param):
+
+a) 224
+b) Error
+c) 12
+d) None
+
+
+ Answer: c
+Explanation: Id in this case will be the attribute of the class. 
+
+
+
+(Python Strings – 2) 3. What will be the output of the following Python code?
+
+        self.o1 = param
+
+a) wo
+b) world
+c) sn
+d) rl
+
+
+ Answer: a
+Explanation: Execute in the shell and verify. 
+
+
+
+(Python Strings – 2) 4. What will be the output of the following Python code?
+
+ 
+
+a) snow
+b) snow world
+c) Error
+d) snos world
+
+
+ Answer: c
+Explanation: Strings cannot be modified.
+
+
+
+(Python Strings – 2) 5. What will be the output of the following Python code?
+
+class child(father):
+
+a) error
+b) u
+c) t
+d) y
+
+
+ Answer: d
+Explanation: Max returns the character with the highest ascii value.
+
+
+
+6. Given a string example=”hello” what is the output of example.count(‘l’)?
+a) 2
+b) 1
+c) None
+d) 0
+
+
+ Answer: a
+Explanation: l occurs twice in hello. 
+
+
+
+(Python Strings – 2) 7. What will be the output of the following Python code?
+
+    def __init__(self, param):
+
+a) Error
+b) -1
+c) 1
+d) 0
+
+
+ Answer: c
+Explanation: Returns lowest index.
+
+
+
+(Python Strings – 2) 8. What will be the output of the following Python code?
+
+        self.o2 = param
+
+a) -1
+b) 4
+c) 3
+d) 1
+
+
+ Answer: b
+Explanation: Returns highest index.
+
+
+
+(Python Strings – 2) 9. What will be the output of the following Python code?
+
+ 
+
+a) dlrowolleh
+b) True
+c) -1
+d) None
+
+
+ Answer: b
+Explanation: Starts with checks if the given string starts with the parameter that is passed.
+
+
+
+10. To concatenate two strings to a third what statements are applicable?
+a) s3 = s1 . s2
+b) s3 = s1.add(s2)
+c) s3 = s1.__add__(s2)
+d) s3 = s1 * s2
+
+
+ Answer: c
+Explanation: __add__ is another method that can be used for concatenation.

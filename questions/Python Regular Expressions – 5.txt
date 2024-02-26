@@ -1,0 +1,110 @@
+1. Which of the following functions returns a dictionary mapping group names to group numbers?
+a) re.compile.group
+b) re.compile.groupindex
+c) re.compile.index
+d) re.compile.indexgroup
+
+
+Answer: b
+Explanation: The function re.compile.groupindex returns a dictionary mapping group names to group numbers.
+
+
+
+2. Which of the following statements regarding the output of the function re.match is incorrect?
+a) ‘pq*’ will match ‘pq’
+b) ‘pq?’ matches ‘p’
+c) ‘p{4}, q’ does not match ‘pppq’
+d) ‘pq+’ matches ‘p’
+
+
+Answer: d
+Explanation: All of the above statements are correct except that ‘pq+’ match ‘p’. ‘pq+’ will match ‘p’ followed by any non-zero number of q’s, but it will not match ‘p’.
+
+
+
+(Python Regular Expressions – 5) 3. The following Python code snippet results in an error.
+
+c=re.compile(r'(\d+)(\[A-Z]+)([a-z]+)')
+c.groupindex
+
+a) True
+b) False
+
+
+Answer: b
+Explanation: In the code shown above, none of the group names match the group numbers. In such a case, no error is thrown. The output of the code is an empty dictionary, that is, {}.
+
+
+
+4. Which of the following functions does not accept any argument?
+a) re.purge
+b) re.compile
+c) re.findall
+d) re.match
+
+
+Answer: a
+Explanation: The function re.purge is used to clear the cache and it does not accept any arguments.
+
+
+
+(Python Regular Expressions – 5) 5. What will be the output of the following Python code?
+
+a = re.compile('0-9')
+a.findall('3 trees')
+
+a) []
+b) [‘3’]
+c) Error
+d) [‘trees’]
+
+
+Answer: c
+Explanation: The output of the code shown above is an empty list. This is due to the way the arguments have been passed to the function re.compile. Carefully read the code shown below in order to understand the correct syntax:
+>>> a = re.compile(‘[0-9]’)
+>>> a.findall(‘3 trees’)
+[‘3’].
+
+
+
+6. Which of the following lines of code will not show a match?
+a) >>> re.match(‘ab*’, ‘a’)
+b) >>> re.match(‘ab*’, ‘ab’)
+c) >>> re.match(‘ab*’, ‘abb’)
+d) >>> re.match(‘ab*’, ‘ba’)
+
+
+Answer: d
+Explanation: In the code shown above, ab* will match to ‘a’ or ‘ab’ or ‘a’ followed by any number of b’s. Hence the only line of code from the above options which does not result in a match is:
+>>> re.match(‘ab*’, ‘ba’).
+
+
+
+(Python Regular Expressions – 5) 7. What will be the output of the following Python code?
+
+m = re.search('a', 'The blue umbrella')
+m.re.pattern
+
+a) {}
+b)  ‘The blue umbrella’
+c) ‘a’
+d) No output
+
+
+Answer: c
+Explanation: The PatternObject is used to produce the match. The real regular expression pattern string must be retrieved from the PatternObject’s pattern method. Hence the output of this code is: ‘a’.
+
+
+
+(Python Regular Expressions – 5) 8. What will be the output of the following Python code?
+
+re.sub('Y', 'X', 'AAAAAA', count=2)
+
+a) ‘YXAAAA’
+b) (‘YXAAAA’)
+c) (‘AAAAAA’)
+d) ‘AAAAAA’
+
+
+Answer: d
+Explanation: The code shown above demonstrates the function re.sub, which returns a string. The pattern specified is substituted in the string and returned. Hence the output of the code shown above is:  ‘AAAAAA’.

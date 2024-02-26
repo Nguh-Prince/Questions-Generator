@@ -1,0 +1,129 @@
+(Python Regular Expressions – 2) 1. What will be the output of the following Python code?
+
+re.compile('hello', re.X)
+
+a) [‘h’, ‘e’, ‘l’, ‘l’, ‘o’]
+b) re.compile(‘hello’, re.VERBOSE)
+c) Error
+d) Junk value
+
+
+Answer: b
+Explanation: The compile function compiles a pattern of regular expression into an object of regular expression. Re.X is a flag which is also used as re.VERBOSE. Hence the output of this code is: re.compile(‘hello’, re.VERBOSE).
+
+
+
+(Python Regular Expressions – 2) 2. What will be the output of the following Python code?
+
+re.split('[a-c]', '0a3B6', re.I)
+
+a) Error
+b) [‘a’, ‘B’]
+c) [‘0’, ‘3B6’]
+d) [‘a’]
+
+
+Answer: c
+Explanation: The function re.split() splits the string on the basis of the pattern given in the parenthesis. Since we have used the flag e.I (that is, re.IGNORECASE), the output is: [‘0’, ‘3B6’].
+
+
+
+(Python Regular Expressions – 2) 3. What will be the output of the following Python code?
+
+re.sub('morning', 'evening', 'good morning')
+
+a) ‘good evening’
+b) ‘good’
+c) ‘morning’
+d) ‘evening’
+
+
+Answer: a
+Explanation: The code shown above first searches for the pattern ‘morning’ in the string ‘good morning’ and then replaces this pattern with ‘evening’. Hence the output of this code is: ‘good evening’.
+
+
+
+4. The function re.error raises an exception if a particular string contains no match for the given pattern.
+a) True
+b) False
+
+
+Answer: b
+Explanation: The function re.error raises an exception when a string passed to one of its functions here is not a valid regular expression. It does not raise an exception if a particular string does not contain a match for the given pattern.
+
+
+
+(Python Regular Expressions – 2) 5. What will be the output of the following Python code?
+
+re.escape('new**world')
+
+a) ‘new world’
+b) ‘new\\*\\*world’
+c) ‘**’
+d) ‘new’, ‘*’, ‘*’, ‘world’
+
+
+Answer: b
+Explanation: The function re.escape escapes all the characters in the pattern other than ASCII letters and numbers. Hence the output of the code shown above is: ‘new\\*\\*world’.
+
+
+
+(Python Regular Expressions – 2) 6. What will be the output of the following Python code?
+
+re.fullmatch('hello', 'hello world')
+
+a) No output
+b) []
+c) <_sre.SRE_Match object; span=(0, 5), match='hello'>
+d) Error
+
+
+Answer: a
+Explanation: The function re.fullmatch applies the pattern to the entire string and returns an object if match is found and none if match in not found. In the code shown above, match is not found. Hence there is no output.
+
+
+
+7. Choose the option wherein the two choices do not refer to the same option.
+a)
+
+Answer: d
+Explanation: The function re.L is also written as re.LOCALE. There is no function such as re.LOWERCASE in the re module of Python.
+
+
+
+8. The difference between the functions re.sub and re.subn is that re.sub returns a _______________ whereas re.subn returns a __________________
+a) string, list
+b) list, tuple
+c) string, tuple
+d) tuple, list
+
+
+Answer: c
+Explanation: The difference the functions re.sub and re.subn is that re.sub returns a string whereas re.subn returns a tuple.
+
+
+
+(Python Regular Expressions – 2) 9. What will be the output of the following Python code?
+
+re.split('mum', 'mumbai*', 1)
+
+a) Error
+b) [”, ‘bai*’]
+c) [”, ‘bai’]
+d) [‘bai*’]
+
+
+Answer: b
+Explanation: The code shown above splits the string based on the pattern given as an argument. Hence the output of the code is: [”, ‘bai*’].
+
+
+
+(Python Regular Expressions – 2) 10. What will be the output of the following Python code?
+
+re.findall('good', 'good is good')
+re.findall('good', 'bad is good')
+
+a)
+
+Answer: a
+Explanation: The function findall returns a list of all the non overlapping matches in a string. Hence the output of the first function is: [‘good’, ‘good’]  and that of the second function is: [‘good’].

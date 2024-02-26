@@ -1,0 +1,177 @@
+(Python Exception Handling – 2) 1. The following Python code will result in an error if the input value is entered as -5.
+
+assert False, 'Spanish'
+
+a) True
+b) False
+
+
+Answer: a
+Explanation: The code shown above results in an assertion error. The output of the code is:
+Traceback (most recent call last):
+  File “<pyshell#0>”, line 1, in <module>
+    assert False, ‘Spanish’
+AssertionError: Spanish
+Hence, this statement is true.
+
+
+
+(Python Exception Handling – 2) 2. What will be the output of the following Python code?
+
+x=10
+y=8
+assert x>y, 'X too small'
+
+a) Assertion Error
+b) 10 8
+c) No output
+d) 108
+
+
+Answer: c
+Explanation: The code shown above results in an error if and only if x<y. However, in the above case, since x>y, there is no error. Since there is no print statement, hence there is no output.
+
+
+
+(Python Exception Handling – 2) 3. What will be the output of the following Python code?
+
+#generator
+def f(x):
+    yield x+1
+g=f(8)
+print(next(g))
+
+a) 8
+b) 9
+c) 7
+d) Error
+
+
+Answer: b
+Explanation: The code shown above returns the value of the expression x+1, since we have used to keyword yield. The value of x is 8. Hence the output of the code is 9.
+
+
+
+(Python Exception Handling – 2) 4. What will be the output of the following Python code?
+
+def f(x):
+    yield x+1
+    print("test")
+    yield x+2
+g=f(9)
+
+a) Error
+b) test
+c)
+
+Answer: d
+Explanation: The code shown above will not yield any output. This is because when we try to yield 9, and there is no next(g), the iteration stops. Hence there is no output.
+
+
+
+(Python Exception Handling – 2) 5. What will be the output of the following Python code?
+
+def f(x):
+    yield x+1
+    print("test")
+    yield x+2
+g=f(10)
+print(next(g))
+print(next(g))
+
+a) No output
+b)
+
+Answer: b
+Explanation: The code shown above results in the output:
+11
+test
+12
+This is because we have used next(g) twice. Had we not used next, there would be no output.
+
+
+
+(Python Exception Handling – 2) 6. What will be the output of the following Python code?
+
+def a():
+    try:
+        f(x, 4)
+    finally:
+        print('after f')
+    print('after f?')
+a()
+
+a) No output
+b) after f?
+c) error
+d) after f
+
+
+Answer: c
+Explanation: This code shown above will result in an error simply because ‘f’ is not defined. ‘try’ and ‘finally’ are keywords used in exception handling.
+
+
+
+(Python Exception Handling – 2) 7. What will be the output of the following Python code?
+
+def f(x):
+    for i in range(5):
+        yield i
+g=f(8)
+print(list(g))
+
+a) [0, 1, 2, 3, 4]
+b) [1, 2, 3, 4, 5, 6, 7, 8]
+c) [1, 2, 3, 4, 5]
+d) [0, 1, 2, 3, 4, 5, 6, 7]
+
+
+Answer: a
+Explanation: The output of the code shown above is a list containing whole numbers in the range (5). Hence the output of this code is: [0, 1, 2, 3, 4].
+
+
+
+(Python Exception Handling – 2) 8. The error displayed in the following Python code is?
+
+import itertools
+l1=(1, 2, 3)
+l2=[4, 5, 6]
+l=itertools.chain(l1, l2)
+print(next(l1))
+
+a) ‘list’ object is not iterator
+b) ‘tuple’ object is not iterator
+c) ‘list’ object is iterator
+d) ‘tuple’ object is iterator
+
+
+Answer: b
+Explanation: The error raised in the code shown above is that: ‘tuple’ object is not iterator. Had we given l2 as argument to next, the error would have been: ‘list’ object is not iterator.
+
+
+
+9. Which of the following is not an exception handling keyword in Python?
+a) try
+b) except
+c) accept
+d) finally
+
+
+Answer: c
+Explanation: The keywords ‘try’, ‘except’ and ‘finally’ are exception handling keywords in python whereas the word ‘accept’ is not a keyword at all.
+
+
+
+(Python Exception Handling – 2) 10. What will be the output of the following Python code?
+
+g = (i for i in range(5))
+type(g)
+
+a) class <’loop’>
+b) class <‘iteration’>
+c) class <’range’>
+d) class <’generator’>
+
+
+Answer: d
+Explanation: Another way of creating a generator is to use parenthesis. Hence the output of the code shown above is: class<’generator’>.

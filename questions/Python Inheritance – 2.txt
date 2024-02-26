@@ -1,0 +1,266 @@
+(Python Inheritance – 2) 1.  What type of inheritance is illustrated in the following Python code?
+
+class A():
+    pass
+class B(A):
+    pass
+class C(B):
+    pass
+
+a)	Multi-level inheritance
+b)	Multiple inheritance
+c)	Hierarchical inheritance
+d)	Single-level inheritance
+
+
+Answer: a
+Explanation: In multi-level inheritance, a subclass derives from another class which itself is derived from another class.
+
+
+
+2. What does single-level inheritance mean?
+a)	A subclass derives from a class which in turn derives from another class
+b)	A single superclass inherits from multiple subclasses
+c)	A single subclass derives from a single superclass
+d)	Multiple base classes inherit a single derived class
+
+
+Answer: c
+Explanation: In single-level inheritance, there is a single subclass which inherits from a single superclass. So the class definition of the subclass will be: class B(A): where A is the superclass.
+
+
+
+(Python Inheritance – 2) 3. What will be the output of the following Python code?
+
+class A:
+     def __init__(self):
+         self.__i = 1
+         self.j = 5
+ 
+     def display(self):
+         print(self.__i, self.j)
+class B(A):
+     def __init__(self):
+         super().__init__()
+         self.__i = 2
+         self.j = 7  
+c = B()
+c.display()
+
+a)	2 7
+b)	1 5
+c)	1 7
+d)	2 5
+
+
+Answer: c
+Explanation: Any change made in variable i isn’t reflected as it is the private member of the superclass.
+
+
+
+4.	Which of the following statements isn’t true?
+a)	A non-private method in a superclass can be overridden
+b)	A derived class is a subset of superclass
+c)	The value of a private variable in the superclass can be changed in the subclass
+d)	When invoking the constructor from a subclass, the constructor of superclass is automatically invoked
+
+
+Answer: c
+Explanation: If the value of a private variable in a superclass is changed in the subclass, the change isn’t reflected.
+
+
+
+(Python Inheritance – 2) 5. What will be the output of the following Python code?
+
+class A:
+    def __init__(self,x):
+        self.x = x
+    def count(self,x):
+        self.x = self.x+1
+class B(A):
+    def __init__(self, y=0):
+        A.__init__(self, 3)
+        self.y = y
+    def count(self):
+        self.y += 1     
+def main():
+    obj = B()
+    obj.count()
+    print(obj.x, obj.y)
+main()
+
+a)	3 0
+b)	3 1
+c)	0 1
+d)	An exception in thrown
+
+
+Answer: b
+Explanation: Initially x=3 and y=0. When obj.count() is called, y=1.
+
+
+
+(Python Inheritance – 2) 6.  What will be the output of the following Python code?
+
+>>> class A:
+	pass
+>>> class B(A):
+	pass
+>>> obj=B()
+>>> isinstance(obj,A)
+
+a)	True
+b)	False
+c)	Wrong syntax for isinstance() method
+d)	Invalid method for classes
+
+
+Answer: a
+Explanation: isinstance(obj,class) returns True if obj is an object class.
+
+
+
+7.  Which of the following statements is true?
+a)	The __new__() method automatically invokes the __init__ method
+b)	The __init__ method is defined in the object class
+c)	The __eq(other) method is defined in the object class
+d)	The __repr__() method is defined in the object class
+
+
+Answer: c
+Explanation: The __eq(other) method is called if any comparison takes place and it is defined in the object class.
+
+
+
+8.  Method issubclass() checks if a class is a subclass of another class.
+a)	True
+b)	False
+
+
+Answer: a
+Explanation: Method issubclass() returns True if a class is a subclass of another class and False otherwise.
+
+
+
+(Python Inheritance – 2) 9. What will be the output of the following Python code?
+
+class A:
+    def __init__(self):
+        self.__x = 1
+class B(A):
+    def display(self):
+        print(self.__x)
+def main():
+    obj = B()
+    obj.display()
+main()
+
+a)	1
+b)	0
+c)	Error, invalid syntax for object declaration
+d)	Error, private class member can’t be accessed in a subclass
+
+
+Answer: d
+Explanation: Private class members in the superclass can’t be accessed in the subclass.
+
+
+
+(Python Inheritance – 2) 10. What will be the output of the following Python code?
+
+class A:
+    def __init__(self):
+        self._x = 5       
+class B(A):
+    def display(self):
+        print(self._x)
+def main():
+    obj = B()
+    obj.display()
+main()
+
+a)	Error, invalid syntax for object declaration
+b)	Nothing is printed
+c)	5
+d)	Error, private class member can’t be accessed in a subclass
+
+
+Answer: c
+Explanation: The class member x is protected, not private and hence can be accessed by subclasses.
+
+
+
+(Python Inheritance – 2) 11. What will be the output of the following Python code?
+
+class A:
+    def __init__(self,x=3):
+        self._x = x        
+class B(A):
+    def __init__(self):
+        super().__init__(5)
+    def display(self):
+        print(self._x)
+def main():
+    obj = B()
+    obj.display()
+ 
+main()
+
+a)	5
+b)	Error, class member x has two values
+c)	3
+d)	Error, protected class member can’t be accessed in a subclass
+
+
+Answer: a
+Explanation: The super() method re-assigns the variable x with value 5. Hence 5 is printed.
+
+
+
+(Python Inheritance – 2) 12. What will be the output of the following Python code?
+
+class A:
+    def test1(self):
+        print(" test of A called ")
+class B(A):
+    def test(self):
+        print(" test of B called ")
+class C(A):
+    def test(self):
+        print(" test of C called ")
+class D(B,C):
+    def test2(self):
+        print(" test of D called ")        
+obj=D()
+obj.test()
+
+a)
+
+Answer: c
+Explanation: Execute in Python shell to verify. If class D(B,C): is switched is class D(C,B): test of C is called.
+
+
+
+(Python Inheritance – 2) 13. What will be the output of the following Python code?
+
+class A:
+    def test(self):
+        print("test of A called")
+class B(A):
+    def test(self):
+        print("test of B called")
+        super().test()  
+class C(A):
+    def test(self):
+        print("test of C called")
+        super().test()
+class D(B,C):
+    def test2(self):
+        print("test of D called")      
+obj=D()
+obj.test()
+
+a)
+
+Answer: a
+Explanation: Since the invoking method, super().test() is called in the subclasses, all the three methods of test() in three different classes is called.

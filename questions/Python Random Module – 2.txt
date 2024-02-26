@@ -1,0 +1,117 @@
+1. What the does random.seed(3) return?
+a) True
+b) None
+c) 3
+d) 1
+
+
+Answer: b
+Explanation: The function random.seed() always returns a None.
+
+
+
+2. Which of the following cannot be returned by random.randrange(4)?
+a) 0
+b) 3
+c) 2.3
+d) none of the mentioned
+
+
+Answer: c
+Explanation: Only integers can be returned.
+
+
+
+3. Which of the following is equivalent to random.randrange(3)?
+a) range(3)
+b) random.choice(range(0, 3))
+c) random.shuffle(range(3))
+d) random.select(range(3))
+
+
+Answer: b
+Explanation: It returns one number from the given range.
+
+
+
+4. The function random.randint(4) can return only one of the following values. Which?
+a) 4
+b) 3.4
+c) error
+d) 5
+
+
+Answer: c
+Explanation: Error, the function takes two arguments.
+
+
+
+5. Which of the following is equivalent to random.randint(3, 6)?
+a) random.choice([3, 6])
+b) random.randrange(3, 6)
+c) 3 + random.randrange(3)
+d) 3 + random.randrange(4)
+
+
+Answer: d
+Explanation: random.randint(3, 6) can return any one of 3, 4, 5 and 6.
+
+
+
+6. Which of the following will not be returned by random.choice(“1 ,”)?
+a) 1
+b) (space)
+c) ,
+d) none of the mentioned
+
+
+Answer: d
+Explanation: Any of the characters present in the string may be returned.
+
+
+
+7. Which of the following will never be displayed on executing print(random.choice({0: 1, 2: 3}))?
+a) 0
+b) 1
+c) KeyError: 1
+d) none of the mentioned
+
+
+Answer: a
+Explanation: It will not print 0 but dict[0] i.e. 1 may be printed.
+
+
+
+8. What does random.shuffle(x) do when x = [1, 2, 3]?
+a) error
+b) do nothing, it is a placeholder for a function that is yet to be implemented
+c) shuffle the elements of the list in-place
+d) none of the mentioned
+
+
+Answer: c
+Explanation: The elements of the list passed to it are shuffled in-place.
+
+
+
+9. Which type of elements are accepted by random.shuffle()?
+a) strings
+b) lists
+c) tuples
+d) integers
+
+
+Answer: b
+Explanation: Strings and tuples are immutable and an integer has no len().
+
+
+
+10. What is the range of values that random.random() can return?
+a) [0.0, 1.0] 
+b) (0.0, 1.0] 
+c) (0.0, 1.0)
+d) [0.0, 1.0)
+
+
+Answer: d
+Explanation: Any number that is greater than or equal to 0.0 and lesser than 1.0 can be returned.

@@ -1,0 +1,164 @@
+1.	What is a variable defined outside a function referred to as?
+a)	A static variable
+b)	A global variable
+c)	A local variable
+d)	An automatic variable
+
+
+Answer: b
+Explanation: The value of a variable defined outside all function definitions is referred to as a global variable and can be used by multiple functions of the program.
+
+
+
+2.	What is a variable defined inside a function referred to as?
+a)	A global variable
+b)	A volatile variable
+c)	A local variable
+d)	An automatic variable
+
+
+Answer: c
+Explanation: The variable inside a function is called as local variable and the variable definition is confined only to that function.
+
+
+
+(Python Function – 4) 3.	What will be the output of the following Python code?
+
+i=0
+def change(i):
+   i=i+1
+   return i
+change(1)
+print(i)
+
+a)	1
+b)	Nothing is displayed
+c)	0
+d)	An exception is thrown
+
+
+Answer: c
+Explanation: Any change made in to an immutable data type in a function isn’t reflected outside the function.
+
+
+
+(Python Function – 4) 4.	What will be the output of the following Python code?
+
+def a(b):
+    b = b + [5]
+ 
+c = [1, 2, 3, 4]
+a(c)
+print(len(c))
+
+a)	4
+b)	5
+c)	1
+d)	An exception is thrown
+
+
+Answer: a
+Explanation: Since a list is mutable, any change made in the list in the function is reflected outside the function.
+
+
+
+(Python Function – 4) 5.	What will be the output of the following Python code?
+
+a=10
+b=20
+def change():
+    global b
+    a=45
+    b=56
+change()
+print(a)
+print(b)
+
+a)
+
+Answer: a
+Explanation: The statement “global b” allows the global value of b to be accessed and changed. Whereas the variable a is local and hence the change isn’t reflected outside the function.
+
+
+
+(Python Function – 4) 6.  What will be the output of the following Python code?
+
+def change(i = 1, j = 2):
+    i = i + j
+    j = j + 1
+    print(i, j)
+change(j = 1, i = 2)
+
+a)	An exception is thrown because of conflicting values
+b)	1 2
+c)	3 3
+d)	3 2
+
+
+Answer: d
+Explanation: The values given during function call is taken into consideration, that is, i=2 and j=1.
+
+
+
+(Python Function – 4) 7.	What will be the output of the following Python code?
+
+def change(one, *two):
+   print(type(two))
+change(1,2,3,4)
+
+a)	Integer
+b)	Tuple
+c)	Dictionary
+d)	An exception is thrown
+
+
+Answer: b
+Explanation: The parameter two is a variable parameter and consists of (2,3,4). Hence the data type is tuple.
+
+
+
+8.  If a function doesn’t have a return statement, which of the following does the function return?
+a)	int
+b)	null
+c)	None
+d)	An exception is thrown without the return statement
+
+
+Answer: c
+Explanation: A function can exist without a return statement and returns None if the function doesn’t have a return statement.
+
+
+
+(Python Function – 4) 9.  What will be the output of the following Python code?
+
+def display(b, n):
+    while n > 0:
+        print(b,end="")
+        n=n-1
+display('z',3)
+
+a)	zzz
+b)	zz
+c)	An exception is executed
+d)	Infinite loop
+
+
+Answer: a
+Explanation: The loop runs three times and ‘z’ is printed each time.
+
+
+
+(Python Function – 4) 10. What will be the output of the following Python code?
+
+def find(a, **b):
+   print(type(b))
+find('letters',A='1',B='2')
+
+a)	String
+b)	Tuple
+c)	Dictionary
+d)	An exception is thrown
+
+
+Answer: c
+Explanation: b combines the remaining parameters into a dictionary.

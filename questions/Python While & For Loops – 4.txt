@@ -1,0 +1,183 @@
+(Python While & For Loops – 4) 1. What will be the output of the following Python code?
+
+x = 123
+for i in x:
+    print(i)
+
+a) 1 2 3
+b) 123
+c) error
+d) none of the mentioned
+
+
+Answer: c
+Explanation: Objects of type int are not iterable.
+
+
+
+(Python While & For Loops – 4) 2. What will be the output of the following Python code?
+
+d = {0: 'a', 1: 'b', 2: 'c'}
+for i in d:
+    print(i)
+
+a) 0 1 2
+b) a b c
+c) 0 a 1 b 2 c
+d) none of the mentioned
+
+
+Answer: a
+Explanation: Loops over the keys of the dictionary.
+
+
+
+(Python While & For Loops – 4) 3. What will be the output of the following Python code?
+
+d = {0: 'a', 1: 'b', 2: 'c'}
+for x, y in d:
+    print(x, y)
+
+a) 0 1 2
+b) a b c
+c) 0 a 1 b 2 c
+d) none of the mentioned
+
+
+Answer: d
+Explanation: Error, objects of type int aren’t iterable.
+
+
+
+(Python While & For Loops – 4) 4. What will be the output of the following Python code?
+
+d = {0: 'a', 1: 'b', 2: 'c'}
+for x, y in d.items():
+    print(x, y)
+
+a) 0 1 2
+b) a b c
+c) 0 a 1 b 2 c
+d) none of the mentioned
+
+
+Answer: c
+Explanation: Loops over key, value pairs.
+
+
+
+(Python While & For Loops – 4) 5. What will be the output of the following Python code?
+
+d = {0: 'a', 1: 'b', 2: 'c'}
+for x in d.keys():
+    print(d[x])
+
+a) 0 1 2
+b) a b c
+c) 0 a 1 b 2 c
+d) none of the mentioned
+
+
+Answer: b
+Explanation: Loops over the keys and prints the values.
+
+
+
+(Python While & For Loops – 4) 6. What will be the output of the following Python code?
+
+d = {0: 'a', 1: 'b', 2: 'c'}
+for x in d.values():
+    print(x)
+
+a) 0 1 2
+b) a b c
+c) 0 a 1 b 2 c
+d) none of the mentioned
+
+
+Answer: b
+Explanation: Loops over the values.
+
+
+
+(Python While & For Loops – 4) 7. What will be the output of the following Python code?
+
+d = {0: 'a', 1: 'b', 2: 'c'}
+for x in d.values():
+    print(d[x])
+
+a) 0 1 2
+b) a b c
+c) 0 a 1 b 2 c
+d) none of the mentioned
+
+
+Answer: d
+Explanation: Causes a KeyError.
+
+
+
+(Python While & For Loops – 4) 8. What will be the output of the following Python code?
+
+d = {0, 1, 2}
+for x in d.values():
+    print(x)
+
+a) 0 1 2
+b) None None None
+c) error
+d) none of the mentioned
+
+
+Answer: c
+Explanation: Objects of type set have no attribute values.
+
+
+
+(Python While & For Loops – 4) 9. What will be the output of the following Python code?
+
+d = {0, 1, 2}
+for x in d:
+    print(x)
+
+a) 0 1 2
+b) {0, 1, 2} {0, 1, 2} {0, 1, 2}
+c) error
+d) none of the mentioned
+
+
+Answer: a
+Explanation: Loops over the elements of the set and prints them.
+
+
+
+(Python While & For Loops – 4) 10. What will be the output of the following Python code?
+
+d = {0, 1, 2}
+for x in d:
+    print(d.add(x))
+
+a) 0 1 2
+b) 0 1 2 0 1 2 0 1 2 …
+c) None None None
+d) None of the mentioned
+
+
+Answer: c
+Explanation: Variable x takes the values 0, 1 and 2. set.add() returns None which is printed.
+
+
+
+(Python While & For Loops – 4) 11. What will be the output of the following Python code?
+
+for i in range(0):
+    print(i)
+
+a) 0
+b) no output
+c) error
+d) none of the mentioned
+
+
+Answer: b
+Explanation: range(0) is empty.

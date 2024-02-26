@@ -1,0 +1,219 @@
+1. Which of the following matrices will throw an error in Python?
+a)
+
+Answer: b
+Explanation: In matrix B will result in an error because in the absence of a comma at the end of each row, it behaves like three separate lists. The error thrown states that the list integers must be integers or slices, not tuples.
+
+
+
+(Python Matrix List Comprehension) 2. What will be the output of the following Python code?
+
+A = [[1, 2, 3],
+          [4, 5, 6],
+          [7, 8, 9]]
+A[1]
+
+a) [4, 5, 6] 
+b) [3, 6, 9] 
+c) [1, 4, 7] 
+d) [1, 2, 3] 
+
+
+Answer: a
+Explanation: We can index the rows and columns using normal index operations. The statement A[1] represents the second row, that is, the middle row. Hence the output of the code will be: [4, 5, 6].
+
+
+
+(Python Matrix List Comprehension) 3. Which of the following Python statements will result in the output: 6?
+
+A = [[1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9]]
+
+a) A[2][3] 
+b) A[2][1] 
+c) A[1][2] 
+d) A[3][2] 
+
+
+Answer: c
+Explanation: The output that is required is 6, that is, row 2, item 3. This position is represented by the statement: A[1][2].
+
+
+
+(Python Matrix List Comprehension) 4. What will be the output of the following Python code?
+
+A = [[1, 2, 3],
+      [4, 5, 6],
+      [7, 8, 9]]
+[A[row][1] for row in (0, 1, 2)]
+
+a) [7, 8, 9] 
+b) [4, 5, 6] 
+c) [2, 5, 8] 
+d) [1, 4, 7] 
+
+
+Answer: c
+Explanation: To get a particular column as output, we can simple iterate across the rows and pull out the desired column, or iterate through positions in rows and index as we go. Hence the output of the code shown above is: [2, 5, 8].
+
+
+
+(Python Matrix List Comprehension) 5. What will be the output of the following Python code?
+
+A = [[1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9]]
+[A[i][i] for i in range(len(A))]
+
+a) [1, 5, 9] 
+b) [3, 5, 7] 
+c) [4, 5, 6] 
+d) [2, 5, 8] 
+
+
+Answer: a
+Explanation: We can also perform tasks like pulling out a diagonal. The expression shown above uses range to generate the list of offsets and the indices with the row and column the same, picking out A[0][0], then A[1][1] and so on. Hence the output of the code is: [1, 5, 9].
+
+
+
+(Python Matrix List Comprehension) 6. What will be the output of the following Python code?
+
+l=[[1, 2, 3], [4, 5, 6]]
+for i in range(len(l)):
+	for j in range(len(l[i])):
+		l[i][j]+=10
+l
+
+a) No output
+b) Error
+c) [[1, 2, 3], [4, 5, 6]] 
+d) [[11, 12, 13], [14, 15, 16]] 
+
+
+Answer: d
+Explanation: We use range twice if the shapes differ. Each element of list l is increased by 10. Hence the output is: [[11, 12, 13], [14, 15, 16]]
+
+
+
+(Python Matrix List Comprehension) 7. What will be the output of the following Python code?
+
+A = [[1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9]]
+ 
+[[col + 10 for col in row] for row in A]
+
+a) [[11, 12, 13], [14, 15, 16], [17, 18, 19]] 
+b) Error
+c) [11, 12, 13], [14, 15, 16], [17, 18, 19] 
+d) [11, 12, 13, 14, 15, 16, 17, 18, 19] 
+
+
+Answer: a
+Explanation: The code shown above shows a list comprehension which adds 10 to each element of the matrix A and prints it row-wise. Hence the output of the code is:  [[11, 12, 13], [14, 15, 16], [17, 18, 19]]
+
+
+
+(Python Matrix List Comprehension) 8. What will be the output of the following Python code?
+
+A = [[1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9]]
+[A[i][len(A)-1-i] for i in range(len(A))]
+
+a) [1, 5, 9] 
+b) [4, 5, 6] 
+c) [3, 5, 7] 
+d) [2, 5, 8] 
+
+
+Answer: c
+Explanation: This expression scales the common index to fetch A[0][2], A[1][1], etc. We assume the matrix has the same number of rows and columns.
+
+
+
+(Python Matrix List Comprehension) 9. What will be the output of the following Python code?
+
+A = [[1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9]]
+B = [[3, 3, 3],
+     [4, 4, 4],
+     [5, 5, 5]]
+[B[row][col]*A[row][col] for row in range(3) for col in range(3)]
+
+a) [3, 6, 9, 16, 20, 24, 35, 40, 45]
+b) Error
+c) [0, 30, 60, 120, 160, 200, 300, 350, 400]
+d) 0
+
+
+Answer: a
+Explanation: In the code shown above, we have used list comprehension to combine values of multiple matrices. We have multiplied the elements of the matrix B with that of the matrix A, in the range(3). Hence the output of this code is: [3, 6, 9, 16, 20, 24, 35, 40, 45].
+
+
+
+(Python Matrix List Comprehension) 10. What will be the output of the following Python code?
+
+r = [11, 12, 13, 14, 15, 16, 17, 18, 19]
+A = [[0, 10, 20],
+               [30, 40, 50],
+               [60, 70, 80]]
+for row in A:
+	for col in row:
+		r.append(col+10)
+r
+
+a) [11, 12, 13, 14, 15, 16, 17, 18, 19, 10, 20, 30, 40, 50, 60, 70, 80, 90]
+b) [10, 20, 30, 40, 50, 60, 70, 80, 90]
+c) [11, 12, 13, 14, 15, 16, 17, 18, 19]
+d) [0, 10, 20, 30, 40, 50, 60, 70, 80]
+
+
+Answer: a
+Explanation: The code shown above adds 10 to each element of the matrix and prints the output row-wise. Since the list l already contains some elements, the new elements are appended to it. Hence the output of this code is: [11, 12, 13, 14, 15, 16, 17, 18, 19, 10, 20, 30, 40, 50, 60, 70, 80, 90].
+
+
+
+(Python Matrix List Comprehension) 11. What will be the output of the following Python code?
+
+A = [[1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9]]
+B = [[3, 3, 3],
+     [4, 4, 4],
+     [5, 5, 5]]
+[[col1 * col2 for (col1, col2) in zip(row1, row2)] for (row1, row2) in zip(A, B)]
+
+a) [0, 30, 60, 120, 160, 200, 300, 350, 400]
+b) [[3, 6, 9], [16, 20, 24], [35, 40, 45]]
+c) No output
+d) Error
+
+
+Answer: b
+Explanation: The list comprehension shown above results in the output: [[3, 6, 9], [16, 20, 24], [35, 40, 45]].
+
+
+
+(Python Matrix List Comprehension) 12. What will be the output of the following Python code?
+
+A = [[1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9]]
+B = [[3, 3, 3],
+     [4, 4, 4],
+     [5, 5, 5]]
+zip(A, B)
+
+a) Address of the zip object
+b) Address of the matrices A and B
+c) No output
+d) [3, 6, 9, 16, 20, 24, 35, 40, 45]
+
+
+Answer: a
+Explanation: The output of the code shown above returns the address of the zip object. If we print it in the form of a list, we get:
+>>> list(zip(A, B))
+[([1, 2, 3], [3, 3, 3]), ([4, 5, 6], [4, 4, 4]), ([7, 8, 9], [5, 5, 5])]

@@ -1,0 +1,228 @@
+1.	Which of these about a set is not true?
+a)	Mutable data type
+b)	Does not allow duplicate values
+c)	Data type with unordered values
+d)	Immutable data type
+
+
+Answer: d
+Explanation: A set is a mutable data type with non-duplicate, unordered values, providing the usual mathematical set operations. 
+
+
+
+2.	Which of the following is not the correct syntax for creating a set?
+a)	set([[1,2],[3,4]])
+b)	set([1,2,2,3,4])
+c)	set((1,2,3,4))
+d)	{1,2,3,4}
+
+
+Answer: a
+Explanation: The argument given for the set must be an iterable.
+
+
+
+(Python Sets – 1) 3.	What will be the output of the following Python code?
+
+nums = set([1,1,2,3,3,3,4,4])
+print(len(nums))
+
+a)	7
+b)	Error, invalid syntax for formation of set
+c)	4
+d)	8
+
+
+Answer: c
+Explanation:  A set doesn’t have duplicate items. 
+
+
+
+(Python Sets – 1) 4.  What will be the output of the following Python code?
+
+a = [5,5,6,7,7,7]
+b = set(a)
+def test(lst):
+    if lst in b:
+        return 1
+    else:
+        return 0
+for i in  filter(test, a):
+    print(i,end=" ")
+
+a)	5 5 6
+b)	5 6 7
+c)	5 5 6 7 7 7
+d)	5 6 7 7 7
+
+
+Answer: c
+Explanation: The filter function will return all the values from list a which are true when passed to function test. Since all the members of the set are non-duplicate members of the list, all of the values will return true. Hence all the values in the list are printed.
+
+
+
+5.	Which of the following statements is used to create an empty set?
+a)	{ }
+b)	set()
+c)	[ ] 
+d)	( )
+
+
+Answer: b
+Explanation: { } creates a dictionary not a set. Only set() creates an empty set. 
+
+
+
+(Python Sets – 1) 6.	What will be the output of the following Python code?
+
+>>> a={5,4}
+>>> b={1,2,4,5}
+>>> a<b
+
+a)	{1,2}
+b)	True
+c)	False
+d)	Invalid operation
+
+
+Answer: b
+Explanation: a<b returns True if a is a proper subset of b.
+
+
+
+7.  If a={5,6,7,8}, which of the following statements is false?
+a)	print(len(a))
+b)	print(min(a))
+c)	a.remove(5)
+d)	a[2]=45
+
+
+Answer: d
+Explanation: The members of a set can be accessed by their index values since the elements of the set are unordered.
+
+
+
+8.  If a={5,6,7}, what happens when a.add(5) is executed?
+a)	a={5,5,6,7}
+b)	a={5,6,7}
+c)	Error as there is no add function for set data type
+d)	Error as 5 already exists in the set
+
+
+Answer: b
+Explanation: There exists add method for set data type. However 5 isn’t added again as set consists of only non-duplicate elements and 5 already exists in the set. Execute in python shell to verify.
+
+
+
+(Python Sets – 1) 9.  What will be the output of the following Python code?
+
+>>> a={4,5,6}
+>>> b={2,8,6}
+>>> a+b
+
+a)	{4,5,6,2,8}
+b)	{4,5,6,2,8,6}
+c)	Error as unsupported operand type for sets
+d)	Error as the duplicate item 6 is present in both sets
+
+
+Answer: c
+Explanation: Execute in python shell to verify.
+
+
+
+(Python Sets – 1) 10.  What will be the output of the following Python code?
+
+>>> a={4,5,6}
+>>> b={2,8,6}
+>>> a-b
+
+a)	{4,5}
+b)	{6}
+c)	Error as unsupported operand type for set data type
+d)	Error as the duplicate item 6 is present in both sets
+
+
+Answer: a
+Explanation: – operator gives the set of elements in set a but not in set b. 
+
+
+
+(Python Sets – 1) 11.	What will be the output of the following Python code?
+
+>>> a={5,6,7,8}
+>>> b={7,8,10,11}
+>>> a^b
+
+a)	{5,6,7,8,10,11}
+b)	{7,8}
+c)	Error as unsupported operand type of set data type
+d)	{5,6,10,11}
+
+
+Answer: d
+Explanation: ^ operator returns a set of elements in set A or set B, but not in both (symmetric difference). 
+
+
+
+(Python Sets – 1) 12. What will be the output of the following Python code?
+
+>>> s={5,6}
+>>> s*3
+
+a)	Error as unsupported operand type for set data type
+b)	{5,6,5,6,5,6}
+c)	{5,6}
+d)	Error as multiplication creates duplicate elements which isn’t allowed
+
+
+Answer: a
+Explanation: The multiplication operator isn’t valid for the set data type.
+
+
+
+(Python Sets – 1) 13. What will be the output of the following Python code?
+
+>>> a={5,6,7,8}
+>>> b={7,5,6,8}
+>>> a==b
+
+a)	True
+b)	False
+
+
+Answer: a
+Explanation:  It is possible to compare two sets and the order of elements in both the sets doesn’t matter if the values of the elements are the same.
+
+
+
+(Python Sets – 1) 14. What will be the output of the following Python code?
+
+>>> a={3,4,5}
+>>> b={5,6,7}
+>>> a|b
+
+a)	Invalid operation
+b)	{3, 4, 5, 6, 7}
+c)	{5}
+d)	{3,4,6,7}
+
+
+Answer: b
+Explanation:  The operation in the above piece of code is union operation. This operation produces a set of elements in both set a and set b.
+
+
+
+(Python Sets – 1) 15. Is the following Python code valid?
+
+a={3,4,{7,5}}
+print(a[2][0])
+
+a)	Yes, 7 is printed
+b)	Error, elements of a set can’t be printed
+c)	Error, subsets aren’t allowed
+d)	Yes, {7,5} is printed
+
+
+Answer: c
+Explanation: In python, elements of a set must not be mutable and sets are mutable. Thus, subsets can’t exist.

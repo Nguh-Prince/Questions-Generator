@@ -1,0 +1,144 @@
+(Python Strings – 6) 1. What will be the output of the following Python code?
+
+print("xyyzxyzxzxyy".count('yy'))
+
+a) 2
+b) 0
+c) error
+d) none of the mentioned
+
+
+Answer: a
+Explanation: Counts the number of times the substring ‘yy’ is present in the given string.
+
+
+
+(Python Strings – 6) 2. What will be the output of the following Python code?
+
+print("xyyzxyzxzxyy".count('yy', 1))
+
+a) 2
+b) 0
+c) 1
+d) none of the mentioned
+
+
+Answer: a
+Explanation: Counts the number of times the substring ‘yy’ is present in the given string, starting from position 1.
+
+
+
+(Python Strings – 6) 3. What will be the output of the following Python code?
+
+print("xyyzxyzxzxyy".count('yy', 2))
+
+a) 2
+b) 0
+c) 1
+d) none of the mentioned
+
+
+Answer: c
+Explanation: Counts the number of times the substring ‘yy’ is present in the given string, starting from position 2.
+
+
+
+(Python Strings – 6) 4. What will be the output of the following Python code?
+
+print("xyyzxyzxzxyy".count('xyy', 0, 100))
+
+a) 2
+b) 0
+c) 1
+d) error
+
+
+Answer: a
+Explanation: An error will not occur if the end value is greater than the length of the string itself.
+
+
+
+(Python Strings – 6) 5. What will be the output of the following Python code?
+
+print("xyyzxyzxzxyy".count('xyy', 2, 11))
+
+a) 2
+b) 0
+c) 1
+d) error
+
+
+Answer: b
+Explanation: Counts the number of times the substring ‘xyy’ is present in the given string, starting from position 2 and ending at position 11.
+
+
+
+(Python Strings – 6) 6. What will be the output of the following Python code?
+
+print("xyyzxyzxzxyy".count('xyy', -10, -1))
+
+a) 2
+b) 0
+c) 1
+d) error
+
+
+Answer: b
+Explanation: Counts the number of times the substring ‘xyy’ is present in the given string, starting from position 2 and ending at position 11.
+
+
+
+(Python Strings – 6) 7. What will be the output of the following Python code?
+
+print('abc'.encode())
+
+a) abc
+b) ‘abc’
+c) b’abc’
+d) h’abc’
+
+
+Answer: c
+Explanation: A bytes object is returned by encode.
+
+
+
+8. What is the default value of encoding in encode()?
+a) ascii
+b) qwerty
+c) utf-8
+d) utf-16
+
+
+Answer: c
+Explanation: The default value of encoding is utf-8.
+
+
+
+(Python Strings – 6) 9. What will be the output of the following Python code?
+
+print("xyyzxyzxzxyy".endswith("xyy"))
+
+a) 1
+b) True
+c) 3
+d) 2
+
+
+Answer: b
+Explanation: The function returns True if the given string ends with the specified substring.
+
+
+
+(Python Strings – 6) 10. What will be the output of the following Python code?
+
+print("xyyzxyzxzxyy".endswith("xyy", 0, 2))
+
+a) 0
+b) 1
+c) True
+d) False
+
+
+Answer: d
+Explanation: The function returns False if the given string does not end with the specified substring.

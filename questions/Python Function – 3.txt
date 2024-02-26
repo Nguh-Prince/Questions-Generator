@@ -1,0 +1,127 @@
+1. Python supports the creation of anonymous functions at runtime, using a construct called __________
+a) lambda
+b) pi
+c) anonymous
+d) none of the mentioned
+
+
+ Answer: a
+Explanation: Python supports the creation of anonymous functions (i.e. functions that are not bound to a name) at runtime, using a construct called lambda. Lambda functions are restricted to a single expression. They can be used wherever normal functions can be used. 
+
+
+
+(Python Function – 3) 2. What will be the output of the following Python code?
+
+y = 6
+
+a) 48
+b) 14
+c) 64
+d) None of the mentioned
+
+
+ Answer: a
+Explanation: The lambda keyword creates an anonymous function. The x is a parameter, that is passed to the lambda function. The parameter is followed by a colon character. The code next to the colon is the expression that is executed, when the lambda function is called. The lambda function is assigned to the z variable.
+The lambda function is executed. The number 8 is passed to the anonymous function and it returns 48 as the result. Note that z is not a name for this function. It is only a variable to which the anonymous function was assigned. 
+
+
+
+(Python Function – 3) 3. What will be the output of the following Python code?
+
+z = lambda x: x * y
+
+a) 15
+b) 555
+c) 125
+d) None of the mentioned
+
+
+ Answer: c
+Explanation: None. 
+
+
+
+4. Does Lambda contains return statements?
+a) True
+b) False
+
+
+ Answer: b
+Explanation: lambda definition does not include a return statement. it always contains an expression which is returned. Also note that we can put a lambda definition anywhere a function is expected. We don’t have to assign it to a variable at all. 
+
+
+
+5. Lambda is a statement.
+a) True
+b) False
+
+
+ Answer: b
+Explanation: lambda is an anonymous function in Python. Hence this statement is false. 
+
+
+
+6. Lambda contains block of statements.
+a) True
+b) False
+
+
+ Answer: b
+Explanation: None. 
+
+
+
+(Python Function – 3) 7. What will be the output of the following Python code?
+
+print z(8)
+
+a) 432
+b) 24000
+c) 430
+d) No output
+
+
+ Answer: a
+Explanation: None. 
+
+
+
+(Python Function – 3) 8. What will be the output of the following Python code?
+
+lamb = lambda x: x ** 3
+
+a) Arthur Sir
+b) Sir Arthur
+c) Arthur
+d) None of the mentioned
+
+
+ Answer: b
+Explanation: None. 
+
+
+
+(Python Function – 3) 9. What will be the output of the following Python code?
+
+print(lamb(5))
+
+a)
+
+ Answer: c
+Explanation: None.
+
+
+
+
+(Python Function – 3) 10. What will be the output of the following Python code?
+
+def f(x, y, z): return x + y + z
+
+a) 9997
+b) 9999
+c) 9996
+d) None of the mentioned
+
+
+ Answer:  c
+Explanation: None.

@@ -1,0 +1,147 @@
+(Python Strings – 7) 1. What will be the output of the following Python code?
+
+print("ab\tcd\tef".expandtabs())
+
+a) ab  cd  ef
+b) abcdef
+c) ab\tcd\tef
+d) ab cd ef
+
+
+Answer: a
+Explanation: Each \t is converted to 8 blank spaces by default.
+
+
+
+(Python Strings – 7) 2. What will be the output of the following Python code?
+
+print("ab\tcd\tef".expandtabs(4))
+
+a) ab   cd   ef
+b) abcdef
+c) ab\tcd\tef
+d) ab cd ef
+
+
+Answer: d
+Explanation: Each \t is converted to 4 blank spaces.
+
+
+
+(Python Strings – 7) 3. What will be the output of the following Python code?
+
+print("ab\tcd\tef".expandtabs('+'))
+
+a) ab+cd+ef
+b) ab++++++++cd++++++++ef
+c) ab cd ef
+d) none of the mentioned
+
+
+Answer: d
+Explanation: TypeError, an integer should be passed as an argument.
+
+
+
+(Python Strings – 7) 4. What will be the output of the following Python code?
+
+print("abcdef".find("cd") == "cd" in "abcdef")
+
+a) True
+b) False
+c) Error
+d) None of the mentioned
+
+
+Answer: b
+Explanation: The function find() returns the position of the sunstring in the given string whereas the in keyword returns a value of Boolean type.
+
+
+
+(Python Strings – 7) 5. What will be the output of the following Python code?
+
+print("abcdef".find("cd"))
+
+a) True
+b) 2
+c) 3
+d) None of the mentioned
+
+
+Answer: b
+Explanation: The first position in the given string at which the substring can be found is returned.
+
+
+
+(Python Strings – 7) 6. What will be the output of the following Python code?
+
+print("ccdcddcd".find("c"))
+
+a) 4
+b) 0
+c) Error
+d) True
+
+
+Answer: b
+Explanation: The first position in the given string at which the substring can be found is returned.
+
+
+
+(Python Strings – 7) 7. What will be the output of the following Python code?
+
+print("Hello {0} and {1}".format('foo', 'bin'))
+
+a) Hello foo and bin
+b) Hello {0} and {1} foo bin
+c) Error
+d) Hello 0 and 1
+
+
+Answer: a
+Explanation: The numbers 0 and 1 represent the position at which the strings are present.
+
+
+
+(Python Strings – 7) 8. What will be the output of the following Python code?
+
+print("Hello {1} and {0}".format('bin', 'foo'))
+
+a) Hello foo and bin
+b) Hello bin and foo
+c) Error
+d) None of the mentioned
+
+
+Answer: a
+Explanation: The numbers 0 and 1 represent the position at which the strings are present.
+
+
+
+(Python Strings – 7) 9. What will be the output of the following Python code?
+
+print("Hello {} and {}".format('foo', 'bin'))
+
+a) Hello foo and bin
+b) Hello {} and {}
+c) Error
+d) Hello and
+
+
+Answer: a
+Explanation: It is the same as Hello {0} and {1}.
+
+
+
+(Python Strings – 7) 10. What will be the output of the following Python code?
+
+print("Hello {name1} and {name2}".format('foo', 'bin'))
+
+a) Hello foo and bin
+b) Hello {name1} and {name2}
+c) Error
+d) Hello and
+
+
+Answer: c
+Explanation: The arguments passed to the function format aren’t keyword arguments.

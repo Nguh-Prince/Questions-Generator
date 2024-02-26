@@ -1,0 +1,153 @@
+1. What is the output of print 0.1 + 0.2 == 0.3?
+a) True
+b) False
+c) Machine dependent
+d) Error
+
+
+Answer: b
+Explanation: Neither of 0.1, 0.2 and 0.3 can be represented accurately in binary. The round off errors from 0.1 and 0.2 accumulate and hence there is a difference of 5.5511e-17 between (0.1 + 0.2) and 0.3.
+
+
+
+2. Which of the following is not a complex number?
+a) k = 2 + 3j
+b) k = complex(2, 3)
+c) k = 2 + 3l
+d) k = 2 + 3J
+
+
+Answer: c
+Explanation: l (or L) stands for long.
+
+
+
+3. What is the type of inf?
+a) Boolean
+b) Integer
+c) Float
+d) Complex
+
+
+Answer: c
+Explanation: Infinity is a special case of floating point numbers. It can be obtained by float(‘inf’).
+
+
+
+4. What does ~4 evaluate to?
+a) -5
+b) -4
+c) -3
+d) +3
+
+
+Answer: a
+Explanation: ~x is equivalent to -(x+1).
+
+
+
+5. What does ~~~~~~5 evaluate to?
+a) +5
+b) -11
+c) +11
+d) -5
+
+
+Answer: a
+Explanation: ~x is equivalent to -(x+1).
+~~x = – (-(x+1) + 1) = (x+1) – 1 = x
+~~x is equivalent to x
+Extrapolating further ~~~~~~x would be same as x in the final result.
+In the question, x value is given as 5 and “~” is repeated 6 times. So, the correct answer for “~~~~~~5” is 5.
+
+
+
+
+6. Which of the following is incorrect?
+a) x = 30963
+b) x = 0x4f5
+c) x = 19023
+d) x = 03964
+
+
+Answer: d
+Explanation: Numbers starting with a 0 are octal numbers but 9 isn’t allowed in octal numbers.
+
+
+
+7. What is the result of cmp(3, 1)?
+a) 1
+b) 0
+c) True
+d) False
+
+
+Answer: a
+Explanation: cmp(x, y) returns 1 if x > y, 0 if x == y and -1 if x < y.
+
+
+
+8. Which of the following is incorrect?
+a) float(‘inf’)
+b) float(‘nan’)
+c) float(’56’+’78’)
+d) float(’12+34′)
+
+
+Answer: d
+Explanation: ‘+’ cannot be converted to a float.
+
+
+
+9. What is the result of round(0.5) – round(-0.5)?
+a) 1.0
+b) 2.0
+c) 0.0
+d) Value depends on Python version
+
+
+Answer: d
+Explanation: The behavior of the round() function is different in Python 2 and Python 3. In Python 2, it rounds off numbers away from 0 when the number to be rounded off is exactly halfway through. round(0.5) is 1 and round(-0.5) is -1 whereas in Python 3, it rounds off numbers towards nearest even number when the number to be rounded off is exactly halfway through. See the below output.
+
+advertisement
+
+
+
+
+Here’s the runtime output for Python version 2.7 interpreter.
+$ python
+Python 2.7.17 (default, Nov  7 2019, 10:07:09)
+>>> round(0.5)
+1.0
+>>> round(-0.5)
+-1.0
+>>>
+
+In the above output, you can see that the round() functions on 0.5 and -0.5 are moving away from 0 and hence “round(0.5) – (round(-0.5)) = 1 – (-1) = 2”
+Here’s the runtime output for Python version 3.6 interpreter.
+$ python3
+Python 3.6.8 (default, Oct  7 2019, 12:59:55)
+>>> round(0.5)
+0
+>>> round(-0.5)
+0
+>>> round(2.5)
+2
+>>> round(3.5)
+4
+>>>
+
+In the above output, you can see that the round() functions on 0.5 and -0.5 are moving towards 0 and hence “round(0.5) – (round(-0.5)) = 0 – 0 = 0“. Also note that the round(2.5) is 2 (which is an even number) whereas round(3.5) is 4 (which is an even number).
+
+
+
+
+10. What does 3 ^ 4 evaluate to?
+a) 81
+b) 12
+c) 0.75
+d) 7
+
+
+Answer: d
+Explanation: ^ is the Binary XOR operator.

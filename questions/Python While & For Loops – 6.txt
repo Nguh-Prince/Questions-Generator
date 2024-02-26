@@ -1,0 +1,179 @@
+(Python While & For Loops – 6) 1. What will be the output of the following Python code?
+
+for i in range(10):
+    if i == 5:
+        break
+    else:
+        print(i)
+else:
+    print("Here")
+
+a) 0 1 2 3 4 Here
+b) 0 1 2 3 4 5 Here
+c) 0 1 2 3 4
+d) 1 2 3 4 5
+
+
+Answer: c
+Explanation: The else part is executed if control doesn’t break out of the loop.
+
+
+
+(Python While & For Loops – 6) 2. What will be the output of the following Python code?
+
+for i in range(5):
+    if i == 5:
+        break
+    else:
+        print(i)
+else:
+    print("Here")
+
+a) 0 1 2 3 4 Here
+b) 0 1 2 3 4 5 Here
+c) 0 1 2 3 4
+d) 1 2 3 4 5
+
+
+Answer: a
+Explanation: The else part is executed if control doesn’t break out of the loop.
+
+
+
+(Python While & For Loops – 6) 3. What will be the output of the following Python code?
+
+x = (i for i in range(3))
+for i in x:
+    print(i)
+
+a) 0 1 2
+b) error
+c) 0 1 2 0 1 2
+d) none of the mentioned
+
+
+Answer: a
+Explanation: The first statement creates a generator object.
+
+
+
+(Python While & For Loops – 6) 4. What will be the output of the following Python code?
+
+x = (i for i in range(3))
+for i in x:
+    print(i)
+for i in x:
+    print(i)
+
+a) 0 1 2
+b) error
+c) 0 1 2 0 1 2
+d) none of the mentioned
+
+
+Answer: a
+Explanation: We can loop over a generator object only once.
+
+
+
+(Python While & For Loops – 6) 5. What will be the output of the following Python code?
+
+string = "my name is x"
+for i in string:
+    print (i, end=", ")
+
+a) m, y,  , n, a, m, e,  , i, s,  , x,
+b) m, y,  , n, a, m, e,  , i, s,  , x
+c) my, name, is, x,
+d) error
+
+
+Answer: a
+Explanation: Variable i takes the value of one character at a time.
+
+
+
+(Python While & For Loops – 6) 6. What will be the output of the following Python code?
+
+string = "my name is x"
+for i in string.split():
+    print (i, end=", ")
+
+a) m, y,  , n, a, m, e,  , i, s,  , x,
+b) m, y,  , n, a, m, e,  , i, s,  , x
+c) my, name, is, x,
+d) error
+
+
+Answer: c
+Explanation: Variable i takes the value of one word at a time.
+
+
+
+(Python While & For Loops – 6) 7. What will be the output of the following Python code snippet?
+
+a = [0, 1, 2, 3]
+for a[-1] in a:
+    print(a[-1])
+
+a) 0 1 2 3
+b) 0 1 2 2
+c) 3 3 3 3
+d) error
+
+
+Answer: b
+Explanation: The value of a[-1] changes in each iteration.
+
+
+
+(Python While & For Loops – 6) 8. What will be the output of the following Python code snippet?
+
+a = [0, 1, 2, 3]
+for a[0] in a:
+    print(a[0])
+
+a) 0 1 2 3
+b) 0 1 2 2
+c) 3 3 3 3
+d) error
+
+
+Answer: a
+Explanation: The value of a[0] changes in each iteration. Since the first value that it takes is itself, there is no visible error in the current example.
+
+
+
+(Python While & For Loops – 6) 9. What will be the output of the following Python code snippet?
+
+a = [0, 1, 2, 3]
+i = -2
+for i not in a:
+    print(i)
+    i += 1
+
+a) -2 -1
+b) 0
+c) error
+d) none of the mentioned
+
+
+Answer: c
+Explanation: SyntaxError, not in isn’t allowed in for loops.
+
+
+
+(Python While & For Loops – 6) 10. What will be the output of the following Python code snippet?
+
+string = "my name is x"
+for i in ' '.join(string.split()):
+    print (i, end=", ")
+
+a) m, y,  , n, a, m, e,  , i, s,  , x,
+b) m, y,  , n, a, m, e,  , i, s,  , x
+c) my, name, is, x,
+d) error
+
+
+Answer: a
+Explanation: Variable i takes the value of one character at a time.

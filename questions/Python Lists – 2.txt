@@ -1,0 +1,126 @@
+(Python Lists – 2) 1. What will be the output of the following Python code?
+
+>>>names = ['Amir', 'Bear', 'Charlton', 'Daman']
+
+a) A
+b) Daman
+c) Error
+d) n
+
+
+ Answer: d
+Explanation: Execute in the shell to verify.
+
+
+
+(Python Lists – 2) 2. What will be the output of the following Python code?
+
+>>>print(names[-1][-1])
+
+a) 11
+b) 12
+c) 21
+d) 22
+
+
+ Answer: b
+Explanation: When assigning names1 to names2, we create a second reference to the same list. Changes to names2 affect names1. When assigning the slice of all elements in names1 to names3, we are creating a full copy of names1 which can be modified independently. 
+
+
+
+3. Suppose list1 is [1, 3, 2], What is list1 * 2?
+a) [2, 6, 4] 
+b) [1, 3, 2, 1, 3] 
+c) [1, 3, 2, 1, 3, 2] 
+d) [1, 3, 2, 3, 2, 1] 
+
+
+ Answer: c
+Explanation: Execute in the shell and verify. 
+
+
+
+4. Suppose list1 = [0.5 * x for x in range(0, 4)], list1 is:
+a) [0, 1, 2, 3] 
+b) [0, 1, 2, 3, 4] 
+c) [0.0, 0.5, 1.0, 1.5] 
+d) [0.0, 0.5, 1.0, 1.5, 2.0] 
+
+
+ Answer: c
+Explanation: Execute in the shell to verify.
+
+
+
+(Python Lists – 2) 5. What will be the output of the following Python code?
+
+names1 = ['Amir', 'Bear', 'Charlton', 'Daman']
+
+a) True
+b) False
+c) Error
+d) None
+
+
+ Answer: b
+Explanation: Elements are compared one by one.
+
+
+
+6. To add a new element to a list we use which command?
+a) list1.add(5)
+b) list1.append(5)
+c) list1.addLast(5)
+d) list1.addEnd(5)
+
+
+ Answer: b
+Explanation: We use the function append to add an element to the list. 
+
+
+
+7. To insert 5 to the third position in list1, we use which command?
+a) list1.insert(3, 5)
+b) list1.insert(2, 5)
+c) list1.add(3, 5)
+d) list1.append(3, 5)
+
+
+ Answer: b
+Explanation: Execute in the shell to verify.
+
+
+
+8. To remove string “hello” from list1, we use which command?
+a) list1.remove(“hello”)
+b) list1.remove(hello)
+c) list1.removeAll(“hello”)
+d) list1.removeOne(“hello”)
+
+
+ Answer: a
+Explanation: Execute in the shell to verify.
+
+
+
+9. Suppose list1 is [3, 4, 5, 20, 5], what is list1.index(5)?
+a) 0
+b) 1
+c) 4
+d) 2
+
+
+ Answer: d
+Explanation: Execute help(list.index) to get details.
+
+
+
+10. Suppose list1 is [3, 4, 5, 20, 5, 25, 1, 3], what is list1.count(5)?
+a) 0
+b) 4
+c) 1
+d) 2
+
+
+ Answer: d
+Explanation: Execute in the shell to verify.

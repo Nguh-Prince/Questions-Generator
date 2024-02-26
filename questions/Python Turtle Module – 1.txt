@@ -1,0 +1,187 @@
+(Python Turtle Module – 1) 1. What will be the output shape of the following Python code?
+
+import turtle
+t=turtle.Pen()
+for i in range(0,4):
+	t.forward(100)
+	t.left(120)
+
+a) square
+b) rectangle
+c) triangle
+d) kite
+
+
+Answer: c
+Explanation: According to the code shown above, 4 lines will be drawn. Three lines will be in the shape of a triangle. The fourth line will trace the base, which is already drawn. Hence the base will be slightly thicker than the rest of the lines. However there will be no change in the shape due to this extra line. Hence the output shape will be a triangle.
+
+
+
+(Python Turtle Module – 1) 2. The number of lines drawn in each case, assuming that the turtle module has been imported:
+
+Case 1:
+for i in range(0,10):
+	turtle.forward(100)
+	turtle.left(90)
+Case 2:
+for i in range(1,10):
+	turtle.forward(100)
+	turtle.left(90)
+
+a) 10, 9
+b) 9, 10
+c) 9, 9
+d) 10, 10
+
+
+Answer: a
+Explanation: The number of lines drawn in the first case is 10, while that in the second case is 9.
+
+
+
+3. The command which helps us to reset the pen (turtle):
+a) turtle.reset
+b) turtle.penreset
+c) turtle.penreset()
+d) turtle.reset()
+
+
+Answer: d
+Explanation: The command turtle.reset() helps us to reset the pen. After the execution of this command, we get a blank page with an arrow on it. We can then perform any desired operation on this page.
+
+
+
+(Python Turtle Module – 1) 4. Fill in the blank such that the following Python code results in the formation of an inverted, equilateral triangle.
+
+import turtle
+t=turtle.Pen()
+for i in range(0,3):
+	t.forward(150)
+	t.right(_____)
+
+a) -60
+b) 120
+c) -120
+d) 60
+
+
+Answer: b
+Explanation: An angle of -120 will result in the formation of an upright, equilateral triangle. An angle of 120 will result in the formation of an inverted triangle. The angles of 60 and -60 do not result in the formation of a triangle.
+
+
+
+(Python Turtle Module – 1) 5.  What will be the output shape of the following Python code?
+
+import turtle
+t=turtle.Pen()
+for i in range(1,4):
+	t.forward(60)
+	t.left(90)
+
+a) Rectangle
+b) Trapezium
+c) Triangle
+d) Square
+
+
+Answer: d
+Explanation: The code shown above will result in the formation of a square, with each of side 60.
+
+
+
+(Python Turtle Module – 1) 6. What will be the output of the following Python code?
+
+import turtle
+t=turtle.Pen()
+for i in range(0,4):
+	t.forward(100)
+	t.left(90)
+ 
+t.penup()
+t.left(90)
+t.forward(200)
+for i in range(0,4):
+	t.forward(100)
+	t.left(90)
+
+a) Error
+b) 1 square
+c) 2 squares, at a separation of100 units, joined by a straight line
+d) 2 squares, at a separation of 100 units, without a line joining them
+
+
+Answer: b
+Explanation: The output of the code shown above will be a single square. This is because the function t.penup() is used to lift the pen after the construction of the first square. However, the function t.pendown() has not been used to put the pen back down. Hence, the output shape of this code is one square, of side 100 units.
+
+
+
+7. Which of the following functions does not accept any arguments?
+a) position
+b) fillcolor
+c) goto
+d) setheading()
+
+
+Answer: a
+Explanation: The functions fillcolor(), goto() and setheading() accept arguments, whereas the function position() does not accept any arguments. The function position() returns the current position of the turtle.
+
+
+
+(Python Turtle Module – 1) 8.  What will be the output of the following Python code?
+
+import turtle
+t=turtle.Pen()
+t.goto(300,9)
+t.position()
+
+a) 300.00, 9.00
+b) 9, 300
+c) 300, 9
+d) 9.00, 300.00
+
+
+Answer: a
+Explanation: The goto functions takes the arrow to the position specified by the user as arguments. The position function returns the current position of the arrow. Hence the output of the code shown above will be: 300.00, 9.00.
+
+
+
+(Python Turtle Module – 1) 9. What will be the output of the following Python code?
+
+import turtle
+t=turtle.Pen()
+for i in range(0,5):
+        t.left(144)
+        t.forward(100)
+
+a) Trapezium
+b) Parallelepiped
+c) Tetrahedron
+d) Star
+
+
+Answer: d
+Explanation: It is clear from the above code that 5 lines will be drawn on the canvas, at an angle of 144 degrees. The only shape which fits this description is star. Hence the output of the code shown above is star.
+
+
+
+(Python Turtle Module – 1) 10. What will be the output of the following Python functions?
+
+import turtle
+t=turtle.Pen()
+for i in range(0,3):
+	t.forward(100)
+	t.left(120)
+ 
+t.back(100)
+for i in range(0,3):
+	t.forward(100)
+	t.left(120)
+
+a) Error
+b) Two triangles, joined by a straight line
+c) Two triangles, joined at one vertex
+d) Two separate triangles, not connected by a line
+
+
+Answer: c
+Explanation: The output of the code shown above is two equilateral triangles (of side 100 units), joined at the vertex.

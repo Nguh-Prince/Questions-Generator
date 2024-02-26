@@ -4,3 +4,4 @@ questions/
 topics_and_questions.pkl
 questions.txt
 __pycache__/
+examples/

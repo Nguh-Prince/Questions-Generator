@@ -1,0 +1,127 @@
+1. The character Dot (that is, ‘.’) in the default mode, matches any character other than _____________
+a) caret
+b) ampersand
+c) percentage symbol
+d) newline
+
+
+Answer: d
+Explanation: The character Dot (that is, ‘,’) in the default mode, matches any character other than newline. If DOTALL flag is used, then it matches any character other than newline.
+
+
+
+2. The expression a{5} will match _____________ characters with the previous regular expression.
+a) 5 or less
+b) exactly 5
+c) 5 or more
+d) exactly 4
+
+
+Answer: b
+Explanation: The character {m} is used to match exactly m characters to the previous regular expression. Hence the expression a{5} will match exactly 5 characters and not less than that.
+
+
+
+3. ________ matches the start of the string.
+    ________ matches the end of the string.
+a) ‘^’, ‘$’
+b) ‘$’, ‘^’
+c) ‘$’, ‘?’
+d) ‘?’, ‘^’
+
+
+Answer: a
+Explanation: ‘^’ (carat) matches the start of the string.
+             ‘$’ (dollar sign) matches the end of the string.
+
+
+
+4. Which of the following will result in an error?
+a)
+
+Answer: c
+Explanation: The function re.subn() will result in an error. This is because subn() requires 3 positional arguments while we have entered none.
+
+
+
+(Python Regular Expressions – 1) 5. What will be the output of the following Python code?
+
+re.split('\W+', 'Hello, hello, hello.')
+
+a) [‘Hello’, ‘hello’, ‘hello.’]
+b) [‘Hello, ‘hello’, ‘hello’]
+c) [‘Hello’, ‘hello’, ‘hello’, ‘.’]
+d) [‘Hello’, ‘hello’, ‘hello’, ”]
+
+
+Answer: d
+Explanation: In the code shown above, the function split() splits the string based on the pattern given as an argument in the parenthesis. Note: split will never split a string on an empty pattern match. Hence the output of this code is: [‘Hello’, ‘hello’, ‘hello’, ”].
+
+
+
+(Python Regular Expressions – 1) 6. What will be the output of the following Python function?
+
+re.findall("hello world", "hello", 1)
+
+a) [“hello”]
+b) [	]
+c) hello
+d) hello world
+
+
+Answer: b
+Explanation: The function findall returns the word matched if and only if both the pattern and the string match completely, that is, they are exactly the same. Observe the example shown below:
+>>> re.findall(“hello”, “hello”, 1)                                                                                                                                                      The output is: [‘hello’]                                                                                                                                                                     Hence the output of the code shown in this question is [].
+
+
+
+7. Choose the function whose output can be: <_sre.SRE_Match object; span=(4, 8), match=’aaaa’>.
+a) >>> re.search(‘aaaa’, “alohaaaa”, 0)
+b) >>> re.match(‘aaaa’, “alohaaaa”, 0)
+c) >>> re.match(‘aaa’, “alohaaa”, 0)
+d) >>> re.search(‘aaa’, “alohaaa”, 0)
+
+
+Answer: a
+Explanation: The output shown above is that of a search function, whose pattern is ‘aaaa’ and the string is that of 8 characters. The only option which matches all these criteria is:
+ >>> re.search(‘aaaa’, “alohaaaa”, 0)
+
+
+
+8.  Which of the following functions clears the regular expression cache?
+a) re.sub()
+b) re.pos()
+c) re.purge()
+d) re.subn()
+
+
+Answer: c
+Explanation: The function which clears the regular expression cache is re.purge(). Note that this function takes zero positional arguments.
+
+
+
+(Python Regular Expressions – 1) 9. What will be the output of the following Python code?
+
+import re
+re.ASCII
+
+a) 8
+b) 32
+c) 64
+d) 256
+
+
+Answer: d
+Explanation: The expression re.ASCII returns the total number of ASCII characters that are present, that is 256. This can also be abbreviated as re.A, which results in the same output (that is, 256).
+
+
+
+10. Which of the following functions results in case insensitive matching?
+a) re.A
+b) re.U
+c) re.I
+d) re.X
+
+
+Answer: c
+Explanation: The function re.I (that is, re.IGNORECASE) results in case-insensitive matching. That is, expressions such as [A-Z] will match lowercase characters too.

@@ -1,0 +1,144 @@
+(Python Formatting – 1) 1. What will be the output of the following Python code snippet?
+
+X=”hi”
+print(“05d”%X)
+
+a) 00000hi
+b) 000hi
+c) hi000
+d) error
+
+
+Answer: d
+Explanation: The code snippet shown above results in an error because the above formatting option works only if ‘X’ is a number. Since in the above case ‘X’ is a string, an error is thrown.
+
+
+
+(Python Formatting – 1) 2. What will be the output of the following Python code snippet?
+
+X=”san-foundry”
+print(“%56s”,X)
+
+a) 56 blank spaces before san-foundry
+b) 56 blank spaces before san and foundry
+c) 56 blank spaces after san-foundry
+d) no change
+
+
+Answer: a
+Explanation: The formatting option print(“%Ns”,X) helps us add ‘N’ number of spaces before a given string ‘X’. Hence the output for the code snippet shown above will be 56 blank spaces before the string “san-foundry”.
+
+
+
+(Python Formatting – 1) 3. What will be the output of the following Python expression if x=456?
+
+print("%-06d"%x)
+
+a) 000456
+b) 456000
+c) 456
+d) error
+
+
+Answer: c
+Explanation: The expression shown above results in the output 456.
+
+
+
+(Python Formatting – 1) 4. What will be the output of the following Python expression if X=345?
+
+print(“%06d”%X)
+
+a) 345000
+b) 000345
+c) 000000345
+d) 345000000
+
+
+Answer: b
+Explanation: The above expression returns the output 000345. It adds the required number of zeroes before the given number in order to make the number of digits 6 (as specified in this case).
+
+
+
+5. Which of the following formatting options can be used in order to add ‘n’ blank spaces after a given string ‘S’?
+a) print(“-ns”%S)
+b) print(“-ns”%S)
+c) print(“%ns”%S)
+d) print(“%-ns”%S)
+
+
+Answer: d
+Explanation: In order to add ‘n’ blank spaces after a given string ‘S’, we use the formatting option:(“%-ns”%S).
+
+
+
+(Python Formatting – 1) 6. What will be the output of the following Python expression if X = -122?
+
+print("-%06d"%x)
+
+a) -000122
+b) 000122
+c) –00122
+d) -00122
+
+
+Answer: c
+Explanation: The given number is -122. Here the total number of digits (including the negative sign) should be 6 according to the expression. In addition to this, there is a negative sign in the given expression. Hence the output will be – -00122.
+
+
+
+(Python Formatting – 1) 7. What will be the output of the following Python expression if the value of x is 34?
+
+print(“%f”%x)
+
+a) 34.00
+b) 34.0000
+c) 34.000000
+d) 34.00000000
+
+
+Answer: c
+Explanation: The expression shown above normally returns the value with 6 decimal points if it is not specified with any number. Hence the output of this expression will be: 34.000000 (6 decimal points).
+
+
+
+(Python Formatting – 1) 8. What will be the output of the following Python expression if x=56.236?
+
+print("%.2f"%x)
+
+a) 56.00
+b) 56.24
+c) 56.23
+d) 0056.236
+
+
+Answer: b
+Explanation: The expression shown above rounds off the given number to the number of decimal places specified. Since the expression given specifies rounding off to two decimal places, the output of this expression will be 56.24. Had the value been x=56.234 (last digit being any number less than 5), the output would have been 56.23.
+
+
+
+(Python Formatting – 1) 9. What will be the output of the following Python expression if x=22.19?
+
+print("%5.2f"%x)
+
+a) 22.1900
+b) 22.00000
+c) 22.19
+d) 22.20
+
+
+Answer: c
+Explanation: The output of the expression above will be 22.19. This expression specifies that the total number of digits (including the decimal point) should be 5, rounded off to two decimal places.
+
+
+
+(Python Formatting – 1) 10. The expression shown below results in an error.
+
+print("-%5d0",989)
+
+a) True
+b) False
+
+
+Answer: b
+Explanation: The expression shown above does not result in an error. The output of this expression is -%5d0 989. Hence this statement is incorrect.

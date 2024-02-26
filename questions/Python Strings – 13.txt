@@ -1,0 +1,147 @@
+(Python Strings – 13) 1. What will be the output of the following Python code snippet?
+
+print('abcdefcdghcd'.split('cd', 2))
+
+a) [‘ab’, ‘ef’, ‘ghcd’] 
+b) [‘ab’, ‘efcdghcd’] 
+c) [‘abcdef’, ‘ghcd’] 
+d) none of the mentioned
+
+
+Answer: a
+Explanation: The string is split into a maximum of maxsplit+1 substrings.
+
+
+
+(Python Strings – 13) 2. What will be the output of the following Python code snippet?
+
+print('ab\ncd\nef'.splitlines())
+
+a) [‘ab’, ‘cd’, ‘ef’] 
+b) [‘ab\n’, ‘cd\n’, ‘ef\n’] 
+c) [‘ab\n’, ‘cd\n’, ‘ef’] 
+d) [‘ab’, ‘cd’, ‘ef\n’] 
+
+
+Answer: a
+Explanation: It is similar to calling split(‘\n’).
+
+
+
+(Python Strings – 13) 3. What will be the output of the following Python code snippet?
+
+print('Ab!2'.swapcase())
+
+a) AB!@
+b) ab12
+c) aB!2
+d) aB1@
+
+
+Answer: c
+Explanation: Lowercase letters are converted to uppercase and vice-versa.
+
+
+
+(Python Strings – 13) 4. What will be the output of the following Python code snippet?
+
+print('ab cd ef'.title())
+
+a) Ab cd ef
+b) Ab cd eF
+c) Ab Cd Ef
+d) None of the mentioned
+
+
+Answer: c
+Explanation: The first letter of every word is capitalized.
+
+
+
+(Python Strings – 13) 5. What will be the output of the following Python code snippet?
+
+print('ab cd-ef'.title())
+
+a) Ab cd-ef
+b) Ab Cd-ef
+c) Ab Cd-Ef
+d) None of the mentioned
+
+
+Answer: c
+Explanation: The first letter of every word is capitalized. Special symbols terminate a word.
+
+
+
+(Python Strings – 13) 6. What will be the output of the following Python code snippet?
+
+print('abcd'.translate('a'.maketrans('abc', 'bcd')))
+
+a) bcde
+b) abcd
+c) error
+d) bcdd
+
+
+Answer: d
+Explanation: The output is bcdd since no translation is provided for d.
+
+
+
+(Python Strings – 13) 7. What will be the output of the following Python code snippet?
+
+print('abcd'.translate({97: 98, 98: 99, 99: 100}))
+
+a) bcde
+b) abcd
+c) error
+d) none of the mentioned
+
+
+Answer: d
+Explanation: The output is bcdd since no translation is provided for d.
+
+
+
+(Python Strings – 13) 8. What will be the output of the following Python code snippet?
+
+print('abcd'.translate({'a': '1', 'b': '2', 'c': '3', 'd': '4'}))
+
+a) abcd
+b) 1234
+c) error
+d) none of the mentioned
+
+
+Answer: a
+Explanation: The function translate expects a dictionary of integers. Use maketrans() instead of doing the above.
+
+
+
+(Python Strings – 13) 9. What will be the output of the following Python code snippet?
+
+print('ab'.zfill(5))
+
+a) 000ab
+b) 00ab0
+c) 0ab00
+d) ab000
+
+
+Answer: a
+Explanation: The string is padded with zeros on the left hand side. It is useful for formatting numbers.
+
+
+
+(Python Strings – 13) 10. What will be the output of the following Python code snippet?
+
+print('+99'.zfill(5))
+
+a) 00+99
+b) 00099
+c) +0099
+d) +++99
+
+
+Answer: c
+Explanation: zeros are filled in between the first sign and the rest of the string.

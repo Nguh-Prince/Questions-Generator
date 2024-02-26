@@ -1,0 +1,159 @@
+1. How many except statements can a try-except block have?
+a) zero
+b) one
+c) more than one
+d) more than zero
+
+
+Answer: d
+Explanation: There has to be at least one except statement.
+
+
+
+2. When will the else part of try-except-else be executed?
+a) always
+b) when an exception occurs
+c) when no exception occurs
+d) when an exception occurs in to except block
+
+
+Answer: c
+Explanation: The else part is executed when no exception occurs.
+
+
+
+(Python Exception Handling – 1) 3. Is the following Python code valid?
+
+try:
+    # Do something
+except:
+    # Do something
+finally:
+    # Do something
+
+a) no, there is no such thing as finally
+b) no, finally cannot be used with except
+c) no, finally must come before except
+d) yes
+
+
+Answer: d
+Explanation: Refer documentation.
+
+
+
+(Python Exception Handling – 1) 4. Is the following Python code valid?
+
+try:
+    # Do something
+except:
+    # Do something
+else:
+    # Do something
+
+a) no, there is no such thing as else
+b) no, else cannot be used with except
+c) no, else must come before except
+d) yes
+
+
+Answer: d
+Explanation: Refer documentation.
+
+
+
+5. Can one block of except statements handle multiple exception?
+a) yes, like except TypeError, SyntaxError [,…] 
+b) yes, like except [TypeError, SyntaxError] 
+c) no
+d) none of the mentioned
+
+
+Answer: a
+Explanation: Each type of exception can be specified directly. There is no need to put it in a list.
+
+
+
+6. When is the finally block executed?
+a) when there is no exception
+b) when there is an exception
+c) only if some condition that has been specified is satisfied
+d) always
+
+
+Answer: d
+Explanation: The finally block is always executed.
+
+
+
+(Python Exception Handling – 1) 7. What will be the output of the following Python code?
+
+def foo():
+    try:
+        return 1
+    finally:
+        return 2
+k = foo()
+print(k)
+
+a) 1
+b) 2
+c) 3
+d) error, there is more than one return statement in a single try-finally block
+
+
+Answer: b
+Explanation: The finally block is executed even there is a return statement in the try block.
+
+
+
+(Python Exception Handling – 1) 8. What will be the output of the following Python code?
+
+def foo():
+    try:
+        print(1)
+    finally:
+        print(2)
+foo()
+
+a) 1 2
+b) 1
+c) 2
+d) none of the mentioned
+
+
+Answer: a
+Explanation: No error occurs in the try block so 1 is printed. Then the finally block is executed and 2 is printed.
+
+
+
+(Python Exception Handling – 1) 9. What will be the output of the following Python code?
+
+try:
+    if '1' != 1:
+        raise "someError"
+    else:
+        print("someError has not occurred")
+except "someError":
+    print ("someError has occurred")
+
+a) someError has occurred
+b) someError has not occurred
+c) invalid code
+d) none of the mentioned
+
+
+Answer: c
+Explanation: A new exception class must inherit from a BaseException. There is no such inheritance here.
+
+
+
+10. What happens when ‘1’ == 1 is executed?
+a) we get a True
+b) we get a False
+c) an TypeError occurs
+d) a ValueError occurs
+
+
+Answer: b
+Explanation: It simply evaluates to False and does not raise any exception.

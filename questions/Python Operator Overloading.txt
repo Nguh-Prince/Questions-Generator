@@ -1,0 +1,123 @@
+(Python Operator Overloading) 1. Which function is called when the following Python code is executed?
+
+f = foo()
+format(f)
+
+a) format()
+b) __format__()
+c) str()
+d) __str__()
+
+
+Answer: d
+Explanation: Both str(f) and format(f) call f.__str__().
+
+
+
+(Python Operator Overloading) 2. Which of the following Python code will print True?
+
+a = foo(2)
+b = foo(3)
+print(a < b)
+
+a)
+
+Answer: c
+Explanation: __lt__ overloads the < operator>.
+
+
+
+
+3. Which function overloads the + operator?
+a) __add__()
+b) __plus__()
+c) __sum__()
+d) none of the mentioned
+
+
+Answer: a
+Explanation: Refer documentation.
+
+
+
+4. Which operator is overloaded by __invert__()?
+a) !
+b) ~
+c) ^
+d) –
+
+
+Answer: b
+Explanation: __invert__() overloads ~.
+
+
+
+5. Which function overloads the == operator?
+a) __eq__()
+b) __equ__()
+c) __isequal__()
+d) none of the mentioned
+
+
+Answer: a
+Explanation: The other two do not exist.
+
+
+
+6. Which operator is overloaded by __lg__()?
+a) <
+b) >
+c) !=
+d) none of the mentioned
+
+
+Answer: d
+Explanation: __lg__() is invalid.
+
+
+
+7. Which function overloads the >> operator?
+a) __more__()
+b) __gt__()
+c) __ge__()
+d) none of the mentioned
+
+
+Answer: d
+Explanation: __rshift__() overloads the >> operator.
+
+
+
+8. Let A and B be objects of class Foo. Which functions are called when print(A + B) is executed?
+a) __add__(), __str__()
+b) __str__(), __add__()
+c) __sum__(), __str__()
+d) __str__(), __sum__()
+
+
+Answer: a
+Explanation: The function __add__() is called first since it is within the bracket. The function __str__() is then called on the object that we received after adding A and B.
+
+
+
+9. Which operator is overloaded by the __or__() function?
+a) ||
+b) |
+c) //
+d) /
+
+
+Answer: b
+Explanation: The function __or__() overloads the bitwise OR operator |.
+
+
+
+10. Which function overloads the // operator?
+a) __div__()
+b) __ceildiv__()
+c) __floordiv__()
+d) __truediv__()
+
+
+Answer: c
+Explanation: __floordiv__() is for //.

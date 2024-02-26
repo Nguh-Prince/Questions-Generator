@@ -1,0 +1,153 @@
+1. Which is/are the basic I/O connections in file?
+a) Standard Input
+b) Standard Output
+c) Standard Errors
+d) All of the mentioned
+
+
+ Answer: d
+Explanation: Standard input, standard output and standard error. Standard input is the data that goes to the program. The standard input comes from a keyboard. Standard output is where we print our data with the print keyword. Unless redirected, it is the terminal console. The standard error is a stream where programs write their error messages. It is usually the text terminal. 
+
+
+
+(Python Files – 3) 2. What will be the output of the following Python code? (If entered name is sanfoundry)
+
+import sys
+
+a) sanfoundry
+b) sanfoundry, sanfoundry
+c) San
+d) None of the mentioned
+
+
+ Answer: a
+Explanation: In order to work with standard I/O streams, we must import the sys module. The read() method reads one character from the standard input. In our example we get a prompt saying “Enter your name”. We enter our name and press enter. The enter key generates the new line character: \n.
+Output:
+Enter your name: sanfoundry
+ Your name is: sanfoundry
+
+
+
+
+(Python Files – 3) 3. What will be the output of the following Python code?
+
+print 'Enter your name: ',
+
+a) Compilation Error
+b) Runtime Error
+c) Hello Python
+d)
+
+ Answer: d
+Explanation: None
+Output:
+  Hello
+Python
+
+
+
+
+4. Which of the following mode will refer to binary data?
+a) r
+b) w
+c) +
+d) b
+
+
+ Answer:d
+Explanation: Mode Meaning is as explained below:
+r Reading
+w Writing
+a Appending
+b Binary data
++ Updating.
+
+
+
+
+5. What is the pickling?
+a) It is used for object serialization
+b) It is used for object deserialization
+c) None of the mentioned
+d) All of the mentioned
+
+
+ Answer: a
+Explanation:  Pickle is the standard mechanism for object serialization. Pickle uses a simple stack-based virtual machine that records the instructions used to reconstruct the object. This makes pickle vulnerable to security risks by malformed or maliciously constructed data, that may cause the deserializer to import arbitrary modules and instantiate any object.
+
+
+
+
+6. What is unpickling?
+a) It is used for object serialization
+b) It is used for object deserialization
+c) None of the mentioned
+d) All of the mentioned
+
+
+ Answer: b
+Explanation: We have been working with simple textual data. What if we are working with objects rather than simple text? For such situations, we can use the pickle module. This module serializes Python objects. The Python objects are converted into byte streams and written to text files. This process is called pickling. The inverse operation, reading from a file and reconstructing objects is called deserializing or unpickling. 
+
+
+
+7. What is the correct syntax of open() function?
+a) file = open(file_name [, access_mode][, buffering])
+b) file object = open(file_name [, access_mode][, buffering])
+c) file object = open(file_name)
+d) none of the mentioned
+
+
+ Answer: b
+Explanation: Open() function correct syntax with the parameter details as shown below:
+file object = open(file_name [, access_mode][, buffering])
+Here is parameters’ detail:
+file_name: The file_name argument is a string value that contains the name of the file that you want to access.
+access_mode: The access_mode determines the mode in which the file has to be opened, i.e., read, write, append, etc. A complete list of possible values is given below in the table. This is optional parameter and the default file access mode is read (r).
+buffering: If the buffering value is set to 0, no buffering will take place. If the buffering value is 1, line buffering will be performed while accessing a file. If you specify the buffering value as an integer greater than 1, then buffering action will be performed with the indicated buffer size. If negative, the buffer size is the system default(default behavior). 
+
+
+
+(Python Files – 3) 8. What will be the output of the following Python code?
+
+name = ''
+
+a) Compilation Error
+b) Runtime Error
+c) No Output
+d) Flushes the file when closing them
+
+
+ Answer: d
+Explanation: The method flush() flushes the internal buffer. Python automatically flushes the files when closing them. But you may want to flush the data before closing any file. 
+
+
+
+9. Correct syntax of file.writelines() is?
+a) file.writelines(sequence)
+b) fileObject.writelines()
+c) fileObject.writelines(sequence)
+d) none of the mentioned
+
+
+ Answer: c
+Explanation: The method writelines() writes a sequence of strings to the file. The sequence can be any iterable object producing strings, typically a list of strings. There is no return value.
+Syntax
+Following is the syntax for writelines() method:
+fileObject.writelines( sequence ).
+
+
+
+10. Correct syntax of file.readlines() is?
+a) fileObject.readlines( sizehint );
+b) fileObject.readlines();
+c) fileObject.readlines(sequence)
+d) none of the mentioned
+
+
+ Answer: a
+Explanation: The method readlines() reads until EOF using readline() and returns a list containing the lines. If the optional sizehint argument is present, instead of reading up to EOF, whole lines totalling approximately sizehint bytes (possibly after rounding up to an internal buffer size) are read.
+Syntax
+Following is the syntax for readlines() method:
+fileObject.readlines( sizehint );
+Parameters
+sizehint — This is the number of bytes to be read from the file. 

@@ -1,0 +1,117 @@
+1. What does os.name contain?
+a) the name of the operating system dependent module imported
+b) the address of the module os
+c) error, it should’ve been os.name()
+d) none of the mentioned
+
+
+Answer: a
+Explanation: It contains the name of the operating system dependent module imported such as ‘posix’, ‘java’ etc.
+
+
+
+2. What does print(os.geteuid()) print?
+a) the group id of the current process
+b) the user id of the current process
+c) both the group id and the user of the current process
+d) none of the mentioned
+
+
+Answer: b
+Explanation: os.geteuid() gives the user id while the os.getegid() gives the group id.
+
+
+
+3. What does os.getlogin() return?
+a) name of the current user logged in
+b) name of the superuser
+c) gets a form to login as a different user
+d) all of the mentioned
+
+
+Answer: a
+Explanation: It returns the name of the user who is currently logged in and is running the script.
+
+
+
+4. What does os.close(f) do?
+a) terminate the process f
+b) terminate the process f if f is not responding
+c) close the file descriptor f
+d) return an integer telling how close the file pointer is to the end of file
+
+
+Answer: c
+Explanation: When a file descriptor is passed as an argument to os.close() it will be closed.
+
+
+
+5. What does os.fchmod(fd, mode) do?
+a) change permission bits of the file
+b) change permission bits of the directory
+c) change permission bits of either the file or the directory
+d) none of the mentioned
+
+
+Answer: a
+Explanation: The arguments to the function are a file descriptor and the new mode.
+
+
+
+6. Which of the following functions can be used to read data from a file using a file descriptor?
+a) os.reader()
+b) os.read()
+c) os.quick_read()
+d) os.scan()
+
+
+Answer: b
+Explanation: None of the other functions exist.
+
+
+
+7. Which of the following returns a string that represents the present working directory?
+a) os.getcwd()
+b) os.cwd()
+c) os.getpwd()
+d) os.pwd()
+
+
+Answer: a
+Explanation: The function getcwd() (get current working directory) returns a string that represents the present working directory.
+
+
+
+8. What does os.link() do?
+a) create a symbolic link
+b) create a hard link
+c) create a soft link
+d) none of the mentioned
+
+
+Answer: b
+Explanation: os.link(source, destination) will create a hard link from source to destination.
+
+
+
+9. Which of the following can be used to create a directory?
+a) os.mkdir()
+b) os.creat_dir()
+c) os.create_dir()
+d) os.make_dir()
+
+
+Answer: a
+Explanation: The function mkdir() creates a directory in the path specified.
+
+
+
+10. Which of the following can be used to create a symbolic link?
+a) os.symlink()
+b) os.symb_link()
+c) os.symblin()
+d) os.ln()
+
+
+Answer: a
+Explanation: It is the function that allows you to create a symbolic link.

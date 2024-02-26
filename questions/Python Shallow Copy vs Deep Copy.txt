@@ -1,0 +1,198 @@
+(Python Shallow Copy vs Deep Copy) 1. Which type of copy is shown in the following python code?
+
+l1=[[10, 20], [30, 40], [50, 60]]
+ls=list(l1)
+ls
+[[10, 20], [30, 40], [50, 60]]
+
+a) Shallow copy
+b) Deep copy
+c) memberwise
+d) All of the mentioned
+
+
+Answer: a
+Explanation: The code shown above depicts shallow copy. For deep copy, the command given is: l2 = l1.copy().
+
+
+
+(Python Shallow Copy vs Deep Copy) 2. What will be the output of the following Python code?
+
+l=[2, 3, [4, 5]]
+l2=l.copy()
+l2[0]=88
+l
+l2
+
+a)
+
+Answer: b
+Explanation: The code shown above depicts deep copy. Deep copy is a process where the copying process takes place recursively. Hence the modification done on one list does not affect the other list.
+
+
+
+3. In _______________ copy, the base address of the objects are copied. In _______________ copy, the base address of the objects are not copied.
+a) deep. shallow
+b) memberwise, shallow
+c) shallow, deep
+d) deep, memberwise
+
+
+Answer: c
+Explanation: In shallow copy, the base address of the objects are copied.
+In deep copy, the base address of the objects are not copied.
+Note that memberwise copy is another name for shallow copy.
+
+
+
+4. The nested list undergoes shallow copy even when the list as a whole undergoes deep copy.
+a) True
+b) False
+
+
+Answer: a
+Explanation: A nested list undergoes shallow copy even when the list as a whole undergoes deep copy. Hence, this statement is true.
+
+
+
+(Python Shallow Copy vs Deep Copy) 5. What will be the output of the following Python code and state the type of copy that is depicted?
+
+l1=[2, 4, 6, 8]
+l2=[1, 2, 3]
+l1=l2
+l2
+
+a) [2, 4, 6, 8], shallow copy
+b) [2, 4, 6, 8], deep copy
+c) [1, 2, 3], shallow copy
+d) [1, 2, 3], deep copy
+
+
+Answer: c
+Explanation: The code shown above depicts shallow copy and the output of the code is: [1, 2, 3].
+
+
+
+(Python Shallow Copy vs Deep Copy) 6. What will be the output of the following Python code?
+
+l1=[10, 20, 30]
+l2=l1
+id(l1)==id(l2)
+ 
+l2=l1.copy()
+id(l1)==id(l2)
+
+a) False, False
+b) False, True
+c) True, True
+d) True, False
+
+
+Answer: d
+Explanation: The first code shown above represents shallow copy. Hence the output of the expression id(l1)==id(l2) is True. The second code depicts deep copy. Hence the output of the expression id(l1)==id(l2) in the second case is False.
+
+
+
+(Python Shallow Copy vs Deep Copy) 7. What will be the output of the following Python code?
+
+l1=[1, 2, 3, [4]]
+l2=list(l1)
+id(l1)==id(l2)
+
+a) True
+b) False
+c) Error
+d) Address of l1
+
+
+Answer: b
+Explanation: The code shown above shows a nested list. A nested list will undergo shallow copy when the list as a whole undergoes deep copy. Hence the output of this code is False.
+
+
+
+(Python Shallow Copy vs Deep Copy) 8. What will be the output of the following Python code?
+
+l1=[10, 20, 30, [40]]
+l2=copy.deepcopy(l1)
+l1[3][0]=90
+l1
+l2
+
+a)
+
+Answer: c
+Explanation: The code shown above depicts deep copy. Hence at the end of the code, l1=[10, 20, 30, [90]] and l2=[10, 20, 30, [40]].
+
+
+
+9. In ____________________ copy, the modification done on one list affects the other list. In ____________________ copy, the modification done on one list does not affect the other list.
+a) shallow, deep
+b) memberwise, shallow
+c) deep, shallow
+d) deep, memberwise
+
+
+Answer: a
+Explanation: In shallow copy, the modification done on one list affects the other list. In deep copy, the modification done on one list does not affect the other list.
+
+
+
+(Python Shallow Copy vs Deep Copy) 10. What will be the output of the following Python code?
+
+l1=[1, 2, 3, (4)]
+l2=l1.copy()
+l2
+l1
+
+a)
+
+Answer: c
+Explanation: In the code shown above, the list l1 is enclosed in a tuple. When we print this list, it is printed as [1, 2, 3, 4]. Note the absence of the tuple. The code shown depicts deep copy. Hence the output of this program is: l1=[1, 2, 3, 4] and l2=[1, 2, 3, 4].
+
+
+
+(Python Shallow Copy vs Deep Copy) 11.  What will be the output of the following Python code?
+
+def check(n):
+    if n < 2:
+        return n % 2 == 0
+    return check(n - 2)
+print(check(11))
+
+a)	False
+b)	True
+c)	1
+d)	An exception is thrown
+
+
+Answer: a
+Explanation: The above piece of code checks recursively whether a number is even or odd.
+
+
+
+12.  What is the base case in the Merge Sort algorithm when it is solved recursively?
+a)	n=0
+b)	n=1
+c)	A list of length one
+d)	An empty list
+
+
+Answer: c
+Explanation: Merge Sort algorithm implements the recursive algorithm and when the recursive function receives a list of length 1 which is the base case, the list is returned.
+
+
+
+(Python Shallow Copy vs Deep Copy) 13.  What will be the output of the following Python code?
+
+a = [1, 2, 3, 4, 5]
+b = lambda x: (b (x[1:]) + x[:1] if x else []) 
+print(b (a))
+
+a)	1 2 3 4 5
+b)	[5,4,3,2,1] 
+c)	[] 
+d)	Error, lambda functions can’t be called recursively
+
+
+Answer: c
+Explanation: The above piece of code appends the first element of the list to a reversed sublist and reverses the list using recursion.

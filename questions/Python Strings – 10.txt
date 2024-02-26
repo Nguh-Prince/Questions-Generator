@@ -1,0 +1,147 @@
+(Python Strings – 10) 1. What will be the output of the following Python code snippet?
+
+print('for'.isidentifier())
+
+a) True
+b) False
+c) None
+d) Error
+
+
+Answer: a
+Explanation: Even keywords are considered as valid identifiers.
+
+
+
+(Python Strings – 10) 2. What will be the output of the following Python code snippet?
+
+print('abc'.islower())
+
+a) True
+b) False
+c) None
+d) Error
+
+
+Answer: a
+Explanation: There are no uppercase letters.
+
+
+
+(Python Strings – 10) 3. What will be the output of the following Python code snippet?
+
+print('a@ 1,'.islower())
+
+a) True
+b) False
+c) None
+d) Error
+
+
+Answer: a
+Explanation: There are no uppercase letters.
+
+
+
+(Python Strings – 10) 4. What will be the output of the following Python code snippet?
+
+print('11'.isnumeric())
+
+a) True
+b) False
+c) None
+d) Error
+
+
+Answer: a
+Explanation: All the character are numeric.
+
+
+
+(Python Strings – 10) 5. What will be the output of the following Python code snippet?
+
+print('1.1'.isnumeric())
+
+a) True
+b) False
+c) None
+d) Error
+
+
+Answer: b
+Explanation: The character . is not a numeric character.
+
+
+
+(Python Strings – 10) 6. What will be the output of the following Python code snippet?
+
+print('1@ a'.isprintable())
+
+a) True
+b) False
+c) None
+d) Error
+
+
+Answer: a
+Explanation: All those characters are printable.
+
+
+
+(Python Strings – 10) 7. What will be the output of the following Python code snippet?
+
+print(''''''.isspace())
+
+a) True
+b) False
+c) None
+d) Error
+
+
+Answer: b
+Explanation: None.
+
+
+
+(Python Strings – 10) 8. What will be the output of the following Python code snippet?
+
+print('\t'.isspace())
+
+a) True
+b) False
+c) None
+d) Error
+
+
+Answer: a
+Explanation: Tab Spaces are considered as spaces.
+
+
+
+(Python Strings – 10) 9. What will be the output of the following Python code snippet?
+
+print('HelloWorld'.istitle())
+
+a) True
+b) False
+c) None
+d) Error
+
+
+Answer: b
+Explanation: The letter W is uppercased.
+
+
+
+(Python Strings – 10) 10. What will be the output of the following Python code snippet?
+
+print('Hello World'.istitle())
+
+a) True
+b) False
+c) None
+d) Error
+
+
+Answer: a
+Explanation: It is in title form.

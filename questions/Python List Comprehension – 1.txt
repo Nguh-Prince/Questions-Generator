@@ -1,0 +1,156 @@
+(Python List Comprehension – 1) 1. What will be the output of the following Python code?
+
+l=[1,2,3,4,5]
+[x&1 for x in l]
+
+a) [1, 1, 1, 1, 1]
+b) [1, 0, 1, 0, 1]
+c) [1, 0, 0, 0, 0]
+d) [0, 1, 0, 1, 0]
+
+
+Answer: b
+Explanation: In the code shown above, each of the numbers of the list, that is, 1, 2, 3, 4 and 5 are AND-ed with 1 and the result is printed in the form of a list. Hence the output is [1, 0, 1, 0, 1].
+
+
+
+(Python List Comprehension – 1) 2. What will be the output of the following Python code?
+
+l1=[1,2,3]
+l2=[4,5,6]
+[x*y for x in l1 for y in l2]
+
+a) [4, 8, 12, 5, 10, 15, 6, 12, 18]
+b) [4, 10, 18]
+c) [4, 5, 6, 8, 10, 12, 12, 15, 18]
+d) [18, 12, 6, 15, 10, 5, 12, 8, 4]
+
+
+Answer: c
+Explanation: The code shown above returns x*y, where x belongs to the list l1 and y belongs to the list l2. Therefore, the output is: [4, 5, 6, 8, 10, 12, 12, 15, 18].
+
+
+
+3. Write the list comprehension to pick out only negative integers from a given list ‘l’.
+a) [x<0 in l] 
+b) [x for x<0 in l] 
+c) [x in l for x<0] 
+d) [x for x in l if x<0] 
+
+
+Answer: d
+Explanation: To pick out only the negative numbers from a given list ‘l’, the correct list comprehension statement would be: [x for x in l if x<0].  
+For example if we have a list l=[-65, 2, 7, -99, -4, 3]                                                                                                       >>> [x for x in l if x<0]                                                                                                                                                 The output would be: [-65, -99, -4].
+
+
+
+(Python List Comprehension – 1) 4. What will be the output of the following Python code?
+
+s=["pune", "mumbai", "delhi"]
+[(w.upper(), len(w)) for w in s]
+
+a) Error
+b) [‘PUNE’, 4, ‘MUMBAI’, 6, ‘DELHI’, 5]
+c) [PUNE, 4, MUMBAI, 6, DELHI, 5]
+d) [(‘PUNE’, 4), (‘MUMBAI’, 6), (‘DELHI’, 5)]
+
+
+Answer: d
+Explanation: If we need to generate two results, we need to put it in the form of a tuple. The code shown above returns each word of list in uppercase, along with the length of the word. Hence the output of the code is: [(‘PUNE’, 4), (‘MUMBAI’, 6), (‘DELHI’, 5)].
+
+
+
+(Python List Comprehension – 1) 5.  What will be the output of the following Python code?
+
+l1=[2,4,6]
+l2=[-2,-4,-6]
+for i in zip(l1, l2):
+	print(i)
+
+a)
+
+Answer: c
+Explanation: The output of the code shown will be:
+ (2, -2)
+ (4, -4)
+ (6, -6)
+This format is due to the statement print(i).
+
+
+
+(Python List Comprehension – 1) 6. What will be the output of the following Python code?
+
+l1=[10, 20, 30]
+l2=[-10, -20, -30]
+l3=[x+y for x, y in zip(l1, l2)]
+print(l3)
+
+a) Error
+b) 0
+c) [-20, -60, -80]
+d) [0, 0, 0]
+
+
+Answer: d
+Explanation: The code shown above returns x+y, for x belonging to the list l1 and y belonging to the list l2. That is, l3=[10-10, 20-20, 30-20], which is, [0, 0, 0].
+
+
+
+7. Write a list comprehension for number and its cube for l=[1, 2, 3, 4, 5, 6, 7, 8, 9].
+a) [x**3 for x in l]
+b) [x^3 for x in l]
+c) [x**3 in l]
+d) [x^3 in l]
+
+
+Answer: a
+Explanation: The list comprehension to print a list of cube of the numbers for the given list is: [x**3 for x in l].
+
+
+
+(Python List Comprehension – 1) 8. What will be the output of the following Python code?
+
+l=[[1 ,2, 3], [4, 5, 6], [7, 8, 9]]
+[[row[i] for row in l] for i in range(3)]
+
+a) Error
+b) [[1, 4, 7], [2, 5, 8], [3, 6, 9]]
+c)
+
+Answer: b
+Explanation: In the code shown above, ‘3’ is the index of the list. Had we used a number greater than 3, it would result in an error. The output of this code is: [[1, 4, 7], [2, 5, 8], [3, 6, 9]].
+
+
+
+(Python List Comprehension – 1) 9. What will be the output of the following Python code?
+
+import math
+[str(round(math.pi)) for i in range (1, 6)]
+
+a) [‘3’, ‘3’, ‘3’, ‘3’, ‘3’, ‘3’]
+b) [‘3.1’, ‘3.14’, ‘3.142’, ‘3.1416’, ‘3.14159’, ‘3.141582’]
+c) [‘3’, ‘3’, ‘3’, ‘3’, ‘3’]
+d) [‘3.1’, ‘3.14’, ‘3.142’, ‘3.1416’, ‘3.14159’]
+
+
+Answer: c
+Explanation: The list comprehension shown above rounds off pi(3.141) and returns its value, that is 3. This is done 5 times. Hence the output is: [‘3’, ‘3’, ‘3’, ‘3’, ‘3’].
+
+
+
+(Python List Comprehension – 1) 10. What will be the output of the following Python code?
+
+l1=[1,2,3]
+l2=[4,5,6]
+l3=[7,8,9]
+for x, y, z in zip(l1, l2, l3):
+	print(x, y, z)
+
+a)
+
+Answer: a
+Explanation: The output of the code shown above is:
+1 4 7
+2 5 8
+3 6 9
+This is due to the statement: print(x, y,z).

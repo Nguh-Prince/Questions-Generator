@@ -1,0 +1,138 @@
+(Python Strings – 1) 1. What will be the output of the following Python statement?
+
+>>>"a"+"bc"
+
+a) a
+b) bc
+c) bca
+d) abc
+
+
+ Answer: d
+Explanation: + operator is concatenation operator. 
+
+
+
+(Python Strings – 1) 2. What will be the output of the following Python statement?
+
+>>>"abcd"[2:]
+
+a) a
+b) ab
+c) cd
+d) dc
+
+
+ Answer: c
+Explanation: Slice operation is performed on string. 
+
+
+
+3. The output of executing string.ascii_letters can also be achieved by:
+a) string.ascii_lowercase_string.digits
+b) string.ascii_lowercase+string.ascii_uppercase
+c) string.letters
+d) string.lowercase_string.uppercase
+
+
+ Answer: b
+Explanation: Execute in shell and check. 
+
+
+
+(Python Strings – 1) 4. What will be the output of the following Python code?
+
+>>> str1 = 'hello'
+
+a) olleh
+b) hello
+c) h
+d) o
+
+
+ Answer: d
+Explanation: -1 corresponds to the last index.
+
+
+
+5. What arithmetic operators cannot be used with strings?
+a) +
+b) *
+c) –
+d) All of the mentioned
+
+
+ Answer: c
+Explanation: + is used to concatenate and * is used to multiply strings.
+
+
+
+(Python Strings – 1) 6. What will be the output of the following Python code?
+
+>>> str2 = ','
+
+a) a new line and hello
+b) \nhello
+c) the letter r and then hello
+d) error
+
+
+ Answer: b
+Explanation: When prefixed with the letter ‘r’ or ‘R’ a string literal becomes a raw string and the escape sequences such as \n are not converted. 
+
+
+
+(Python Strings – 1) 7. What will be the output of the following Python statement?
+
+>>> str3 = 'world'
+
+a) Error
+b) Output equivalent to print ‘new\nline’
+c) newline
+d) new line
+
+
+ Answer: c
+Explanation: String literal separated by whitespace are allowed. They are concatenated.
+
+
+
+(Python Strings – 1) 8. What will be the output of the following Python statement?
+
+>>> str1[-1:]
+
+a) Error
+b)
+
+ Answer: c
+Explanation: \x is an escape sequence that means the following 2 digits are a hexadecimal number encoding a character.
+
+
+
+(Python Strings – 1) 9. What will be the output of the following Python code?
+
+>>>print (r"\nhello")
+
+a) dlrowolleh
+b) hello
+c) world
+d) helloworld
+
+
+ Answer: a
+Explanation: Execute in shell to verify.
+
+
+
+(Python Strings – 1) 10. What will be the output of the following Python code?
+
+>>>print('new' 'line')
+
+a) 0xA0xB0xC
+b) Error
+c) 0x22
+d) 33
+
+
+ Answer: d
+Explanation: 0xA and 0xB and 0xC are hexadecimal integer literals representing the decimal values 10, 11 and 12 respectively. There sum is 33.

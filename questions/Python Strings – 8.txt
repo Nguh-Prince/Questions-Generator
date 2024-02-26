@@ -1,0 +1,147 @@
+(Python Strings – 8) 1. What will be the output of the following Python code?
+
+print("Hello {name1} and {name2}".format(name1='foo', name2='bin'))
+
+a) Hello foo and bin
+b) Hello {name1} and {name2}
+c) Error
+d) Hello and
+
+
+Answer: a
+Explanation: The arguments are accessed by their names.
+
+
+
+(Python Strings – 8) 2. What will be the output of the following Python code?
+
+print("Hello {0!r} and {0!s}".format('foo', 'bin'))
+
+a) Hello foo and foo
+b) Hello ‘foo’ and foo
+c) Hello foo and ‘bin’
+d) Error
+
+
+Answer: b
+Explanation: !r causes the characters ‘ or ” to be printed as well.
+
+
+
+(Python Strings – 8) 3. What will be the output of the following Python code?
+
+print("Hello {0} and {1}".format(('foo', 'bin')))
+
+a) Hello foo and bin
+b) Hello (‘foo’, ‘bin’) and (‘foo’, ‘bin’)
+c) Error
+d) None of the mentioned
+
+
+Answer: c
+Explanation: IndexError, the tuple index is out of range.
+
+
+
+(Python Strings – 8) 4. What will be the output of the following Python code?
+
+print("Hello {0[0]} and {0[1]}".format(('foo', 'bin')))
+
+a) Hello foo and bin
+b) Hello (‘foo’, ‘bin’) and (‘foo’, ‘bin’)
+c) Error
+d) None of the mentioned
+
+
+Answer: a
+Explanation: The elements of the tuple are accessed by their indices.
+
+
+
+(Python Strings – 8) 5. What will be the output of the following Python code snippet?
+
+print('The sum of {0} and {1} is {2}'.format(2, 10, 12))
+
+a) The sum of 2 and 10 is 12
+b) Error
+c) The sum of 0 and 1 is 2
+d) None of the mentioned
+
+
+Answer: a
+Explanation: The arguments passed to the function format can be integers also.
+
+
+
+(Python Strings – 8) 6. What will be the output of the following Python code snippet?
+
+print('The sum of {0:b} and {1:x} is {2:o}'.format(2, 10, 12))
+
+a) The sum of 2 and 10 is 12
+b) The sum of 10 and a is 14
+c) The sum of 10 and a is c
+d) Error
+
+
+Answer: b
+Explanation: 2 is converted to binary, 10 to hexadecimal and 12 to octal.
+
+
+
+(Python Strings – 8) 7. What will be the output of the following Python code snippet?
+
+print('{:,}'.format(1112223334))
+
+a) 1,112,223,334
+b) 111,222,333,4
+c) 1112223334
+d) Error
+
+
+Answer: a
+Explanation: A comma is added after every third digit from the right.
+
+
+
+(Python Strings – 8) 8. What will be the output of the following Python code snippet?
+
+print('{:,}'.format('1112223334'))
+
+a) 1,112,223,334
+b) 111,222,333,4
+c) 1112223334
+d) Error
+
+
+Answer: d
+Explanation: An integer is expected.
+
+
+
+(Python Strings – 8) 9. What will be the output of the following Python code snippet?
+
+print('{:$}'.format(1112223334))
+
+a) 1,112,223,334
+b) 111,222,333,4
+c) 1112223334
+d) Error
+
+
+Answer: d
+Explanation: $ is an invalid format code.
+
+
+
+(Python Strings – 8) 10. What will be the output of the following Python code snippet?
+
+print('{:#}'.format(1112223334))
+
+a) 1,112,223,334
+b) 111,222,333,4
+c) 1112223334
+d) Error
+
+
+Answer: c
+Explanation: The number is printed as it is.

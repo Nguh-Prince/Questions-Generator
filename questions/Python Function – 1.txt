@@ -1,0 +1,128 @@
+1. Which of the following is the use of function in python?
+a) Functions are reusable pieces of programs
+b) Functions don’t provide better modularity for your application
+c) you can’t also create your own functions
+d) All of the mentioned
+
+
+ Answer: a
+Explanation: Functions are reusable pieces of programs. They allow you to give a name to a block of statements, allowing you to run that block using the specified name anywhere in your program and any number of times. 
+
+
+
+2. Which keyword is used for function?
+a) Fun
+b) Define
+c) def
+d) Function
+
+
+ Answer: c
+Explanation: The def keyword is used to create, (or define) a function in python. 
+
+
+
+(Python Function – 1) 3. What will be the output of the following Python code?
+
+def sayHello():
+
+a)
+
+ Answer: a
+Explanation: Functions are defined using the def keyword. After this keyword comes an identifier name for the function, followed by a pair of parentheses which may enclose some names of variables, and by the final colon that ends the line. Next follows the block of statements that are part of this function.
+def sayHello():    print('Hello World!') # block belonging to the function# End of function # sayHello() # call the functionsayHello() # call the function again
+
+
+
+
+(Python Function – 1) 4. What will be the output of the following Python code?
+
+    print('Hello World!') 
+
+a) 3
+b) 4
+c) 4 is maximum
+d) None of the mentioned
+
+
+ Answer: c
+Explanation: Here, we define a function called printMax that uses two parameters called a and b. We find out the greater number using a simple if..else statement and then print the bigger number. 
+
+
+
+(Python Function – 1) 5. What will be the output of the following Python code?
+
+sayHello() 
+
+a)
+
+ Answer: a
+Explanation: The first time that we print the value of the name x with the first line in the function’s body, Python uses the value of the parameter declared in the main block, above the function definition.
+Next, we assign the value 2 to x. The name x is local to our function. So, when we change the value of x in the function, the x defined in the main block remains unaffected.
+With the last print function call, we display the value of x as defined in the main block, thereby confirming that it is actually unaffected by the local assignment within the previously called function. 
+
+
+
+(Python Function – 1) 6. What will be the output of the following Python code?
+
+sayHello()
+
+a)
+
+Answer: b
+Explanation: The global statement is used to declare that x is a global variable – hence, when we assign a value to x inside the function, that change is reflected when we use the value of x in the main block. 
+
+
+
+(Python Function – 1) 7. What will be the output of the following Python code?
+
+def sayHello():
+
+a)
+
+ Answer: a
+Explanation: For some functions, you may want to make some parameters optional and use default values in case the user does not want to provide values for them. This is done with the help of default argument values. You can specify default argument values for parameters by appending to the parameter name in the function definition the assignment operator (=) followed by the default value.
+The function named say is used to print a string as many times as specified. If we don’t supply a value, then by default, the string is printed just once. We achieve this by specifying a default argument value of 1 to the parameter times.
+In the first usage of say, we supply only the string and it prints the string once. In the second usage of say, we supply both the string and an argument 5 stating that we want to say the string message 5 times. 
+
+
+
+(Python Function – 1) 8. What will be the output of the following Python code?
+
+    print('Hello World!') # block belonging to the function
+
+a)
+
+ Answer: c
+Explanation: If you have some functions with many parameters and you want to specify only some of them, then you can give values for such parameters by naming them – this is called keyword arguments – we use the name (keyword) instead of the position (which we have been using all along) to specify the arguments to the function.
+The function named func has one parameter without a default argument value, followed by two parameters with default argument values.
+In the first usage, func(3, 7), the parameter a gets the value 3, the parameter b gets the value 7 and c gets the default value of 10.
+In the second usage func(25, c=24), the variable a gets the value of 25 due to the position of the argument. Then, the parameter c gets the value of 24 due to naming i.e. keyword arguments. The variable b gets the default value of 5.
+In the third usage func(c=50, a=100), we use keyword arguments for all specified values. Notice that we are specifying the value for parameter c before that for a even though a is defined before c in the function definition. 
+
+
+
+(Python Function – 1) 9. What will be the output of the following Python code?
+
+# End of function #
+
+a) 2
+b) 3
+c) The numbers are equal
+d) None of the mentioned
+
+
+ Answer: b
+Explanation: The maximum function returns the maximum of the parameters, in this case the numbers supplied to the function. It uses a simple if..else statement to find the greater value and then returns that value. 
+
+
+
+10. Which of the following is a feature of DocString?
+a) Provide a convenient way of associating documentation with Python modules, functions, classes, and methods
+b) All functions should have a docstring
+c) Docstrings can be accessed by the __doc__ attribute on objects
+d) All of the mentioned
+
+
+ Answer: d
+Explanation: Python has a nifty feature called documentation strings, usually referred to by its shorter name docstrings. DocStrings are an important tool that you should make use of since it helps to document the program better and makes it easier to understand. 

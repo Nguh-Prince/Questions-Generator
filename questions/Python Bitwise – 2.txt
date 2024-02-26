@@ -1,0 +1,132 @@
+1. It is not possible for the two’s complement value to be equal to the original value in any case.
+a) True
+b) False
+
+
+Answer: b
+Explanation: In most cases the value of two’s complement is different from the original value. However, there are cases in which the two’s complement value may be equal to the original value. For example, the two’s complement of 10000000 is also equal to 10000000. Hence the statement is false.
+
+
+
+2. The one’s complement of 110010101 is:
+a) 001101010
+b) 110010101
+c) 001101011
+d) 110010100
+
+
+Answer: a
+Explanation: The one’s complement of a value is obtained by simply changing all the 1’s to 0’s and all the 0’s to 1’s. Hence the one’s complement of 110010101 is 001101010.
+
+
+
+3. Bitwise _________ gives 1 if either of the bits is 1 and 0 when both of the bits are 1.
+a) OR
+b) AND
+c) XOR
+d) NOT
+
+
+Answer: c
+Explanation: Bitwise XOR gives 1 if either of the bits is 1 and 0 when both of the bits are 1.
+
+
+
+(Python Bitwise – 2) 4. What will be the output of the following Python expression?
+
+4^12
+
+a) 2
+b) 4
+c) 8
+d) 12
+
+
+Answer: c
+Explanation:  ^ is the XOR operator. The binary form of 4 is 0100 and that of 12 is 1100. Therefore, 0100^1100 is 1000, which is equal to 8.
+
+
+
+5. Any odd number on being AND-ed with ________ always gives 1. Hint: Any even number on being AND-ed with this value always gives 0.
+a) 10
+b) 2
+c) 1
+d) 0
+
+
+Answer: c
+Explanation: Any odd number on being AND-ed with 1 always gives 1. Any even number on being AND-ed with this value always gives 0.
+
+
+
+(Python Bitwise – 2) 6. What will be the value of the following Python expression?
+
+ bin(10-2)+bin(12^4)
+
+a) 0b10000
+b) 0b10001000
+c) 0b1000b1000
+d) 0b10000b1000
+
+
+Answer: d
+Explanation: The output of bin(10-2) = 0b1000 and that of bin(12^4) is ob1000. Hence the output of the above expression is: 0b10000b1000.
+
+
+
+7. Which of the following expressions can be used to multiply a given number ‘a’ by 4?
+a) a<<2
+b) a<<4
+c) a>>2
+d) a>>4
+
+
+Answer: a
+Explanation: Let us consider an example wherein a=2. The binary form of 2 is 0010. When we left shift this value by 2, we get 1000, the value of which is 8. Hence if we want to multiply a given number ‘a’ by 4, we can use the expression: a<<2.
+
+
+
+(Python Bitwise – 2) 8. What will be the output of the following Python code if a=10 and b =20?
+
+a=10
+b=20
+a=a^b
+b=a^b
+a=a^b
+print(a,b)
+
+a) 10 20
+b) 10 10
+c) 20 10
+d) 20 20
+
+
+Answer: c
+Explanation: The code shown above is used to swap the contents of two memory locations using bitwise X0R operator. Hence the output of the code shown above is: 20 10.
+
+
+
+9. What is the two’s complement of -44?
+a) 1011011
+b) 11010100
+c) 11101011
+d) 10110011
+
+
+Answer: b
+Explanation: The binary form of -44 is 00101100. The one’s complement of this value is 11010011. On adding one to this we get: 11010100 (two’s complement).
+
+
+
+(Python Bitwise – 2) 10. What will be the output of the following Python expression?
+
+~100?
+
+a) 101
+b) -101
+c) 100
+d) -100
+
+
+Answer: b
+Explanation: Suppose we have an expression ~A. This is evaluated as: -A – 1. Therefore, the expression ~100 is evaluated as -100 – 1, which is equal to -101.

@@ -1,0 +1,147 @@
+(Python Strings – 12) 1. What will be the output of the following Python code snippet?
+
+print('cd'.partition('cd'))
+
+a) (‘cd’)
+b) (”)
+c) (‘cd’, ”, ”)
+d) (”, ‘cd’, ”)
+
+
+Answer: d
+Explanation: The entire string has been passed as the separator hence the first and the last item of the tuple returned are null strings.
+
+
+
+(Python Strings – 12) 2. What will be the output of the following Python code snippet?
+
+print('abef'.partition('cd'))
+
+a) (‘abef’)
+b) (‘abef’, ‘cd’, ”)
+c) (‘abef’, ”, ”)
+d) error
+
+
+Answer: c
+Explanation: The separator is not present in the string hence the second and the third elements of the tuple are null strings.
+
+
+
+(Python Strings – 12) 3. What will be the output of the following Python code snippet?
+
+print('abcdef12'.replace('cd', '12'))
+
+a) ab12ef12
+b) abcdef12
+c) ab12efcd
+d) none of the mentioned
+
+
+Answer: a
+Explanation: All occurrences of the first substring are replaced by the second substring.
+
+
+
+(Python Strings – 12) 4. What will be the output of the following Python code snippet?
+
+print('abef'.replace('cd', '12'))
+
+a) abef
+b) 12
+c) error
+d) none of the mentioned
+
+
+Answer: a
+Explanation: The first substring is not present in the given string and hence nothing is replaced.
+
+
+
+(Python Strings – 12) 5. What will be the output of the following Python code snippet?
+
+print('abcefd'.replace('cd', '12'))
+
+a) ab1ef2
+b) abcefd
+c) ab1efd
+d) ab12ed2
+
+
+Answer: b
+Explanation: The first substring is not present in the given string and hence nothing is replaced.
+
+
+
+(Python Strings – 12) 6. What will be the output of the following Python code snippet?
+
+print('xyyxyyxyxyxxy'.replace('xy', '12', 0))
+
+a) xyyxyyxyxyxxy
+b) 12y12y1212x12
+c) 12yxyyxyxyxxy
+d) xyyxyyxyxyx12
+
+
+Answer: a
+Explanation: The first 0 occurrences of the given substring are replaced.
+
+
+
+(Python Strings – 12) 7. What will be the output of the following Python code snippet?
+
+print('xyyxyyxyxyxxy'.replace('xy', '12', 100))
+
+a) xyyxyyxyxyxxy
+b) 12y12y1212x12
+c) none of the mentioned
+d) error
+
+
+Answer: b
+Explanation: The first 100 occurrences of the given substring are replaced.
+
+
+
+(Python Strings – 12) 8. What will be the output of the following Python code snippet?
+
+print('abcdefcdghcd'.split('cd'))
+
+a) [‘ab’, ‘ef’, ‘gh’] 
+b) [‘ab’, ‘ef’, ‘gh’, ”] 
+c) (‘ab’, ‘ef’, ‘gh’)
+d) (‘ab’, ‘ef’, ‘gh’, ”)
+
+
+Answer: b
+Explanation: The given string is split and a list of substrings is returned.
+
+
+
+(Python Strings – 12) 9. What will be the output of the following Python code snippet?
+
+print('abcdefcdghcd'.split('cd', 0))
+
+a) [‘abcdefcdghcd’] 
+b) ‘abcdefcdghcd’
+c) error
+d) none of the mentioned
+
+
+Answer: a
+Explanation: The given string is split at 0 occurances of the specified substring.
+
+
+
+(Python Strings – 12) 10. What will be the output of the following Python code snippet?
+
+print('abcdefcdghcd'.split('cd', -1))
+
+a) [‘ab’, ‘ef’, ‘gh’] 
+b) [‘ab’, ‘ef’, ‘gh’, ”] 
+c) (‘ab’, ‘ef’, ‘gh’)
+d) (‘ab’, ‘ef’, ‘gh’, ”)
+
+
+Answer: b
+Explanation: Calling the function with a negative value for maxsplit is the same as calling it without any maxsplit specified. The string will be split into as many substring s as possible.

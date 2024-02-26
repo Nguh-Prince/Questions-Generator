@@ -1,0 +1,147 @@
+(Python Strings – 9) 1. What will be the output of the following Python code?
+
+print('{0:.2}'.format(1/3))
+
+a) 0.333333
+b) 0.33
+c) 0.333333:.2
+d) Error
+
+
+Answer: b
+Explanation: .2 specifies the precision.
+
+
+
+(Python Strings – 9) 2. What will be the output of the following Python code?
+
+print('{0:.2%}'.format(1/3))
+
+a) 0.33
+b) 0.33%
+c) 33.33%
+d) 33%
+
+
+Answer: c
+Explanation: The symbol % is used to represent the result of an expression as a percentage.
+
+
+
+(Python Strings – 9) 3. What will be the output of the following Python code?
+
+print('ab12'.isalnum())
+
+a) True
+b) False
+c) None
+d) Error
+
+
+Answer: a
+Explanation: The string has only letters and digits.
+
+
+
+(Python Strings – 9) 4. What will be the output of the following Python code?
+
+print('ab,12'.isalnum())
+
+a) True
+b) False
+c) None
+d) Error
+
+
+Answer: b
+Explanation: The character , is not a letter or a digit.
+
+
+
+(Python Strings – 9) 5. What will be the output of the following Python code?
+
+print('ab'.isalpha())
+
+a) True
+b) False
+c) None
+d) Error
+
+
+Answer: a
+Explanation: The string has only letters.
+
+
+
+(Python Strings – 9) 6. What will be the output of the following Python code?
+
+print('a B'.isalpha())
+
+a) True
+b) False
+c) None
+d) Error
+
+
+Answer: b
+Explanation: Space is not a letter.
+
+
+
+(Python Strings – 9) 7. What will be the output of the following Python code snippet?
+
+print('0xa'.isdigit())
+
+a) True
+b) False
+c) None
+d) Error
+
+
+Answer: b
+Explanation: Hexadecimal digits aren’t considered as digits (a-f).
+
+
+
+(Python Strings – 9) 8. What will be the output of the following Python code snippet?
+
+print(''.isdigit())
+
+a) True
+b) False
+c) None
+d) Error
+
+
+Answer: b
+Explanation: If there are no characters then False is returned.
+
+
+
+(Python Strings – 9) 9.What will be the output of the following Python code snippet?
+
+print('my_string'.isidentifier())
+
+a) True
+b) False
+c) None
+d) Error
+
+
+Answer: a
+Explanation: It is a valid identifier.
+
+
+
+(Python Strings – 9) 10. What will be the output of the following Python code snippet?
+
+print('__foo__'.isidentifier())
+
+a) True
+b) False
+c) None
+d) Error
+
+
+Answer: a
+Explanation: It is a valid identifier.

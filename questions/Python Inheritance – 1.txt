@@ -1,0 +1,256 @@
+1.  Which of the following best describes inheritance?
+a)	Ability of a class to derive members of another class as a part of its own definition
+b)	Means of bundling instance variables and methods in order to restrict access to certain class members
+c)	Focuses on variables and passing of variables to functions
+d)	Allows for implementation of elegant software that is well designed and easily modified
+
+
+Answer: a
+Explanation: If the class definition is class B(A): then class B inherits the methods of class A. This is called inheritance.
+
+
+
+2.	Which of the following statements is wrong about inheritance?
+a)	Protected members of a class can be inherited
+b)	The inheriting class is called a subclass
+c)	Private members of a class can be inherited and accessed
+d)	Inheritance is one of the features of OOP
+
+
+Answer: c
+Explanation: Any changes made to the private members of the class in the subclass aren’t reflected in the original members.
+
+
+
+(Python Inheritance – 1) 3. What will be the output of the following Python code?
+
+class Demo:
+    def __new__(self):
+        self.__init__(self)
+        print("Demo's __new__() invoked")
+    def __init__(self):
+        print("Demo's __init__() invoked")
+class Derived_Demo(Demo):
+    def __new__(self):
+        print("Derived_Demo's __new__() invoked")
+    def __init__(self):
+        print("Derived_Demo's __init__() invoked")
+def main():
+    obj1 = Derived_Demo()
+    obj2 = Demo()
+main()
+
+a)
+
+Answer: b
+Explanation: Since the object for the derived class is declared first, __new__() method of the derived class is invoked first, followed by the constructor and the __new__() method of main class.
+
+
+
+(Python Inheritance – 1) 4. What will be the output of the following Python code?
+
+class Test:
+    def __init__(self):
+        self.x = 0
+class Derived_Test(Test):
+    def __init__(self):
+        self.y = 1
+def main():
+    b = Derived_Test()
+    print(b.x,b.y)
+main()
+
+a)	0 1
+b)	0 0
+c)      Error because class B inherits A but variable x isn’t inherited
+d)	Error because when object is created, argument must be passed like Derived_Test(1)
+
+
+Answer: c
+Explanation: Since the invoking method, Test.__init__(self), isn’t present in the derived class, variable x can’t be inherited.
+
+
+
+(Python Inheritance – 1) 5. What will be the output of the following Python code?
+
+class A():
+    def disp(self):
+        print("A disp()")
+class B(A):
+    pass
+obj = B()
+obj.disp()
+
+a)	Invalid syntax for inheritance
+b)	Error because when object is created, argument must be passed
+c)	Nothing is printed
+d)	A disp()
+
+
+Answer: d
+Explanation: Class B inherits class A hence the function disp () becomes part of class B’s definition. Hence disp() method is properly executed and the line is printed.
+
+
+
+6.  All subclasses are a subtype in object-oriented programming.
+a)	True
+b)      False
+
+
+Answer: b
+Explanation: A subtype is something that be substituted for and behave as its parent type. All subclass may not be a subtype in object-oriented programming.
+
+
+
+7.  When defining a subclass in Python that is meant to serve as a subtype, the subtype Python keyword is used.
+a)	True
+b)	False
+
+
+Answer: b
+Explanation: B is a subtype of B if instances of type B can substitute for instances of type A without affecting semantics.
+
+
+
+8.  Suppose B is a subclass of A, to invoke the __init__ method in A from B, what is the line of code you should write?
+a)	A.__init__(self)
+b)	B.__init__(self)
+c)	A.__init__(B)
+d)	B.__init__(A)
+
+
+Answer: a
+Explanation: To invoke the __init__ method in A from B, either of the following should be written: A.__init__(self) or super().__init__(self).
+
+
+
+(Python Inheritance – 1) 9. What will be the output of the following Python code?
+
+class Test:
+    def __init__(self):
+        self.x = 0
+class Derived_Test(Test):
+    def __init__(self):
+        Test.__init__(self)
+        self.y = 1
+def main():
+    b = Derived_Test()
+    print(b.x,b.y)
+main()
+
+a)	Error because class B inherits A but variable x isn’t inherited
+b)	0 0
+c)	0 1
+d)	Error, the syntax of the invoking method is wrong
+
+
+Answer: c
+Explanation: Since the invoking method has been properly invoked, variable x from the main class has been properly inherited and it can also be accessed.
+
+
+
+(Python Inheritance – 1) 10.  What will be the output of the following Python code?
+
+class A:
+    def __init__(self, x= 1):
+        self.x = x
+class der(A):
+    def __init__(self,y = 2):
+        super().__init__()
+        self.y = y
+def main():
+    obj = der()
+    print(obj.x, obj.y)
+main()
+
+a)	Error, the syntax of the invoking method is wrong
+b)	The program runs fine but nothing is printed
+c)	1 0
+d)	1 2
+
+
+Answer: d
+Explanation: In the above piece of code, the invoking method has been properly implemented and hence x=1 and y=2. 
+
+
+
+11.  What does built-in function type do in context of classes?
+a)	Determines the object name of any value
+b)	Determines the class name of any value
+c)	Determines class description of any value
+d)	Determines the file name of any value
+
+
+Answer: b
+Explanation: For example: >>> type((1,)) gives <class ‘tuple’>.
+
+
+
+12.  Which of the following is not a type of inheritance?
+a)	Double-level
+b)	Multi-level
+c)	Single-level
+d)	Multiple
+
+
+Answer: a
+Explanation: Multiple, multi-level, single-level and hierarchical inheritance are all types of inheritance. 
+
+
+
+13.  What does built-in function help do in context of classes?
+a)	Determines the object name of any value
+b)	Determines the class identifiers of any value
+c)	Determines class description of any built-in type
+d)	Determines class description of any user-defined built-in type
+
+
+Answer: c
+Explanation: help() usually gives information of the class on any built-in type or function.
+
+
+
+(Python Inheritance – 1) 14. What will be the output of the following Python code?
+
+class A:
+    def one(self):
+        return self.two()
+ 
+    def two(self):
+        return 'A'
+ 
+class B(A):
+    def two(self):
+        return 'B'
+obj1=A()
+obj2=B()
+print(obj1.two(),obj2.two())
+
+a)	A A
+b)	A B
+c)	B B
+d)	An exception is thrown
+
+
+Answer: b
+Explanation: obj1.two() invokes the method two() in class A which returns ‘A’ and obj2.two() invokes the  method two() in class B which returns ‘B’.
+
+
+
+(Python Inheritance – 1) 15.  What type of inheritance is illustrated in the following Python code?
+
+class A():
+    pass
+class B():
+    pass
+class C(A,B):
+    pass
+
+a)	Multi-level inheritance
+b)	Multiple inheritance
+c)	Hierarchical inheritance
+d)	Single-level inheritance
+
+
+Answer: b
+Explanation: In multiple inheritance, two or more subclasses are derived from the superclass as shown in the above piece of code.

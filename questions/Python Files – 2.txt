@@ -1,0 +1,147 @@
+1. Which are the two built-in functions to read a line of text from standard input, which by default comes from the keyboard?
+a) Raw_input & Input
+b) Input & Scan
+c) Scan & Scanner
+d) Scanner
+
+
+ Answer: a
+Explanation: Python provides two built-in functions to read a line of text from standard input, which by default comes from the keyboard. These functions are:
+raw_input and input 
+
+
+
+(Python Files – 2) 2. What will be the output of the following Python code?
+
+str = raw_input("Enter your input: ");
+
+a)
+
+ Answer: a
+Explanation: The raw_input([prompt]) function reads one line from standard input and returns it as a string. This would prompt you to enter any string and it would display same string on the screen. When I typed “Hello Python!” 
+
+
+
+(Python Files – 2) 3. What will be the output of the following Python code?
+
+print "Received input is : ", str
+
+a)
+
+ Answer: a
+Explanation: None. 
+
+
+
+4. Which one of the following is not attributes of file?
+a) closed
+b) softspace
+c) rename
+d) mode
+
+
+ Answer: c
+Explanation: rename is not the attribute of file rest all are files attributes.
+Attribute	Description
+file.closed	Returns true if file is closed, false otherwise.
+file.mode	Returns access mode with which file was opened.
+file.name	Returns name of the file.
+file.softspace	Returns false if space explicitly required with print, true otherwise.
+
+
+
+
+5. What is the use of tell() method in python?
+a) tells you the current position within the file
+b) tells you the end position within the file
+c) tells you the file is opened or not
+d) none of the mentioned
+
+
+ Answer: a
+Explanation: The tell() method tells you the current position within the file; in other words, the next read or write will occur at that many bytes from the beginning of the file. 
+
+
+
+6. What is the current syntax of rename() a file?
+a) rename(current_file_name, new_file_name)
+b) rename(new_file_name, current_file_name,)
+c) rename(()(current_file_name, new_file_name))
+d) none of the mentioned
+
+
+ Answer: a
+Explanation: This is the correct syntax which has shown below.
+rename(current_file_name, new_file_name) 
+
+
+
+7. What is the current syntax of remove() a file?
+a) remove(file_name)
+b) remove(new_file_name, current_file_name,)
+c) remove(() , file_name))
+d) none of the mentioned
+
+
+ Answer: a
+Explanation: remove(file_name) 
+
+
+
+(Python Files – 2) 8. What will be the output of the following Python code?
+
+str = input("Enter your input: ");
+
+a) Compilation Error
+b) Syntax Error
+c) Displays  Output
+d) None of the mentioned
+
+
+ Answer: c
+Explanation: It displays the output as shown below. The method next() is used when a file is used as an iterator, typically in a loop, the next() method is called repeatedly. This method returns the next input line, or raises StopIteration when EOF is hit.
+Output:
+Name of the file:  foo.txt
+Line No 0 - This is 1st line
+
+Line No 1 - This is 2nd line
+
+Line No 2 - This is 3rd line
+
+Line No 3 - This is 4th line
+
+Line No 4 - This is 5th line
+
+
+
+
+9. What is the use of seek() method in files?
+a) sets the file’s current position at the offset
+b) sets the file’s previous position at the offset
+c) sets the file’s current position within the file
+d) none of the mentioned
+
+
+ Answer:  a
+Explanation: Sets the file’s current position at the offset. The method seek() sets the file’s current position at the offset.
+Following is the syntax for seek() method:
+fileObject.seek(offset[, whence])
+Parameters
+offset — This is the position of the read/write pointer within the file.
+whence — This is optional and defaults to 0 which means absolute file positioning, other values are 1 which means seek relative to the current position and 2 means seek relative to the file’s end.
+
+
+
+
+10. What is the use of truncate() method in file?
+a) truncates the file size
+b) deletes the content of the file
+c) deletes the file size
+d) none of the mentioned
+
+
+ Answer: a
+Explanation: The method truncate() truncates the file size. Following is the syntax for truncate() method:
+fileObject.truncate( [ size ])
+Parameters
+size — If this optional argument is present, the file is truncated to (at most) that size. 

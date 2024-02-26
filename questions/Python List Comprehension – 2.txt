@@ -1,0 +1,137 @@
+1. Read the information given below carefully and write a list comprehension such that the output is: [‘e’, ‘o’]
+
+
+
+Answer: b
+Explanation: The tuple ‘v’ is used to generate a list containing only vowels in the string ‘w’. The result is a list containing only vowels present in the string “hello”. Hence the required list comprehension is: [x for x in w if x in v].
+
+
+
+(Python List Comprehension – 2) 2. What will be the output of the following Python code?
+
+w="hello"
+v=('a', 'e', 'i', 'o', 'u')
+
+a) [97, 98, 99]
+b) [‘97’, ‘98’, ‘99’]
+c) [65, 66, 67]
+d) Error
+
+
+Answer: a
+Explanation: The list comprehension shown above returns the ASCII value of each alphabet of the string ‘abc’. Hence the output is: [97, 98, 99]. Had the string been ‘ABC’, the output would be: [65, 66, 67].
+
+
+
+(Python List Comprehension – 2) 3. What will be the output of the following Python code?
+
+[ord(ch) for ch in 'abc']
+
+a) [0]
+b) 0
+c) [0.00]
+d) Error
+
+
+Answer: d
+Explanation: The value of t in the code shown above is equal to 32.00, which is a floating point value. ‘Float’ objects are not iterable. Hence the code results in an error.
+
+
+
+4. Write a list comprehension for producing a list of numbers between 1 and 1000 that are divisible by 3.
+a) [x in range(1, 1000) if x%3==0]
+b) [x for x in range(1000) if x%3==0]
+c) [x%3 for x in range(1, 1000)]
+d) [x%3=0 for x in range(1, 1000)]
+
+
+Answer: b
+Explanation: The list comprehension [x for x in range(1000) if x%3==0] produces a list of numbers between 1 and 1000 that are divisible by 3.
+
+
+
+(Python List Comprehension – 2) 5. Write a list comprehension equivalent for the Python code shown below.
+
+t=32.00
+[round((x-32)*5/9) for x in t]
+
+a) [i for i in range(1, 100) if int(i*0.5)==(i*0.5)]
+b) [i for i in range(1, 101) if int(i*0.5)==(i*0.5)]
+c) [i for i in range(1, 101) if int(i*0.5)=(i*0.5)]
+d) [i for i in range(1, 100) if int(i*0.5)=(i*0.5)]
+
+
+Answer: b
+Explanation: The code shown above prints the value ‘i’ only if it satisfies the condition: int(i*0.5) is equal to (i*0.5). Hence the required list comprehension is: [i for i in range(1, 101) if int(i*0.5)==(i*0.5)].
+
+
+
+6. What is the list comprehension equivalent for: list(map(lambda x:x**-1, [1, 2, 3]))?
+a) [1|x for x in [1, 2, 3]]
+b) [-1**x for x in [1, 2, 3]]
+c) [x**-1 for x in [1, 2, 3]]
+d) [x^-1 for x in range(4)]
+
+
+Answer: c
+Explanation: The output of the function list(map(lambda x:x**-1, [1, 2, 3])) is [1.0, 0.5, 0.3333333333333333] and that of the list comprehension [x**-1 for x in [1, 2, 3]] is [1.0, 0.5, 0.3333333333333333]. Hence the answer is: [x**-1 for x in [1, 2, 3]].
+
+
+
+7. Write a list comprehension to produce the list: [1, 2, 4, 8, 16……212].
+a) [(2**x) for x in range(0, 13)]
+b) [(x**2) for x in range(1, 13)]
+c) [(2**x) for x in range(1, 13)]
+d) [(x**2) for x in range(0, 13)]
+
+
+Answer: a
+Explanation: The required list comprehension will print the numbers from 1 to 12, each raised to 2. The required answer is thus, [(2**x) for x in range(0, 13)].
+
+
+
+(Python List Comprehension – 2) 8. What is the list comprehension equivalent for?
+
+for i in range(1, 101):
+	if int(i*0.5)==i*0.5:
+		print(i)
+
+a) [x for x in range(1, 20) if (x%2==0)]
+b) [x for x in range(0, 20) if (x//2==0)]
+c) [x for x in range(1, 20) if (x//2==0)]
+d) [x for x in range(0, 20) if (x%2==0)]
+
+
+Answer: d
+Explanation: The required list comprehension will print a whole number, less than 20, provided that the number is even. Since the output list should contain zero as well, the answer to this question is: [x for x in range(0, 20) if (x%2==0)].
+
+
+
+(Python List Comprehension – 2) 9. What will be the output of the following Python list comprehension?
+
+[j for i in range(2,8) for j in range(i*2, 50, i)]
+
+a) A list of prime numbers up to 50
+b) A list of numbers divisible by 2, up to 50
+c) A list of non prime numbers, up to 50
+d) Error
+
+
+Answer: c
+Explanation: The list comprehension shown above returns a list of non-prime numbers up to 50. The logic behind this is that the square root of 50 is almost equal to 7. Hence all the multiples of 2-7 are not prime in this range.
+
+
+
+(Python List Comprehension – 2) 10. What will be the output of the following Python code?
+
+l=["good", "oh!", "excellent!", "#450"]
+[n for n in l if n.isalpha() or n.isdigit()]
+
+a) [‘good’, ‘oh’, ‘excellent’, ‘450’	]
+b) [‘good’]
+c) [‘good’, ‘#450’]
+d) [‘oh!’, ‘excellent!’, ‘#450’]
+
+
+Answer: b
+Explanation: The code shown above returns a new list containing only strings which do not have any punctuation in them. The only string from the list which does not contain any punctuation is ‘good’. Hence the output of the code shown above is [‘good’].

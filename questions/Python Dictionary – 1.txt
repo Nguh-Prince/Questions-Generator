@@ -1,0 +1,135 @@
+1. Which of the following statements create a dictionary?
+a) d = {}
+b) d = {“john”:40, “peter”:45}
+c) d = {40:”john”, 45:”peter”}
+d) All of the mentioned
+
+
+ Answer: d
+Explanation: Dictionaries are created by specifying keys and values.
+
+
+
+(Python Dictionary – 1) 2. What will be the output of the following Python code snippet?
+
+d = {"john":40, "peter":45}
+
+a) “john”, 40, 45, and “peter”
+b) “john” and “peter”
+c) 40 and 45
+d) d = (40:”john”, 45:”peter”)
+
+
+ Answer: b
+Explanation: Dictionaries appear in the form of keys and values. 
+
+
+
+(Python Dictionary – 1) 3. What will be the output of the following Python code snippet?
+
+d = {"john":40, "peter":45}
+
+a) True
+b) False
+c) None
+d) Error
+
+
+ Answer: a
+Explanation: In can be used to check if the key is int dictionary. 
+
+
+
+(Python Dictionary – 1) 4. What will be the output of the following Python code snippet?
+
+"john" in d
+
+a) True
+b) False
+c) None
+d) Error
+
+
+ Answer: b
+Explanation: If d2 was initialized as d2 = d1 the answer would be true.
+
+
+
+(Python Dictionary – 1) 5. What will be the output of the following Python code snippet?
+
+d1 = {"john":40, "peter":45}
+
+a) True
+b) False
+c) Error
+d) None
+
+
+ Answer: c
+Explanation: Arithmetic > operator cannot be used with dictionaries.
+
+
+
+(Python Dictionary – 1) 6. What will be the output of the following Python code snippet?
+
+d2 = {"john":466, "peter":45}
+
+a) 40
+b) 45
+c) “john”
+d) “peter”
+
+
+ Answer: a
+Explanation: Execute in the shell to verify. 
+
+
+
+7. Suppose d = {“john”:40, “peter”:45}, to delete the entry for “john” what command do we use?
+a) d.delete(“john”:40)
+b) d.delete(“john”)
+c) del d[“john”] 
+d) del d(“john”:40)
+
+
+ Answer: c
+Explanation: Execute in the shell to verify.
+
+
+
+8. Suppose d = {“john”:40, “peter”:45}. To obtain the number of entries in dictionary which command do we use?
+a) d.size()
+b) len(d)
+c) size(d)
+d) d.len()
+
+
+ Answer: b
+Explanation: Execute in the shell to verify.
+
+
+
+(Python Dictionary – 1) 9. What will be the output of the following Python code snippet?
+
+d1 == d2
+
+a) [“john”, “peter”] 
+b) [“john”:40, “peter”:45] 
+c) (“john”, “peter”)
+d) (“john”:40, “peter”:45)
+
+
+ Answer: a
+Explanation: The output of the code shown above is a list containing only keys of the dictionary d, in the form of a list.
+
+
+
+10. Suppose d = {“john”:40, “peter”:45}, what happens when we try to retrieve a value using the expression d[“susan”]?
+a) Since “susan” is not a value in the set, Python raises a KeyError exception
+b) It is executed fine and no exception is raised, and it returns None
+c) Since “susan” is not a key in the set, Python raises a KeyError exception
+d) Since “susan” is not a key in the set, Python raises a syntax error
+
+
+ Answer: c
+Explanation: Execute in the shell to verify.

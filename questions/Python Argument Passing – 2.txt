@@ -1,0 +1,140 @@
+(Python Argument Passing – 2) 1. What will be the output of the following Python code?
+
+def foo(k):
+    k = [1]
+q = [0]
+foo(q)
+print(q)
+
+a) [0] 
+b) [1] 
+c) [1, 0] 
+d) [0, 1] 
+
+
+Answer: a
+Explanation: A new list object is created in the function and the reference is lost. This can be checked by comparing the id of k before and after k = [1].
+
+
+
+2. How are variable length arguments specified in the function heading?
+a) one star followed by a valid identifier
+b) one underscore followed by a valid identifier
+c) two stars followed by a valid identifier
+d) two underscores followed by a valid identifier
+
+
+Answer: a
+Explanation: Refer documentation.
+
+
+
+3. Which module in the python standard library parses options received from the command line?
+a) getopt
+b) os
+c) getarg
+d) main
+
+
+Answer: a
+Explanation: getopt parses options received from the command line.
+
+
+
+4. What is the type of sys.argv?
+a) set
+b) list
+c) tuple
+d) string
+
+
+Answer: b
+Explanation: It is a list of elements.
+
+
+
+5. What is the value stored in sys.argv[0]?
+a) null
+b) you cannot access it
+c) the program’s name
+d) the first argument
+
+
+Answer: c
+Explanation: Refer documentation.
+
+
+
+6. How are default arguments specified in the function heading?
+a) identifier followed by an equal to sign and the default value
+b) identifier followed by the default value within backticks (“)
+c) identifier followed by the default value within square brackets ([])
+d) identifier
+
+
+Answer: a
+Explanation: Refer documentation.
+
+
+
+7. How are required arguments specified in the function heading?
+a) identifier followed by an equal to sign and the default value
+b) identifier followed by the default value within backticks (“)
+c) identifier followed by the default value within square brackets ([])
+d) identifier
+
+
+Answer: d
+Explanation: Refer documentation.
+
+
+
+(Python Argument Passing – 2) 8. What will be the output of the following Python code?
+
+def foo(x):
+    x[0] = ['def']
+    x[1] = ['abc']
+    return id(x)
+q = ['abc', 'def']
+print(id(q) == foo(q))
+
+a) True
+b) False
+c) None
+d) Error
+
+
+Answer: a
+Explanation: The same object is modified in the function.
+
+
+
+9. Where are the arguments received from the command line stored?
+a) sys.argv
+b) os.argv
+c) argv
+d) none of the mentioned
+
+
+Answer: a
+Explanation: Refer documentation.
+
+
+
+(Python Argument Passing – 2) 10. What will be the output of the following Python code?
+
+def foo(i, x=[]):
+    x.append(x.append(i))
+    return x
+for i in range(3):
+    y = foo(i)
+print(y)
+
+a) [[[0]], [[[0]], [1]], [[[0]], [[[0]], [1]], [2]]] 
+b) [[0], [[0], 1], [[0], [[0], 1], 2]] 
+c) [0, None, 1, None, 2, None] 
+d) [[[0]], [[[0]], [1]], [[[0]], [[[0]], [1]], [2]]] 
+
+
+Answer: c
+Explanation: append() returns None.
